@@ -5,23 +5,29 @@ flatList = []
 
 
 def flattenList(nestedList):
-    flatList = []
-    if not nestedList:
-        return flatList
-    for n in nestedList:
-        if type(list):
-            flatList.append(flattenList(n))
+    #  iterate through each item in the list
+    for i in nestedList:
+        # if item is in the  list then call the function by itself with the i from for loop
+        if type(i) is list:
+            # call the function with itself with i from the for loop 
+            flattenList(i)
         else:
-            flatList.append(n)
-    print(flatList)
+            # add it to the list 
+            flatList.append(i)
+    return(flatList)
 
 
-flattenList(nestedList)
+print(flattenList(nestedList))
+
+
+# flatItems = [i for i in nestedList if type(i) is list  flatList.extend(i)]
+# print(flatItems)
 
 
 # 2. return duplicates
 # test case  ---> Input: [4,9,1,2,1,3,1,8,8,8,2,2,2] ---> Output: [1,2,3,4,8,9]
 numInput = [4, 9, 1, 2, 1, 3, 1, 8, 8, 8, 2, 2, 2]
+
 
 def sortNum(numInput):
     newList = []
@@ -127,7 +133,7 @@ def primeOrNot(n):
             return False
 
 
-print(primeOrNot(7))
+# print(primeOrNot(7))
 
 # 9. Input: 3,1,6 ---> Output: 6
 
