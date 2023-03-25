@@ -2,21 +2,21 @@
 nestedList = [[1, 2], 3, [4], 5, [6, 7, [8, 9, [10]]]]
 
 flatList = []
-newList = []
-
-# incomplete
 
 
-def flattenList():
-    # iterate over each item in the list
-    for item in list:
-        if type(item) == int:
-            # push item into a new list
-            newList.insert(-1, item)
-            list.append(newList)
-            print(list)
+def flattenList(nestedList):
+    flatList = []
+    if not nestedList:
+        return flatList
+    for n in nestedList:
+        if type(list):
+            flatList.append(flattenList(n))
+        else:
+            flatList.append(n)
+    print(flatList)
 
-# flattenList()
+
+flattenList(nestedList)
 
 
 # 2. return duplicates
@@ -47,9 +47,10 @@ def sum(input):
     sum = 0
     # iterate through each num
     for i in input:
-        # add each number 
+        # add each number
         sum += i
     return (sum)
+
 # print(sum(input))
 
 
@@ -57,18 +58,14 @@ def sum(input):
 tupleInp = ([7, 5, 4], [8, 2, 4], [0, 7, 5])
 
 # test case ---> input ([7, 5, 4], [8, 2, 4], [0, 7, 5]) --->  Output: ( [4, 5, 7], [2, 4, 8], [0, 5, 7] )
-# incomplete
 
 
 def output(tupleInp):
     newTuple = ()
     # loop through each item in tuple
     for t in tupleInp:
-
         odrItems = (sorted(t))
-        print(odrItems)
-        # newItem = newTuple.insert(odrItems)
-        # print(newItem)
+        print(list(odrItems))
 
 # print(output(tupleInp))
 
@@ -87,11 +84,21 @@ def maxMin(setInput):
 
 
 # 6. Input: “helloworld” ----> Output: 7
+def countWords(words):
+    word = {}
+    for w in words:
+        if w not in words:
+            word[w] += 1
+        else:
+            word[w] = 1
+    print(len(word))
+
+# countWords("helloworld")
 
 
 # 7.  Input: { ‘a’: 100, ‘b’:200, ‘c’:300 } --> Output: True
-
 obj = {'a': 100, 'b': 200, 'c': 300}
+
 
 def oddEven(obj):
     sum = 0
@@ -108,17 +115,40 @@ def oddEven(obj):
 
 # print(oddEven(obj))
 
-# 8. Prime or not. Input: 5 ---> Output: True 
-num = 1
+# 8. Prime or not. Input: 5 ---> Output: True
 
-def primeOrNot(num):
-    if num % num == 0: 
-        return True 
-    else: 
-        return False 
-        
-print(primeOrNot(num))
-
-
+def primeOrNot(n):
+    if n > 1:
+        for i in range(2, n // 2 + 1):
+            if n % i == 0:
+                return False
+            return True
+        else:
+            return False
 
 
+print(primeOrNot(7))
+
+# 9. Input: 3,1,6 ---> Output: 6
+
+
+def largeNum(number):
+    bigNum = sorted(number)
+#     print(bigNum[-1])
+
+# largeNum([3, 1, 6])
+
+# 10. The zip function returns a zip object, which is an iterator of tuples where the first item in each assed iterator
+# is paired together andd the second item n each passed iterator are paired together.
+
+
+# zip
+list1 = [1, 2, 3, 4]
+list2 = [4, 3, 2, 1]
+z = zip(list1, list2)
+z = list(z)
+# print(z)
+
+# unzip
+unzip = list(zip(*z))
+# print(unzip)
