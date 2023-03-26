@@ -9,12 +9,12 @@ def flattenList(nestedList):
     for i in nestedList:
         # if item is in the  list then call the function by itself with the i from for loop
         if type(i) is list:
-            # call the function with itself with i from the for loop 
+            # call the function with itself with i from the for loop
             flattenList(i)
         else:
-            # add it to the list 
+            # add it to the list
             flatList.append(i)
-    return(flatList)
+    return (flatList)
 
 
 print(flattenList(nestedList))
@@ -22,7 +22,6 @@ print(flattenList(nestedList))
 
 # flatItems = [i for i in nestedList if type(i) is list  flatList.extend(i)]
 # print(flatItems)
-
 
 # 2. return duplicates
 # test case  ---> Input: [4,9,1,2,1,3,1,8,8,8,2,2,2] ---> Output: [1,2,3,4,8,9]
@@ -92,7 +91,9 @@ def maxMin(setInput):
 # 6. Input: “helloworld” ----> Output: 7
 def countWords(words):
     word = {}
+    # loop through the words
     for w in words:
+        # if word not in the obj yet then add
         if w not in words:
             word[w] += 1
         else:
@@ -125,6 +126,7 @@ def oddEven(obj):
 
 def primeOrNot(n):
     if n > 1:
+        # iterate over the num in range loop
         for i in range(2, n // 2 + 1):
             if n % i == 0:
                 return False
