@@ -479,352 +479,515 @@ item = add(n1, n2)
 # result = {}
 # for keys in test_str:
 #     print("Before inserting result.get(keys, 0)", result)
-#     result[keys] = result.get(keys, 0) + 1
-#     print("After inserting result.get(keys, 0)", result)
-#     print("Count of all characters is : ", result) 
+# #     result[keys] = result.get(keys, 0) + 1
+# #     print("After inserting result.get(keys, 0)", result)
+# #     print("Count of all characters is : ", result) 
 
 
-# fruits = ['papaya', 'mango', 'kiwi']
-# for fruit in fruits:
-#     print(fruit)
+# # fruits = ['papaya', 'mango', 'kiwi']
+# # for fruit in fruits:
+# #     print(fruit)
 
-# item = 'I am a javascript developer but I am also leanring python'
-# for items in item:
-#     print(items + '1')
-# count = 7
+# # item = 'I am a javascript developer but I am also leanring python'
+# # for items in item:
+# #     print(items + '1')
+# # count = 7
 
-# for x in range(1,60):
-#     if (count % 2 == 0):
-#         print('number is even!')
-#     else:
-#         print('number is not a even number!')
-
-
-# arr = [1,2,3,4,5,6,7,8]
-# # print(len(arr))
+# # for x in range(1,60):
+# #     if (count % 2 == 0):
+# #         print('number is even!')
+# #     else:
+# #         print('number is not a even number!')
 
 
-# for i in range(len(arr)):
-#     if arr[i] > 4:
-#         print('item is one two three four')
+# # arr = [1,2,3,4,5,6,7,8]
+# # # print(len(arr))
 
 
-# def checkBinary(str):
-#     binaryNum = set(['0', '1'])
-#     for i in set(str):
-#         if i not in binaryNum:
-#            return False
+# # for i in range(len(arr)):
+# #     if arr[i] > 4:
+# #         print('item is one two three four')
+
+
+# # def checkBinary(str):
+# #     binaryNum = set(['0', '1'])
+# #     for i in set(str):
+# #         if i not in binaryNum:
+# #            return False
+# #         else:
+# #            return True
+
+
+# # print(checkBinary('hghghghghghg'))
+
+# # words = "abc de ok"
+# # vowels = 'a,e,i,o,u,A,E,I,O,U'
+
+# # def checkVowels(words, vowels):
+# #     result = 0
+# #     for i in words:
+# #         if i in vowels:
+# #             result += 1
+# #     return result
+
+# # print(checkVowels(words, vowels))
+
+
+# # def checkBinary(str):
+# #     binary = {'0', '1'}
+# #     if binary == set(str) or set(str) == {'0'} or set(str) == {'1'}:
+# #         return True
+# #     else:
+# #         return False
+
+# # print(checkBinary('0'))
+
+
+# # n = input('enter')
+
+# # def checkStr(n):
+# #     if type(n) == str:
+# #         return True
+# #     else:
+# #         return False
+
+# # print(checkStr(n))
+
+
+# # vowels = 'a,e,i,o,u,A,E,I,O,U'
+# # input = 'ABeeIghiObhkUul'
+# # small = input.lower()
+
+# # def checkVowel(input):
+# #     for i in input:
+# #         if input in vowels:
+# #             print(len(vowels))
+# #         else:
+# #             print('not accepted')
+# # print(checkVowel(input))
+
+# #  if the vowel string is
+
+# # def checkItem():
+
+
+# # def check(string):
+# #     string = string.lower()
+# #     vowels = set("aeiou")
+# #     s = set({})
+# #     for char in string:
+# #         if char in vowels:
+# #             s.add(char)
+# #             if len(s) == len(vowels):
+# #                   print("Accepted")
+# #                   else:
+# #                   print("Not Accepted")
+# #                   if __name__ == "__main__":
+# #                      string = "SEEquoiaL"
+# #                      check(string)
+# #                      string = "AaeEsdfsdfgiOu"    check(string)    string = "Saurabh"    check(string)
+
+
+# # print (1000/0)
+
+# # a = [1,2,3]
+
+# # try:
+# #  print(a[1])
+# # except:
+# #    print('error')
+
+# # print(10/ 0)
+
+# # def divide(x,y):
+# #    try:
+# #       result1 = x / y
+# #       result2 = x // y
+# #       result3 = x % y
+# #       print(result1, result2, result3)
+# #    except ZeroDivisionError:
+# #       print('error')
+# # divide(21,3)
+# # divide(3,0)
+
+
+# # def fun(a):
+# #     if a < 4:
+# #         b = a/(a - 3)
+# #     print(b)
+# #     try:
+# #         fun(3)
+# #         fun(5)
+# #     except ZeroDivisionError:
+# #         print('zero division error')
+# #     except NameError:
+# #         print('name error occurred')
+
+
+# # fun(5)
+
+
+# # # read file
+# # file = open(item.txt, 'r')
+# # print(file)
+# # # edit the file
+# # file = file.write(item.txt, 'w')
+# # # closes a file
+# # file.close()
+
+
+# # test_str = 'myNameisRishavaCharya'
+# # obj = {}
+# # for keys in test_str:
+# #     obj[keys] = obj.get(keys, 0) + 1
+# # print(obj)
+
+
+# # def checkWord(string):
+# #     str = string.lower()
+# #     vowels = set('aeiou')
+# #     s = set({})
+# #     for i in str:
+# #         if i in vowels:
+# #             s.add(i)
+# #         else:
+# #             pass
+# #     if (len(s)) == (len(vowels)):
+# #         print('Accepted')
+# #     else:
+# #         print('no accepted')
+
+
+# # checkWord('juju')
+
+
+# # present working directory
+# path = '/Users/admin/desktop/test'
+
+# # All files in Test folder before creating new file
+# dir_list = os.listdir(path)
+# print("List of directories and files before creation:")
+# print(dir_list)
+
+# # Creates a new file
+# with open('/Users/admin/desktop/test/test.txt', 'w') as fp:
+#     fp.write("New file created")
+
+
+# # All files in Test folder after creating new file
+# dir_list = os.listdir(path)
+# print("List of directories and files after creation:")
+# print(dir_list)
+
+
+# # present working directory
+# path = '/Users/admin/desktop/test'
+
+# # All files in Test folder before creating new file
+# dir_list = os.listdir(path)
+# print("List of directories and files before creation:")
+# print(dir_list)
+
+# # Creates a new file
+# with open('/Users/admin/desktop/test.txt', 'w') as fp:
+#     fp.write("New file created.")
+#     fp.write("This is the write command.")
+#     fp.write("It allows us to write in a particular file,this is a file.")
+#     fp.write("This will add this line,hello world!")
+
+# # All files in Test folder after creating new file
+# dir_list = os.listdir(path)
+# print("List of directories and files after creation:")
+# print(dir_list)
+
+
+# def checkWords():
+#     count = 0
+#     with open('/Users/admin/desktop/test.txt', 'r') as fp:
+#         file = fp.read()
+#         print(file)
+#     data = file.replace('.', ' ').replace(',', ' ').split()
+
+
+# #    print(data)
+# #    print(len(data))
+# #    for i in range(len(data)):
+# #       count += i
+# #       print(count)
+# checkWords()
+
+
+# def oddNum():
+#     num = []
+#     for i in range(1, 11):
+#         if i % 2 is not 0:
+#             num.append(i ** 2)
+#         #   print(num)
+# # print(oddNum())
+
+
+# # pythonic way of writing this code function
+# L = [i ** 2 for i in range(1, 11) if i % 2 == 1]
+# # print(L)
+
+
+# # Write a program to print a list with all numbers less than 100 who are divisible by both 2 and 5?
+
+
+# def checkNum():
+#     list = []
+#     for i in range(1, 100):
+#         if i % 2 == 0 and i % 5 == 0:
+#             list.append(i)
+#             print(list)
+# # print(checkNum())
+
+
+# L = [i for i in range(1, 100) if i % 2 == 0 and i % 5 == 0]
+
+# # print(L)
+
+
+# def createMatrix():
+#     matrix = []
+#     for i in range(0, 5):
+#         matrix.append([])
+#         for n in range(0, 5):
+#             matrix[i].append(n)
+#         print(matrix)
+
+
+# print(createMatrix())
+
+
+# # list =  []
+
+# matrix = [[i for i in range(0, 5)] for n in range(0, 5)]
+
+# # print(matrix)
+
+
+# # lambda
+
+# # def square(n):
+# #    item = n ** 2
+# #    return item
+
+# # print(square(5))
+
+# def square(n): return n ** 2
+
+
+# # print(square(5))
+
+
+# def max(x, y): return x if x > y else y
+
+
+# # print(max(4, 6))
+
+
+# T = 'hello world'
+# def Y(T): return print(T)
+
+
+# # print(Y)
+
+# # map function
+# def starts_with_A(s):
+#     return s[0] == 'A'
+
+
+# fruit = ['Apple', 'Banana', 'Pear', 'Apricot', 'Orange']
+# map_object = map(starts_with_A, fruit)
+# # print(list(map_object))
+
+
+# map_item = map(lambda s: [0] == 'A', fruit)
+# # print(list(map_item))
+
+
+# # filter function
+# def starts_with_F(j):
+#     return j[0] == 'F'
+
+
+# things = ['Fun', 'Fuzz', 'Action']
+
+# filter_obj = filter(starts_with_F, things)
+# # print(list(filter_obj))
+
+# filter_item = filter(lambda j: [0] == 'F', things)
+# # print(list(filter_item))
+
+# #  reduce function
+# def add(x, y):
+#     return x + y
+
+
+# list = [2, 4, 7, 3]
+# # print(reduce(add, list))
+# # print(reduce(lambda x, y: x + y, list, 10))
+
+
+# myStrings = ("demigod", "rewire", "madam", "fortran", "python", "xamarin", "salas", "PHP")
+
+# def palineDrome(myStrings):
+#     list = []
+#     #  iterate through each string 
+#     #  reverse each string 
+#     #  if reverse string == regular string 
+#     #  return  plaindrome 
+#     #  else not a palindrome
+#     for s in myStrings:
+#         if s is s[::-1]: 
+#             y = list(s)
+#             return y
 #         else:
-#            return True
+#             return 'not a palindrome'
+        
+
+# filter_obj = filter(plaineDrome, myStrings)
+# print(list(filter_obj))
 
 
-# print(checkBinary('hghghghghghg'))
-
-# words = "abc de ok"
-# vowels = 'a,e,i,o,u,A,E,I,O,U'
-
-# def checkVowels(words, vowels):
-#     result = 0
-#     for i in words:
-#         if i in vowels:
-#             result += 1
-#     return result
-
-# print(checkVowels(words, vowels))
 
 
-# def checkBinary(str):
-#     binary = {'0', '1'}
-#     if binary == set(str) or set(str) == {'0'} or set(str) == {'1'}:
-#         return True
-#     else:
-#         return False
+# filter_strings = filter(lambda x: x == x[::-1], myStrings)
 
-# print(checkBinary('0'))
+# print(list(filter_strings))
 
 
-# n = input('enter')
+# def checkpalindrome(word):
 
-# def checkStr(n):
-#     if type(n) == str:
-#         return True
-#     else:
-#         return False
+# return word == word[::-1]
 
-# print(checkStr(n))
+# words = ["demigod", "rewire", "madam", "fortran", "python", "xamarin", "salas", "PHP"]
+# palindromes = list(filter(checkpalindrome, words))
+# print(palindromes)
 
 
-# vowels = 'a,e,i,o,u,A,E,I,O,U'
-# input = 'ABeeIghiObhkUul'
-# small = input.lower()
+# names = ['john', 'kodie','kimi', 'ron']
 
-# def checkVowel(input):
-#     for i in input:
-#         if input in vowels:
-#             print(len(vowels))
-#         else:
-#             print('not accepted')
-# print(checkVowel(input))
-
-#  if the vowel string is
-
-# def checkItem():
+# def upperCase(names):
+#     return names[0].upper() 
 
 
-# def check(string):
-#     string = string.lower()
-#     vowels = set("aeiou")
-#     s = set({})
-#     for char in string:
-#         if char in vowels:
-#             s.add(char)
-#             if len(s) == len(vowels):
-#                   print("Accepted")
-#                   else:
-#                   print("Not Accepted")
-#                   if __name__ == "__main__":
-#                      string = "SEEquoiaL"
-#                      check(string)
-#                      string = "AaeEsdfsdfgiOu"    check(string)    string = "Saurabh"    check(string)
+# map_object = map(upperCase, names)
+# print(list(map_object))
+
+# # print(upperCase(names))    
+
+# persons = ['alfred', 'tabitha', 'william', 'arla']
+
+# uppered_persons = list(map(str.upper, persons))
+
+# print(uppered_persons)
 
 
-# print (1000/0)
+# •Write a Python program to print length of all the items of a list
 
-# a = [1,2,3]
+# •Input:
+# x = ['ab', 'cd', 'a']
 
-# try:
-#  print(a[1])
-# except:
-#    print('error')
-
-# print(10/ 0)
-
-# def divide(x,y):
-#    try:
-#       result1 = x / y
-#       result2 = x // y
-#       result3 = x % y
-#       print(result1, result2, result3)
-#    except ZeroDivisionError:
-#       print('error')
-# divide(21,3)
-# divide(3,0)
+# # •Output:
+# # [2, 2, 1]
 
 
-# def fun(a):
-#     if a < 4:
-#         b = a/(a - 3)
-#     print(b)
-#     try:
-#         fun(3)
-#         fun(5)
-#     except ZeroDivisionError:
-#         print('zero division error')
-#     except NameError:
-#         print('name error occurred')
+# def itemLength(x):
+#     return  list(len(x))
+
+# map_obj = map(itemLength, x)
+# print(itemLength(map_obj))
+
+# print(itemLength(x))
 
 
-# fun(5)
+# x = ['ab', 'cd', 'a']
+# print(x)
+# len = list(map(len, x))
+# print(len)
 
 
-# # read file
-# file = open(item.txt, 'r')
-# print(file)
-# # edit the file
-# file = file.write(item.txt, 'w')
-# # closes a file
-# file.close()
+# numbers = []
+# for i in range(1,10001):
 
 
-# test_str = 'myNameisRishavaCharya'
-# obj = {}
-# for keys in test_str:
-#     obj[keys] = obj.get(keys, 0) + 1
-# print(obj)
-
-
-# def checkWord(string):
-#     str = string.lower()
-#     vowels = set('aeiou')
-#     s = set({})
-#     for i in str:
-#         if i in vowels:
-#             s.add(i)
-#         else:
-#             pass
-#     if (len(s)) == (len(vowels)):
-#         print('Accepted')
-#     else:
-#         print('no accepted')
-
-
-# checkWord('juju')
-
-
-# present working directory
-path = '/Users/admin/desktop/test'
-
-# All files in Test folder before creating new file
-dir_list = os.listdir(path)
-print("List of directories and files before creation:")
-print(dir_list)
-
-# Creates a new file
-with open('/Users/admin/desktop/test/test.txt', 'w') as fp:
-    fp.write("New file created")
-
-
-# All files in Test folder after creating new file
-dir_list = os.listdir(path)
-print("List of directories and files after creation:")
-print(dir_list)
-
-
-# present working directory
-path = '/Users/admin/desktop/test'
-
-# All files in Test folder before creating new file
-dir_list = os.listdir(path)
-print("List of directories and files before creation:")
-print(dir_list)
-
-# Creates a new file
-with open('/Users/admin/desktop/test.txt', 'w') as fp:
-    fp.write("New file created.")
-    fp.write("This is the write command.")
-    fp.write("It allows us to write in a particular file,this is a file.")
-    fp.write("This will add this line,hello world!")
-
-# All files in Test folder after creating new file
-dir_list = os.listdir(path)
-print("List of directories and files after creation:")
-print(dir_list)
-
-
-def checkWords():
-    count = 0
-    with open('/Users/admin/desktop/test.txt', 'r') as fp:
-        file = fp.read()
-        print(file)
-    data = file.replace('.', ' ').replace(',', ' ').split()
-
-
-#    print(data)
-#    print(len(data))
-#    for i in range(len(data)):
-#       count += i
-#       print(count)
-checkWords()
-
-
-def oddNum():
-    num = []
-    for i in range(1, 11):
-        if i % 2 is not 0:
-            num.append(i ** 2)
-        #   print(num)
-# print(oddNum())
-
-
-# pythonic way of writing this code function
-L = [i ** 2 for i in range(1, 11) if i % 2 == 1]
-# print(L)
-
-
-# Write a program to print a list with all numbers less than 100 who are divisible by both 2 and 5?
-
-
-def checkNum():
-    list = []
-    for i in range(1, 100):
-        if i % 2 == 0 and i % 5 == 0:
-            list.append(i)
-            print(list)
+# def checkNum():
+#     for n in range(1,10001):
+#         print(n)
+        
 # print(checkNum())
 
 
-L = [i for i in range(1, 100) if i % 2 == 0 and i % 5 == 0]
-
-# print(L)
-
-
-def createMatrix():
-    matrix = []
-    for i in range(0, 5):
-        matrix.append([])
-        for n in range(0, 5):
-            matrix[i].append(n)
-        print(matrix)
+# list = [n for n in range(1,10001) if n % 8 == 0 ]
+# print(list)
 
 
-print(createMatrix())
+# elements = ['Ch','Dh','Eh','cb','Tb','Td','Chb','Tdb']
+
+# item = [e for e in elements if len(e) > 2 and e.endswith('b')]
+# print(item)
+
+# import re 
+# s = 'helloworld'
+# match = re.search(r' \.', s)
+# print(match)
+
+# import re
+# txt = "The rain in Spain"
+# x = re.findall("ai",txt)
+# y = re.findall("Portugal",txt)
+# print(x)
+# print(y)
 
 
-# list =  []
-
-matrix = [[i for i in range(0, 5)] for n in range(0, 5)]
-
-# print(matrix)
-
-
-# lambda
-
-# def square(n):
-#    item = n ** 2
-#    return item
-
-# print(square(5))
-
-def square(n): return n ** 2
+# x = re.search("\s",txt)
+# y = re.search("Portugal",txt)
+# print("The first white-space character is located in position:", x.start())
+# print(y)
 
 
-print(square(5))
+# x = re.split("\s",txt)
+# y = re.split("\s",txt,1)
+
+# print(x)
+# print(y)
 
 
-def max(x, y): return x if x > y else y
+# x = re.sub("\s","9", txt)
+# y = re.sub("\s","9", txt,2)
+
+# print(x)
+# print(y)
 
 
-print(max(4, 6))
 
 
-T = 'hello world'
-def Y(T): return print(T)
 
 
-print(Y)
-
-# map function
-def starts_with_A(s):
-    return s[0] == 'A'
 
 
-fruit = ['Apple', 'Banana', 'Pear', 'Apricot', 'Orange']
-map_object = map(starts_with_A, fruit)
-# print(list(map_object))
 
 
-map_item = map(lambda s: [0] == 'A', fruit)
-# print(list(map_item))
 
 
-# filter function
-def starts_with_F(j):
-    return j[0] == 'F'
 
 
-things = ['Fun', 'Fuzz', 'Action']
-
-filter_obj = filter(starts_with_F, things)
-# print(list(filter_obj))
-
-filter_item = filter(lambda j: [0] == 'F', things)
-print(list(filter_item))
-
-#  reduce function
-def add(x, y):
-    return x + y
 
 
-list = [2, 4, 7, 3]
-print(reduce(add, list))
-print(reduce(lambda x, y: x + y, list, 10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

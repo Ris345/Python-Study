@@ -43,7 +43,6 @@ def addition(num):
 
 # 4.
 
-
 def radians_to_degrees(rad):
     degrees = rad * 180/pi
     #  print(round(degrees))
@@ -53,7 +52,6 @@ def radians_to_degrees(rad):
 # radians_to_degrees(50)
 
 # 5
-
 
 def circle_or_square(rad, area):
     # find circumfrence of the circle
@@ -104,4 +102,168 @@ def relation_to_luke(name):
     }
 
 
+
 # relation_to_luke('luke')
+
+
+
+# def starts_with_A(s):
+#     if s[0] == 'A':
+#         return s
+#     else:
+#         return None
+
+# fruit = ['Apple', 'Banana', 'Pear', 'Apricot', 'Orange']
+# map_object = map(starts_with_A, fruit)
+# # print(list(map_object))
+
+
+# # map_item = map(lambda s: s[0] == 'A', fruit)
+# # print(list(map_item))
+
+
+# # def make_A_small(z):
+# #     return z[0].lower()
+    
+items = ['Sabian' , 'HHX' , 'Ludwig' , 'Pearl']
+# # map_items = map(make_A_small, items)
+# # print(list(map_items))    
+
+
+map_items = list(map(str.upper, items))
+# print(map_items)
+                       
+# map_other = map(lambda z:  z[0].lower, items )
+# print(list(map_other))
+
+
+
+import re 
+s = 'hello world'
+match = re.search(r'hello.', s)
+# print(match)
+
+import re
+txt = "The rain in Spain"
+x = re.findall("ai",txt)
+y = re.findall("Portugal",txt)
+# print(x)
+# print(y)
+
+
+# x = re.search("\s",txt)
+# y = re.search("Portugal",txt)
+# print("The first white-space character is located in position:", x.start())
+# print(y)
+
+
+# x = re.split("\s",txt)
+# y = re.split("\s",txt,1)
+
+# print(x)
+# print(y)
+
+
+x = re.sub("\s","9", txt)
+y = re.sub("\s","9", txt,1)
+
+# print(x)
+# print(y)
+
+
+
+#  understanding lambda 
+
+# def square():
+#     return n ** 2
+
+# square = lambda n: n ** 2 
+# # print(square(2))
+
+
+
+
+# maxi = lambda x, y: x if x > y else y
+# print(maxi(4,6))
+
+
+# def starts_with_word(x):
+#     return x[0] == 'A'
+
+# fruits = ['Apricot', 'Apple', 'Aqua' , 'Banana', 'Pear', 'Peach']
+# map_obj = map(starts_with_word, fruits)
+# # print(list(map_obj))
+
+# map_objc = map(lambda x: x[0] == 'A', fruits)
+# # print(list(map_obj))
+
+
+def starts_with(s):
+    return s[0] == 'O'
+fruit = ['Apple', 'Banana', 'Pear', 'Apricot', 'Orange']
+filt_obj = filter(starts_with, fruit)
+# print(list(filt_obj))
+
+filter_objs = filter(lambda x: x[0] == 'B', fruit)
+
+# print(list(filter_objs))
+
+from functools import reduce 
+
+def add(x,y):
+    return x + y
+
+liste = [10,15,20,10]
+
+# print(reduce(add, list))
+
+
+print(reduce(lambda x,y: x + y, liste))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
