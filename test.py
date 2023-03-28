@@ -834,23 +834,21 @@ item = add(n1, n2)
 
 # def palineDrome(myStrings):
 #     list = []
-#     #  iterate through each string 
-#     #  reverse each string 
-#     #  if reverse string == regular string 
-#     #  return  plaindrome 
+#     #  iterate through each string
+#     #  reverse each string
+#     #  if reverse string == regular string
+#     #  return  plaindrome
 #     #  else not a palindrome
 #     for s in myStrings:
-#         if s is s[::-1]: 
+#         if s is s[::-1]:
 #             y = list(s)
 #             return y
 #         else:
 #             return 'not a palindrome'
-        
+
 
 # filter_obj = filter(plaineDrome, myStrings)
 # print(list(filter_obj))
-
-
 
 
 # filter_strings = filter(lambda x: x == x[::-1], myStrings)
@@ -870,13 +868,13 @@ item = add(n1, n2)
 # names = ['john', 'kodie','kimi', 'ron']
 
 # def upperCase(names):
-#     return names[0].upper() 
+#     return names[0].upper()
 
 
 # map_object = map(upperCase, names)
 # print(list(map_object))
 
-# # print(upperCase(names))    
+# # print(upperCase(names))
 
 # persons = ['alfred', 'tabitha', 'william', 'arla']
 
@@ -916,7 +914,7 @@ item = add(n1, n2)
 # def checkNum():
 #     for n in range(1,10001):
 #         print(n)
-        
+
 # print(checkNum())
 
 
@@ -929,7 +927,7 @@ item = add(n1, n2)
 # item = [e for e in elements if len(e) > 2 and e.endswith('b')]
 # print(item)
 
-# import re 
+# import re
 # s = 'helloworld'
 # match = re.search(r' \.', s)
 # print(match)
@@ -962,32 +960,110 @@ item = add(n1, n2)
 # print(y)
 
 
+# def listfyColor(colorList):
+#     return colorList
+# colorList = ['Red', 'Blue', 'Black', 'Pink']
 
 
+# map_color = map(list,colorList)
+# print(list(map_color))
+
+class Dog:
+    attr1 = 'Mammal'
+    attr2 = 'Dog'
+
+    def fun(self):
+        print("I am a ", self.attr1)
+        print('I am a ', self.attr2)
 
 
+# Rodger = Dog()
+# Max = Dog()
+# print(Rodger.attr1)
+# print(Max.attr2)
+# Rodger.fun()
 
 
+# class Person:
+#     def __init__(self,name,last):
+#         self.fname = name
+#         self.lname = last
+#     def say_hi(self):
+#         print('hello! my name is',self.lname, self.fname)
 
 
+# p = Person('Rishav', 'Acharya')
+# x = Person('Kimmy', 'Green')
+# z = Person('Johnny', 'Boy')
 
 
+# p.say_hi()
+# x.say_hi()
+# z.say_hi()
 
 
+# class Car:
+#     wheels = 4
+#     def __init__(self, name):
+#         self.name = name
 
 
+# class Dog:
+#     animal = 'Dog'
+#     # contructor
+#     def __init__(self, breed, color):
+#         print(self)
+#         print('hello')
+#         self.breed = breed
+#         self.color = color
 
 
+# class Dog:
+#     animal = 'dog'
+
+#     def __init__(self, breed):
+#         self.breed = breed
+#     def setColor(self,color):
+#         self.color = color
+#     def getColor(self):
+#         return self.color
 
 
+# Pinky = Dog('Mastif:', 'Brown')
+# Kiku = Dog('Labrador:', 'Golden')
+
+# # print( "Pinky", Pinky.animal)
+# # print("Pinky", Pinky.color)
+
+# # print( "Kiku", Kiku.animal)
+# # print("Kiku", Kiku.color)
 
 
+# class Employee:
+
+#     def __init__ (self):
+#         print('employee create')
+#     def __del__()
 
 
+# import builtins
+# # help(builtins.abs)
+# print(builtins.abs(-155))
+
+# print(builtins.abs(155))
+
+# print(builtins.abs.__doc__)
 
 
+# import builtins
+# # help(builtins.abs)
+# print(builtins.abs.__doc__)
+# print(builtins.abs(-123))
+# help(builtins)
 
 
+# help(builtins)
 
+# help(print)
 
-
+# help(list)
