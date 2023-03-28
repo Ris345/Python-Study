@@ -2,6 +2,8 @@
 #  1.stuttering function
 #  level super easy
 # test cases stutter("incredible") ➞ "in... in... incredible?"
+from functools import reduce
+import re
 import math
 from math import pi
 
@@ -53,6 +55,7 @@ def radians_to_degrees(rad):
 
 # 5
 
+
 def circle_or_square(rad, area):
     # find circumfrence of the circle
     # find the perimeter of the square
@@ -102,9 +105,7 @@ def relation_to_luke(name):
     }
 
 
-
 # relation_to_luke('luke')
-
 
 
 # def starts_with_A(s):
@@ -124,29 +125,25 @@ def relation_to_luke(name):
 
 # # def make_A_small(z):
 # #     return z[0].lower()
-    
-items = ['Sabian' , 'HHX' , 'Ludwig' , 'Pearl']
+items = ['Sabian', 'HHX', 'Ludwig', 'Pearl']
 # # map_items = map(make_A_small, items)
-# # print(list(map_items))    
+# # print(list(map_items))
 
 
 map_items = list(map(str.upper, items))
 # print(map_items)
-                       
+
 # map_other = map(lambda z:  z[0].lower, items )
 # print(list(map_other))
 
 
-
-import re 
 s = 'hello world'
 match = re.search(r'hello.', s)
 # print(match)
 
-import re
 txt = "The rain in Spain"
-x = re.findall("ai",txt)
-y = re.findall("Portugal",txt)
+x = re.findall("ai", txt)
+y = re.findall("Portugal", txt)
 # print(x)
 # print(y)
 
@@ -164,23 +161,20 @@ y = re.findall("Portugal",txt)
 # print(y)
 
 
-x = re.sub("\s","9", txt)
-y = re.sub("\s","9", txt,1)
+x = re.sub("\s", "9", txt)
+y = re.sub("\s", "9", txt, 1)
 
 # print(x)
 # print(y)
 
 
-
-#  understanding lambda 
+#  understanding lambda
 
 # def square():
 #     return n ** 2
 
-# square = lambda n: n ** 2 
+# square = lambda n: n ** 2
 # # print(square(2))
-
-
 
 
 # maxi = lambda x, y: x if x > y else y
@@ -200,6 +194,8 @@ y = re.sub("\s","9", txt,1)
 
 def starts_with(s):
     return s[0] == 'O'
+
+
 fruit = ['Apple', 'Banana', 'Pear', 'Apricot', 'Orange']
 filt_obj = filter(starts_with, fruit)
 # print(list(filt_obj))
@@ -208,62 +204,87 @@ filter_objs = filter(lambda x: x[0] == 'B', fruit)
 
 # print(list(filter_objs))
 
-from functools import reduce 
 
-def add(x,y):
+def add(x, y):
     return x + y
 
-liste = [10,15,20,10]
+
+liste = [10, 15, 20, 10]
 
 # print(reduce(add, list))
 
 
-print(reduce(lambda x,y: x + y, liste))
+# print(reduce(lambda x,y: x + y, liste))
 
 
+#  7 convert(5) ➞ 300
+
+def convert(minutes):
+    return minutes * 60
+
+# print(convert(5))
+# print(convert(3))
+# print(convert(2))
 
 
+# 8.
+
+def tri_area(base, height):
+    return round(base * height / 2)
+# print(tri_area(3, 2))
+# print(tri_area(7, 4))
+# print(tri_area(10, 10))
 
 
+# 9.
+
+def cubes(a):
+    return a ** 3
+# print(cubes(3))
+# print(cubes(4))
+# print(cubes(5))
 
 
+# 10
+
+def football_points(wins, draws, losses):
+    return wins * 3 + draws * 1 + losses * 0
+
+# print(football_points(3, 4, 2))
+# print(football_points(5, 0, 2))
+# print(football_points(0, 0, 1))
 
 
+# test case ---->lottery([["YYW", 70], ["WXK", 65], ["RPDI", 88]], 2)
+# ➞ "Loser!"
+
+#  step 1 the nested lists should have a character match in the sublist ---> if "WXK" --> should match 65 --> win, if all the wins is greater than the win number then it is a win other wise it's a loss
+
+#  step 2
+
+def lottery(ticket, win):
+    newList = []
+    miniWin = 0
+    # run a for loop iterate through each item
+    for t in ticket:
+        character = (t[0])
+        ticketNum = (t[1])
+        for c in character:
+            print(c)
+        # mini win
+        if character == ticketNum:
+            miniWin += 1
+        else:
+            miniWin = 0
+        # bigger win
+        if miniWin > win:
+            return 'Winner!'
+        else:
+            return 'Looser!'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(lottery([["YYW", 70], ["WXK", 65], ["RPDI", 88]], 2))
+print(lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73],
+      ["AGXMEE", 74], ["IU", 68], ["VOSP", 84]], 1))
+print(lottery([["ZSAMZB", 81], ["XWWCXP", 72],
+      ["SYBRQOHP", 88], ["HJSVV", 75]], 1))
