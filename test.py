@@ -1067,3 +1067,122 @@ class Dog:
 # help(print)
 
 # help(list)
+
+
+# class Balanced_brackets:
+# def is_valid_parenthese(self, str1):
+# stack= []
+# pchar = {"(": ")", "{": "}", "[": "]"}
+# for parenthese in str1:
+# if parenthese in pchar:
+# stack.append(parenthese)
+# print("Stack: ", stack)
+# elif len(stack) == 0 or (pchar[stack.pop()]) != parenthese:
+# return "Unbalanced"
+# return len(stack) == 0
+
+
+# print(Balanced_brackets().is_valid_parenthese("({[]})"))
+# print(Balanced_brackets().is_valid_parenthese("()"))
+# print(Balanced_brackets().is_valid_parenthese("()("))
+# print(Balanced_brackets().is_valid_parenthese(")("))
+
+
+# class Rectangle:
+#      def __init__ (self, length, breadth):
+#          self.length = length
+#          self.breadth = breadth
+# def area(self):
+#         total = self.length * self.breadth
+#         print(total)
+
+class Rectangle:
+    #   intialize constructor
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+    # calculate area
+
+    def area(self):
+        total = self.length * self.breadth
+        return total
+
+
+item = Rectangle(4, 8)
+
+# print(item.area())
+
+
+class Student:
+    pass
+
+
+class Marks:
+    pass
+
+
+student1 = Student()
+marks1 = Marks()
+
+
+# print(isinstance(student1, Student))
+# print(isinstance(student1, Marks))
+# print(isinstance(marks1, Marks))
+# print(isinstance(marks1, Student))
+# print(issubclass(Student, object))
+# print(issubclass(Marks, object))
+
+# import math
+
+# class Circle:
+
+#      def __init__(self,radius):
+#           self.radius = radius
+#      def totalArea(self):
+#           return  round(math.pi * self.radius ** 2)
+#      def periMeter(self):
+#           return round(2 * math.pi * self.radius)
+
+# circle1 = Circle(8)
+
+# print(circle1.totalArea())
+# print(circle1.periMeter())
+
+# test cases ---> valid parenthisesis ---->
+
+
+# def isValid(input):
+#      collection = {
+#           '(':')'
+#           ,'{':'}'
+#           ,'[':']'
+#      }
+#      stack = []
+#      for p in input:
+#           if input in collection:
+#             stack.append(p)
+#             print(stack)
+#           elif len(stack) == 0 or collection[stack.pop()] != collection:
+#                 return False
+#           return len(stack) == 0
+
+
+# print(isValid('(){}[]'))
+
+
+class Brackets:
+    def isValid(self, str):
+        stack = []
+        collection = {
+            '(': ')', '{': '}', '[': ']'
+        }
+        for p in str:
+            if p in collection:
+                stack.append(p)
+                print(stack)
+            elif len(stack) == 0 or collection[stack.pop()] != p:
+                return False
+        return len(stack) == 0
+
+
+print(Brackets().isValid('{}()[]'))
