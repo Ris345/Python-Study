@@ -1323,12 +1323,13 @@ class Horses(Animals):
 # tom = Dogs()
 # tom.isMammal()
 
-print(Horses.__mro__)
-print(Dogs.__mro__)
+# print(Horses.__mro__)
+# print(Dogs.__mro__)
 
 
 
-
+item = [1,4,7,8]
+print(enumerate(item))
 
 
 
