@@ -1170,19 +1170,170 @@ marks1 = Marks()
 # print(isValid('(){}[]'))
 
 
-class Brackets:
-    def isValid(self, str):
-        stack = []
-        collection = {
-            '(': ')', '{': '}', '[': ']'
-        }
-        for p in str:
-            if p in collection:
-                stack.append(p)
-                print(stack)
-            elif len(stack) == 0 or collection[stack.pop()] != p:
-                return False
-        return len(stack) == 0
+# class Brackets:
+#     def isValid(self, str):
+#         print(str)
+#         stack = []
+#         collection = {
+#             '(': ')', '{': '}', '[': ']'
+#         }
+#         for p in str:
+#             if p in collection:
+#                 # if any opening bracket append it to the key
+#                 stack.append(p)
+#                 print(stack)
+#             elif len(stack) == 0 or collection[stack.pop()] != p:
+#                 return False
+#         return len(stack) == 0
 
 
-print(Brackets().isValid('{}()[]'))
+# # print(Brackets().isValid('{}()[]'))
+# # print(Brackets().isValid('([{}])'))
+# # print(Brackets().isValid('())'))
+# # print(Brackets().isValid('{[)()('))
+# # print(Brackets().isValid('{{{{{{'))
+# # print(Brackets().isValid('}}}}}}}'))
+# # print(Brackets().isValid('{([])}'))
+
+# # class BaseClass:
+
+
+# # class DerivedClass(BaseClass):
+
+# # class Person:
+# #     def __init__(self,name,id):
+# #         self.name = name
+# #         self.id = id
+# #     def display(self):
+# #         print(self.name, self.id)
+
+
+# # class Emp(Person):
+# #     def __init__(self, name, id, post, salary):
+# #         self.salary = salary
+# #         self.post = post
+# #         Person.__init__(self,name,id)
+# #     # def print(self):
+# #     #     print("Emp class called")
+
+
+# # emp_details = Emp('Cookie', 890, 500000, 'Full-Stack developer')
+# # print(emp_details.display())
+
+# # returns a error
+# class A:
+#     def __init__(self, n='Rahul'):
+#         self.n = n
+
+
+# class B:
+#     def __init__(self, roll):
+#         self.roll = roll
+
+
+# # o = B(23)
+# # print(o.name)
+
+# class Employee():
+#     def __init__(self, id, name, Add):
+#         self.id = id
+#         self.name = name
+#         self.Add = Add
+
+
+# class Freelance(Employee):
+#     def __init__(self, id, name, Emails):
+#         super().__init__(id, Name, Add)
+#         self.Emails = Emails
+
+
+# # ep1 = Freelance()
+
+
+
+
+
+# •Write a python function to find a pair of elements (indices of the two numbers) from a given array whose sum equals a specific target number.
+
+# •Assume that atleast one pair exists.
+
+# •L = [3,4,6,1,8], target = 10
+
+# •Output – [1,2]
+
+L = [3,4,6,1,11] 
+target = 12
+
+# def findSum(L, target):
+#     #  loop through the list 
+#     #  find the sum of each pair 
+#     # if sum === target return the index of the L
+#     for num in range(len(L) - 1):
+#         for x in range(num + 1, len(L)):
+#             if L[num] + L[x] == target: 
+#                 return [num, x]
+             
+       
+# print(findSum(L,target))
+
+
+
+# def twoSum(L,target):
+#     d = {}
+#     for i, value in enumerate(L):
+#         if d.get(value, None) == None:
+#             d[target - value] = i
+#         else: 
+#             return [d.get(value), i]
+
+
+# print(twoSum(L, target))
+
+
+
+class Animals:
+    def __init__(self):
+        self.legs = 4
+        self.domestic = True
+        self.tail = True
+        self.mammals = True
+
+    def isMammal(self):
+        if self.mammals:
+                print('it is a mammal!')
+    def isDomestic(self):
+        if self.domestic:
+                print('it is domestic!')
+        
+class Dogs(Animals):
+    def __init__(self):
+        super().__init__()
+
+
+class Horses(Animals):
+    def __init__(self):
+        super().__init__()
+
+
+    def hasTailandLegs(self):
+        if self.tail and self.legs == 4:
+            print('has tails and legs')
+
+
+# tom = Dogs()
+# tom.isMammal()
+
+print(Horses.__mro__)
+print(Dogs.__mro__)
+
+
+
+
+
+
+
+
+
+
+
+
