@@ -1341,27 +1341,49 @@
 #                    return [n, x]
                
                
-L = [3, 4, 6, 1, 7]
-target = 7
+# L = [3, 4, 6, 1, 7]
+# target = 7
 
 
-class Number: 
-    def __init__(self,L, target):
-        self.L = L 
-        self.target = target
+# class Number: 
+#     def __init__(self,L, target):
+#         self.L = L 
+#         self.target = target
 
-    def twoSum(self):
-            dict = {}
-            for item,  value  in enumerate(L):
-                 if dict.get(value, None) == None: 
-                    dict[target - value] = item
-                 else: 
-                      return [dict.get(value), item]     
+#     def twoSum(self):
+#             dict = {}
+#             for item,  value  in enumerate(L):
+#                  if dict.get(value, None) == None: 
+#                     dict[target - value] = item
+#                  else: 
+#                       return [dict.get(value), item]     
                  
                
 
-checkTarget = Number(L, target)
-print(checkTarget.twoSum())
+# checkTarget = Number(L, target)
+# print(checkTarget.twoSum())
+
+
+
+# dict = {
+#     'age': 30, 
+#     'occupation': 'Software engineer',
+#     'salary': 80000,
+#     'desiredincome': 200000,
+#     'relationship': 'widowed'
+# }
+
+
+# print(dict.get('age', None))
+
+
+
+
+
+
+
+
+
 
 
 
