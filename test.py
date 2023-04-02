@@ -1327,28 +1327,41 @@
 #  re practicing the twoSum problem with class
 
 
-L = [3, 4, 6, 1, 7]
-target = 20
 
 # class based way! 
-class Number:
-    def __init__(self,L,target):
-         self.target = target 
-         self.L = L
+# class Number:
+#     def __init__(self,L,target):
+#          self.target = target 
+#          self.L = L
+
+#     def twoSum(self):
+#         for n in range(len(L)):
+#             for x in range(n + 1, len(L)):
+#                if L[n] + L[x] == target:
+#                    return [n, x]
+               
+               
+L = [3, 4, 6, 1, 7]
+target = 7
+
+
+class Number: 
+    def __init__(self,L, target):
+        self.L = L 
+        self.target = target
 
     def twoSum(self):
-        for n in range(len(L)):
-            for x in range(n + 1, len(L)):
-               if L[n] + L[x] == target:
-                   return [n, x]
+            dict = {}
+            for item,  value  in enumerate(L):
+                 if dict.get(value, None) == None: 
+                    dict[target - value] = item
+                 else: 
+                      return [dict.get(value), item]     
+                 
                
-               
+
 checkTarget = Number(L, target)
 print(checkTarget.twoSum())
-
-
-
-
 
 
 
