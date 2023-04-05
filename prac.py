@@ -269,6 +269,7 @@ def lottery(ticket, win):
     for t in ticket:
         character = (t[0])
         ticketNum = (t[1])
+        print(t[1])
         for c in character:
             print(c)
         # mini win
@@ -281,7 +282,6 @@ def lottery(ticket, win):
             return 'Winner!'
         else:
             return 'Looser!'
-
 
 print(lottery([["YYW", 70], ["WXK", 65], ["RPDI", 88]], 2))
 print(lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73],

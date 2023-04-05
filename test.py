@@ -1320,6 +1320,16 @@
 # # print(Dogs.__mro__)
 
 
+
+
+
+
+
+
+
+
+
+
 # # item = [1,4,7,8]
 # # print(list(enumerate(item)))
 
@@ -1327,11 +1337,10 @@
 #  re practicing the twoSum problem with class
 
 
-
-# class based way! 
+# class based way!
 # class Number:
 #     def __init__(self,L,target):
-#          self.target = target 
+#          self.target = target
 #          self.L = L
 
 #     def twoSum(self):
@@ -1339,42 +1348,314 @@
 #             for x in range(n + 1, len(L)):
 #                if L[n] + L[x] == target:
 #                    return [n, x]
-               
-               
+
+
 # L = [3, 4, 6, 1, 7]
 # target = 7
 
 
-# class Number: 
+# class Number:
 #     def __init__(self,L, target):
-#         self.L = L 
+#         self.L = L
 #         self.target = target
 
 #     def twoSum(self):
 #             dict = {}
 #             for item,  value  in enumerate(L):
-#                  if dict.get(value, None) == None: 
+#                  if dict.get(value, None) == None:
 #                     dict[target - value] = item
-#                  else: 
-#                       return [dict.get(value), item]     
-                 
-               
+#                  else:
+#                       return [dict.get(value), item]
+
 
 # checkTarget = Number(L, target)
 # print(checkTarget.twoSum())
 
 
-
 # dict = {
-#     'age': 30, 
+#     'age': 30,
 #     'occupation': 'Software engineer',
 #     'salary': 80000,
 #     'desiredincome': 200000,
 #     'relationship': 'widowed'
 # }
 
-
 # print(dict.get('age', None))
+
+
+
+
+# nums = (55,44,33,22)
+
+# print(max(min(nums[:2])))
+
+
+# def power(x,y):
+#     if y == 0:
+#         return 1
+#     else:
+#         return x * power(x,  y - 1)
+    
+    
+
+
+
+# print(power(2,3))
+
+
+
+# class Call():
+#     # Attributes
+#     shape = ' '
+#     numOfboxes = 0
+#     color = ''
+#     dimenisons = ''
+#     num_of_rows = 0
+#     num_of_columns = 0
+
+#     # Methods
+#     def grow():
+#         pass
+#     def reproduce():
+#         pass 
+#     def die():
+#         pass
+
+# class Animal_Cell(Cell):
+#     pass
+
+# class Jail_Cell():
+#     pass
+
+
+# # Animal_Cell = Call()
+
+# # Animal_Cell.shape = 'Rectangle'
+
+# # Plant_Cell = Animal_Cell 
+
+
+# print(Animal_Cell.shape)
+
+# # print(Plant_Cell.shape)  
+
+# # Fundamentals of OOP 
+# # 1. Inheritance 
+# # 2.Encapsultaion 
+# # 3. Abstraction 
+# # 4. Polymorphism 
+
+
+
+# class Base1(object):
+#     def __init__(self):
+#         self.str1 = 'Geek1'
+
+# class Base2(object):
+#     def __init__(self):
+#         self.str2 = 'Geek1'
+    
+# class Derived(Base1,Base2):
+#     def __init__(self):
+#         Base1.__init__
+#         Base2.__init__
+#         print('derived')
+
+
+#     def printStr(self):
+#         print(self.str1, self.str2)
+
+# ob = Derived()
+
+# ob.printStr()
+
+
+# class Mammal():
+#     def __init__(self,name):
+#         print(name)
+
+# class canFly(Mammal):
+#     def __init__(self, canFly_name)
+
+
+
+# class Vehicle():
+#     def __init__(self):
+#         self.vehicle = 'Truck'
+         
+# class Car(Vehicle):
+#     def __init__(self):
+#         self.car = 'Yes'
+
+# class CityRide(Car):
+#     def __init__(self):
+#         self.cityride = 'Yes'
+
+# class Offroad(Car):
+#     def __init__(self):
+
+# class Suv(CityRide, Offroad):
+#     def __init__(self):
+#         super().__init__()
+
+# ob = Vehicle()
+# print(ob)
+
+
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name 
+        self.mileage = mileage
+        self.capacity = capacity
+    def fare(self):
+        return self.capacity * 100
+
+
+class Car(Vehicle):
+    def fare(self):
+        amount = super().fare()
+        amount += amount * 20 / 100
+        return amount
+
+class Bus(Vehicle):
+    def fare(self):
+        amount = super().fare()
+        amount += amount * 10 / 100
+        return amount
+
+
+
+School_bus = Bus("SchoolVolvo", 12, 50)
+Car_obj = Car('Ferrari', 15, 30)
+# print(School_bus.fare())
+
+# print(Car_obj.fare())
+
+class Vehicle:
+    def __init__(self,name, color,price):
+        self.name = name 
+        self.color = color
+        self.price = price 
+
+    def show(self):
+        print('details', self.name, self.color, self.price)
+    def maxSpeed(self):
+        print('vehicle has a max a speed of 150')
+    def change_gear(self):
+        print('change gear to 6 gear')
+    
+class Car(Vehicle):
+    def max_speed(self):
+        print('car speed is 240')
+    def change_gear(self):
+        print('car change gear to 7')   
+    def is_electric(self):
+        print('car is electric')
+
+
+
+
+class Shopping: 
+    def __init__(self,basket, buyer):
+        self.basket = list(basket)
+        self.buyer = buyer
+    def __len__(self):
+        print('Redifine Length')
+        count = len(self.basket)
+        return count * 2
+    
+
+shopping = Shopping(['Shoes', 'dress'], 'Jessa' )
+print(len(shopping))
+
+
+# for i in range(5):
+#     print(i, end =',')
+
+# print()
+# for i in range(5,10):
+#     print(i, end = ',')
+
+# print()
+
+# for i in range (2, 12, 2):
+#     print(i, end = ',')
+# print()
+
+
+
+# a = 5
+# b = 3
+# c = a + b
+# print(c)
+
+
+# a ='5'
+# b ='3'
+# x = a + b
+# print(x)
+
+
+
+# class Area:
+#     def __init__(self,length,breadth,totalarea):
+#         self.length = length 
+#         self.breadth = breadth
+#         self.totalarea = totalarea
+#     def squareArea(self,totalarea):
+#        return totalarea ** 2
+
+#     def recArea(self,length,breadth):
+        
+#         return self.length * self.breadth
+
+
+# # a = Area(4)
+
+
+# # print(Area.squareArea())
+
+# class Shape:
+#     def area(self, a, b = 0):
+#         if b > 0:
+#             print(a * b)
+#         else: 
+#             print(a ** 2)
+
+# square = Shape()
+
+# square.area(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
