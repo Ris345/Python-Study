@@ -1320,16 +1320,6 @@
 # # print(Dogs.__mro__)
 
 
-
-
-
-
-
-
-
-
-
-
 # # item = [1,4,7,8]
 # # print(list(enumerate(item)))
 
@@ -1383,8 +1373,6 @@
 # print(dict.get('age', None))
 
 
-
-
 # nums = (55,44,33,22)
 
 # print(max(min(nums[:2])))
@@ -1395,13 +1383,9 @@
 #         return 1
 #     else:
 #         return x * power(x,  y - 1)
-    
-    
-
 
 
 # print(power(2,3))
-
 
 
 # class Call():
@@ -1417,7 +1401,7 @@
 #     def grow():
 #         pass
 #     def reproduce():
-#         pass 
+#         pass
 #     def die():
 #         pass
 
@@ -1432,19 +1416,18 @@
 
 # # Animal_Cell.shape = 'Rectangle'
 
-# # Plant_Cell = Animal_Cell 
+# # Plant_Cell = Animal_Cell
 
 
 # print(Animal_Cell.shape)
 
-# # print(Plant_Cell.shape)  
+# # print(Plant_Cell.shape)
 
-# # Fundamentals of OOP 
-# # 1. Inheritance 
-# # 2.Encapsultaion 
-# # 3. Abstraction 
-# # 4. Polymorphism 
-
+# # Fundamentals of OOP
+# # 1. Inheritance
+# # 2.Encapsultaion
+# # 3. Abstraction
+# # 4. Polymorphism
 
 
 # class Base1(object):
@@ -1454,7 +1437,7 @@
 # class Base2(object):
 #     def __init__(self):
 #         self.str2 = 'Geek1'
-    
+
 # class Derived(Base1,Base2):
 #     def __init__(self):
 #         Base1.__init__
@@ -1478,11 +1461,10 @@
 #     def __init__(self, canFly_name)
 
 
-
 # class Vehicle():
 #     def __init__(self):
 #         self.vehicle = 'Truck'
-         
+
 # class Car(Vehicle):
 #     def __init__(self):
 #         self.car = 'Yes'
@@ -1504,9 +1486,10 @@
 
 class Vehicle:
     def __init__(self, name, mileage, capacity):
-        self.name = name 
+        self.name = name
         self.mileage = mileage
         self.capacity = capacity
+
     def fare(self):
         return self.capacity * 100
 
@@ -1517,12 +1500,12 @@ class Car(Vehicle):
         amount += amount * 20 / 100
         return amount
 
+
 class Bus(Vehicle):
     def fare(self):
         amount = super().fare()
         amount += amount * 10 / 100
         return amount
-
 
 
 School_bus = Bus("SchoolVolvo", 12, 50)
@@ -1531,42 +1514,47 @@ Car_obj = Car('Ferrari', 15, 30)
 
 # print(Car_obj.fare())
 
+
 class Vehicle:
-    def __init__(self,name, color,price):
-        self.name = name 
+    def __init__(self, name, color, price):
+        self.name = name
         self.color = color
-        self.price = price 
+        self.price = price
 
     def show(self):
         print('details', self.name, self.color, self.price)
+
     def maxSpeed(self):
         print('vehicle has a max a speed of 150')
+
     def change_gear(self):
         print('change gear to 6 gear')
-    
+
+
 class Car(Vehicle):
     def max_speed(self):
         print('car speed is 240')
+
     def change_gear(self):
-        print('car change gear to 7')   
+        print('car change gear to 7')
+
     def is_electric(self):
         print('car is electric')
 
 
-
-
-class Shopping: 
-    def __init__(self,basket, buyer):
+class Shopping:
+    def __init__(self, basket, buyer):
         self.basket = list(basket)
         self.buyer = buyer
+
     def __len__(self):
         print('Redifine Length')
         count = len(self.basket)
         return count * 2
-    
 
-shopping = Shopping(['Shoes', 'dress'], 'Jessa' )
-print(len(shopping))
+
+shopping = Shopping(['Shoes', 'dress'], 'Jessa')
+# print(len(shopping))
 
 
 # for i in range(5):
@@ -1583,7 +1571,6 @@ print(len(shopping))
 # print()
 
 
-
 # a = 5
 # b = 3
 # c = a + b
@@ -1596,17 +1583,16 @@ print(len(shopping))
 # print(x)
 
 
-
 # class Area:
 #     def __init__(self,length,breadth,totalarea):
-#         self.length = length 
+#         self.length = length
 #         self.breadth = breadth
 #         self.totalarea = totalarea
 #     def squareArea(self,totalarea):
 #        return totalarea ** 2
 
 #     def recArea(self,length,breadth):
-        
+
 #         return self.length * self.breadth
 
 
@@ -1619,32 +1605,102 @@ print(len(shopping))
 #     def area(self, a, b = 0):
 #         if b > 0:
 #             print(a * b)
-#         else: 
+#         else:
 #             print(a ** 2)
 
 # square = Shape()
 
 # square.area(2)
+# yield
+
+# class Book:
+#     def __init__(self,pages):
+#         self.pages = pages
+#     def __add__(self):
+
+# def simpleGeneratorFun():
+#     yield 1
+#     print('first yield')
+#     yield 2
+#     print('second yield')
+#     yield 3
+#     print('third yield')
+
+# def simpleReturnFun():
+#     return 1
+#     return 2
+#     return 3
 
 
+# for value in simpleGeneratorFun():
+# print('this is a new iteration', value)
 
 
+# for x in simpleReturnFun():
+#     print(x)
+
+# print(simpleGeneratorFun())
+
+# def nextSquare():
+#     i = 1
+#     while True:
+#         yield i * i
+#         i += 1
 
 
+# for num in nextSquare():
+#     if num > 100:
+#       break
+
+#     print(num)
+
+# def fib(limit):
+#     a, b  = 0,1
+#     while a < limit:
+#         yield a
+#         a, b = b, a + b
+#         # a = b
+#         # a = a + b
+
+# # for i in fib(5):
+# #     print(i)
 
 
+# x = fib(5)
+# print(next(x))
+# print(next(x))
+# print(next(x))
+# print(next(x))
+# print(next(x))
 
 
+# square = (x * x for x in range(5))
+# # print(list(square))
+# # print(type(square))
+# print(next(square))
+# print(next(square))
+# print(next(square))
+# print(next(square))
+# print(next(square))
+# print(type(square))
 
 
+# square1 = [x * x for x in range(5)]
+# print(square1)
+# print(type(square1))
 
 
+# def generateNum(x):
+#     x = 0
+#     while True:
+#         yield x
+#         x += 1
 
 
+# for j in generateNum(5):
+#     print(j)
 
-
-
-
+# generateNum(5)
 
 
 
