@@ -1759,6 +1759,51 @@ shopping = Shopping(['Shoes', 'dress'], 'Jessa')
 # function_to_be_used = hello_decorator(function_to_be_used)
 # function_to_be_used()
 
+# inList = [1, 2, 3, 4, 5, 6, 7, 8]
+# print output list with square of even numbers.
+# And then decorate the function to have the cube of odd numbers
+
+
+outlist = [1,2,3,4,5,6,7,8]
+
+def numberCheck(num):
+    if num % 2 ==0:
+        return num ** 2
+
+
+# map_item = map(numberCheck, outlist)
+# print(list(map_item))
+    
+
+
+def myFun(x, y=50):
+    print('x', x)
+    print('y', y)
+
+
+# myFun(10)
+# myFun(10,20)
+
+# def student(firstname,lastname):
+#     print(firstname,lastname)
+
+
+# student(firstname='Jinko', lastname='Cookie')
+
+# def myFun(*args):
+#     for x in args:
+#         print(x)
+
+# myFun('Life', [1.2.3],'fare',99,'though','do you','really think')
+
+# def myFun(**kwargs):
+#     for key, value in kwargs.items():
+#         print(key, value)
+
+# myFun(first='Jinko', mid='egua', last='cookie')
+
+
+
 
 
 
