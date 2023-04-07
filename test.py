@@ -1703,16 +1703,45 @@ shopping = Shopping(['Shoes', 'dress'], 'Jessa')
 # generateNum(5)
 
 
+#  decorators in python 
+#  treating function as an object 
+
+# def shout(text):
+#     return text.upper()
+
+# # print(shout('hello'))
+
+# yell = shout
 
 
+# print(yell('rishav'))
+
+# def shout(text):
+#     return text.upper()
+
+# def whisper(text):
+#     return text.lower()
+
+# def greet(func):
+#     greeting = func('Hello good evenning')
+#     print(greeting)
+
+# greet(shout)
+# greet(whisper)
+
+#  function that returns another function 
+
+# def create_adder(x):
+#     def adder(y):
+#         return x + y
+#     return adder
 
 
+# add_15 = create_adder(15)
+# print(add_15)
+# print(type(add_15))
 
-
-
-
-
-
+# print(add_15(10))
 
 
 
