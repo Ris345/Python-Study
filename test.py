@@ -1743,6 +1743,31 @@ shopping = Shopping(['Shoes', 'dress'], 'Jessa')
 
 # print(add_15(10))
 
+# def hello_decorator(func):
+#     def inner1():
+#         print('Hello, this is the first function')
+
+#         func()
+#         print('this is after the first function executes!')
+#     print('Hey')
+#     return inner1
+
+# def function_to_be_used():
+#     print('this is a inside function')
+
+
+# function_to_be_used = hello_decorator(function_to_be_used)
+# function_to_be_used()
+
+
+
+
+
+
+
+
+
+
 
 
 
