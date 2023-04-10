@@ -47,6 +47,7 @@
 # #                      ['World']]
 # # ]
 
+
 # # append method appends....at the end of the list
 
 # # L = list()
@@ -60,7 +61,6 @@
 # # print(L)
 # # L.append([8, 'Geeks', 'Always'])
 # # print(L)
-
 
 # # List = [1,2,3,4,5,5,6,7,8,9,10,11,12]
 
@@ -1703,8 +1703,8 @@ shopping = Shopping(['Shoes', 'dress'], 'Jessa')
 # generateNum(5)
 
 
-#  decorators in python 
-#  treating function as an object 
+#  decorators in python
+#  treating function as an object
 
 # def shout(text):
 #     return text.upper()
@@ -1729,7 +1729,7 @@ shopping = Shopping(['Shoes', 'dress'], 'Jessa')
 # greet(shout)
 # greet(whisper)
 
-#  function that returns another function 
+#  function that returns another function
 
 # def create_adder(x):
 #     def adder(y):
@@ -1764,16 +1764,16 @@ shopping = Shopping(['Shoes', 'dress'], 'Jessa')
 # And then decorate the function to have the cube of odd numbers
 
 
-outlist = [1,2,3,4,5,6,7,8]
+outlist = [1, 2, 3, 4, 5, 6, 7, 8]
+
 
 def numberCheck(num):
-    if num % 2 ==0:
+    if num % 2 == 0:
         return num ** 2
 
 
 # map_item = map(numberCheck, outlist)
 # print(list(map_item))
-    
 
 
 def myFun(x, y=50):
@@ -1801,27 +1801,3 @@ def myFun(x, y=50):
 #         print(key, value)
 
 # myFun(first='Jinko', mid='egua', last='cookie')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

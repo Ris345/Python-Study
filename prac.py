@@ -288,3 +288,66 @@ print(lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73],
       ["AGXMEE", 74], ["IU", 68], ["VOSP", 84]], 1))
 print(lottery([["ZSAMZB", 81], ["XWWCXP", 72],
       ["SYBRQOHP", 88], ["HJSVV", 75]], 1))
+
+
+
+
+
+# class Rectangle:
+#     def __init__(self,l,b):
+#         self.l = l
+#         self.b = b
+#     def get_area(self):
+#         area = self.l * self.b
+#         return area
+
+# c = Rectangle(4,6)
+# # print(c.get_area())
+
+class Student:
+    pass
+
+
+class Marks:
+    pass
+
+
+student1 = Student()
+marks = Marks()
+
+# print(isinstance(student1, Student))
+# print(isinstance(student1, Student))
+# print(isinstance(marks, Marks))
+
+# print(isinstance(Student, object))
+# print(isinstance(Marks, object))
+
+# class Circle:
+#     def __init__(self, radius):
+#         self.radius = radius
+
+#     def totalArea(self):
+#         pi =  3.14
+#         return pi * self.radius ** 2
+
+#     def perimeter(self):
+#         return 2 * self.radius
+
+# print(Circle(6).totalArea())
+# print(Circle(6).perimeter())
+
+
+# class isValid:
+#     def __init__(self, input):
+#         self.input = input
+
+
+def checkBrackets():
+    bracks = {
+        '{': '}',
+        '[': ']',
+        '(': ')',
+    }
+
+
+print(checkBrackets())
