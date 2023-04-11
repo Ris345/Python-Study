@@ -449,8 +449,10 @@
 # #         return False
 
 
+
 # # print(check('hghghgh'))
 # # print(check('01010101'))
+
 
 # # def binary(s):    for char in s:        if char not in {'0', '1'}:            return False    return Trues=((input('Input Data: ')))d=set(s)print('Entered Data is : ',s)print('Is Binary: ',binary(d))
 
@@ -1035,7 +1037,6 @@
 
 # # print( "Kiku", Kiku.animal)
 # # print("Kiku", Kiku.color)
-
 
 # # class Employee:
 
@@ -1801,3 +1802,16 @@ def myFun(x, y=50):
 #         print(key, value)
 
 # myFun(first='Jinko', mid='egua', last='cookie')
+
+# try this question 
+
+# int mat[][] = { { 0, 0, 0, 1 },
+# { 0, 1, 1, 1 },
+# { 1, 1, 1, 1 },
+# { 0, 0, 0, 0 } };
+
+
+
+# inList = [1, 2, 3, 4, 5, 6, 7, 8]
+# print output list with square of even numbers.
+# And then decorate the function to have the cube of odd numbers
