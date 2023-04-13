@@ -1197,27 +1197,27 @@
 # # # class BaseClass:
 
 
-# # # class DerivedClass(BaseClass):
+# class DerivedClass(BaseClass):
 
-# # # class Person:
-# # #     def __init__(self,name,id):
-# # #         self.name = name
-# # #         self.id = id
-# # #     def display(self):
-# # #         print(self.name, self.id)
-
-
-# # class Emp(Person):
-# #     def __init__(self, name, id, post, salary):
-# #         self.salary = salary
-# #         self.post = post
-# #         Person.__init__(self,name,id)
-# #     def print(self):
-# #         print("Emp class called")
+# class Person:
+#     def __init__(self,name,id):
+#         self.name = name
+#         self.id = id
+#     def display(self):
+#         print(self.name, self.id)
 
 
-# # emp_details = Emp('Cookie', 890, 500000, 'Full-Stack developer')
-# # print(emp_details.display())
+# class Emp(Person):
+#     def __init__(self, name, id, post, salary):
+#         self.salary = salary
+#         self.post = post
+#         Person.__init__(self,name,id)
+#     def print(self):
+#         print("Emp class called")
+
+
+# emp_details = Emp('Cookie', 890, 500000, 'Full-Stack developer')
+# print(emp_details.display())
 
 # # # returns a error
 # # class A:
