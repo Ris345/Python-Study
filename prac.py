@@ -262,58 +262,55 @@ def football_points(wins, draws, losses):
 
 #  step 2
 
-def lottery(ticket, win):
-    newList = []
-    miniWin = 0
-    # run a for loop iterate through each item
-    for t in ticket:
-        character = (t[0])
-        ticketNum = (t[1])
-        print(t[1])
-        for c in character:
-            print(c)
-        # mini win
-        if character == ticketNum:
-            miniWin += 1
-        else:
-            miniWin = 0
-        # bigger win
-        if miniWin > win:
-            return 'Winner!'
-        else:
-            return 'Looser!'
+# def lottery(ticket, win):
+#     newList = []
+#     miniWin = 0
+#     # run a for loop iterate through each item
+#     for t in ticket:
+#         character = (t[0])
+#         ticketNum = (t[1])
+#         print(t[1])
+#         for c in character:
+#             print(c)
+#         # mini win
+#         if character == ticketNum:
+#             miniWin += 1
+#         else:
+#             miniWin = 0
+#         # bigger win
+#         if miniWin > win:
+#             return 'Winner!'
+#         else:
+#             return 'Looser!'
 
-print(lottery([["YYW", 70], ["WXK", 65], ["RPDI", 88]], 2))
-print(lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73],
-      ["AGXMEE", 74], ["IU", 68], ["VOSP", 84]], 1))
-print(lottery([["ZSAMZB", 81], ["XWWCXP", 72],
-      ["SYBRQOHP", 88], ["HJSVV", 75]], 1))
-
-
+# print(lottery([["YYW", 70], ["WXK", 65], ["RPDI", 88]], 2))
+# print(lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73],
+#       ["AGXMEE", 74], ["IU", 68], ["VOSP", 84]], 1))
+# print(lottery([["ZSAMZB", 81], ["XWWCXP", 72],
+#       ["SYBRQOHP", 88], ["HJSVV", 75]], 1))
 
 
+# # class Rectangle:
+# #     def __init__(self,l,b):
+# #         self.l = l
+# #         self.b = b
+# #     def get_area(self):
+# #         area = self.l * self.b
+# #         return area
 
-# class Rectangle:
-#     def __init__(self,l,b):
-#         self.l = l
-#         self.b = b
-#     def get_area(self):
-#         area = self.l * self.b
-#         return area
+# # c = Rectangle(4,6)
+# # # print(c.get_area())
 
-# c = Rectangle(4,6)
-# # print(c.get_area())
-
-class Student:
-    pass
-
-
-class Marks:
-    pass
+# class Student:
+#     pass
 
 
-student1 = Student()
-marks = Marks()
+# class Marks:
+#     pass
+
+
+# student1 = Student()
+# marks = Marks()
 
 # print(isinstance(student1, Student))
 # print(isinstance(student1, Student))
@@ -342,12 +339,72 @@ marks = Marks()
 #         self.input = input
 
 
-def checkBrackets():
-    bracks = {
-        '{': '}',
-        '[': ']',
-        '(': ')',
-    }
+# def checkBrackets():
+#     bracks = {
+#         '{': '}',
+#         '[': ']',
+#         '(': ')',
+#     }
 
 
-print(checkBrackets())
+# print(checkBrackets())
+
+
+# def calc_age(age):
+# 	return age * 365
+
+
+# print(calc_age(20))
+
+
+# conver to int ----> str
+# def int_to_str(num):
+#     print(type(num))
+#     return str(num)
+
+# print(int_to_str(4))
+
+
+# def str_to_int(str):
+#     print(type(str))
+#     return int(str)
+
+# print(str_to_int('4'))
+
+# weird way the if/else works here.. 
+# def fizz_buzz(num):
+#     if num % 3 == 0 and num % 5 == 0:
+#         return 'fizz_buzz'
+#     elif num % 3 == 0:
+#         return 'fizz'
+#     elif num % 5 == 0:
+#         return 'buzz'
+#     return str(num)
+
+
+# print(fizz_buzz(2))
+
+
+class Calulator:
+    def __init__(self,num1, num2):
+        self.num1 = num1 
+        self.num2 = num2 
+    def add(self):
+        return self.num1 + self.num2
+    def subtract(self):
+        return self.num1 - self.num2
+    def multply(self):
+        return self.num1 * self.num2
+    def divide(self):
+        return self.num1 / self.num2 
+    
+    
+    
+cl = Calulator(10, 5)
+
+print(cl.add())
+print(cl.subtract())
+print(cl.multply())
+print(cl.divide())
+        
+        

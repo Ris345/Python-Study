@@ -25,7 +25,6 @@ cl = Students('Ron', 'Tompkins', 2, 2018, [34, 67, 78])
 
 # 2.
 
-
 class Inventory:
     def __init__(self):
         self.inventory = {}
