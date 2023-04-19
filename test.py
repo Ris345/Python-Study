@@ -1765,21 +1765,21 @@ shopping = Shopping(['Shoes', 'dress'], 'Jessa')
 # And then decorate the function to have the cube of odd numbers
 
 
-outlist = [1, 2, 3, 4, 5, 6, 7, 8]
+# outlist = [1, 2, 3, 4, 5, 6, 7, 8]
 
 
-def numberCheck(num):
-    if num % 2 == 0:
-        return num ** 2
+# def numberCheck(num):
+#     if num % 2 == 0:
+#         return num ** 2
 
 
-# map_item = map(numberCheck, outlist)
-# print(list(map_item))
+# # map_item = map(numberCheck, outlist)
+# # print(list(map_item))
 
 
-def myFun(x, y=50):
-    print('x', x)
-    print('y', y)
+# def myFun(x, y=50):
+#     print('x', x)
+#     print('y', y)
 
 
 # myFun(10)
@@ -1815,3 +1815,55 @@ def myFun(x, y=50):
 # inList = [1, 2, 3, 4, 5, 6, 7, 8]
 # print output list with square of even numbers.
 # And then decorate the function to have the cube of odd numbers
+
+
+# n = 4
+# # 1
+# # 2 5
+# # 3 6 8
+# # 4 7 9 10
+
+n = 5
+# 1
+# 2 6
+# 3 7 10
+# 4 8 11 13
+# 5 9 12 14 15
+
+# def column(n):
+#     for x in range(1, n + 1):
+#         check = x
+#         for j in range(x):
+#             print(check,end = ' ')
+#             check = check + n - j - 1
+#         print()
+            
+# print(column(n))
+    
+
+# nput: S = “abcabcbb”
+# Output: 3
+# Explanation:
+
+# “abc” is the longest substring without repeating characters among all the substrings.
+
+# Input:  S = “pwwkew”
+# Output: 3
+# Explanation:
+
+# “wke” is the longest substring without repeating characters among all the substrings.
+
+S = 'abcabcbb'
+def subString(S):
+    newStr = ' '
+    # iterate through each item 
+    for i in (range(len(S))):
+        for x in (range(len(S))):
+            # if firstValue != seconfValue
+            if S[i] != S[x]:
+                 newStr = S[i]        
+            print(newStr)
+        
+                        
+print(subString(S))
+

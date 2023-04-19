@@ -17,7 +17,7 @@ class Students:
         return self.first, self.last, self.grade, self.batch, self.marks
 
 
-cl = Students('Rishav', 'Acharya', 2, 2018, [34, 67, 78])
+cl = Students('Ron', 'Tompkins', 2, 2018, [34, 67, 78])
 
 
 # print(list(cl.show()))
