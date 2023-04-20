@@ -1863,7 +1863,6 @@ def subString(S):
             if S[i] != S[x]:
                  newStr = S[i]        
             print(newStr)
-        
-                        
+                                 
 print(subString(S))
 

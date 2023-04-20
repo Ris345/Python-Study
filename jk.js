@@ -8,7 +8,7 @@ function subString(S) {
     for (let i = 0; i < S.length; i++){
         for (let j = 0; j < S.length; j++){
             if (S[i] !== S[j + 1]) {
-                newStr =  S[i]
+                newStr =  S[j + 1]
             }
         }
     }
