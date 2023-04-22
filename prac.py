@@ -371,7 +371,7 @@ def football_points(wins, draws, losses):
 
 # print(str_to_int('4'))
 
-# weird way the if/else works here.. 
+# weird way the if/else works here..
 # def fizz_buzz(num):
 #     if num % 3 == 0 and num % 5 == 0:
 #         return 'fizz_buzz'
@@ -387,8 +387,8 @@ def football_points(wins, draws, losses):
 
 # class Calulator:
 #     def __init__(self,num1, num2):
-#         self.num1 = num1 
-#         self.num2 = num2 
+#         self.num1 = num1
+#         self.num2 = num2
 #     def add(self):
 #         return self.num1 + self.num2
 #     def subtract(self):
@@ -396,24 +396,23 @@ def football_points(wins, draws, losses):
 #     def multply(self):
 #         return self.num1 * self.num2
 #     def divide(self):
-#         return self.num1 / self.num2 
-    
-    
-    
+#         return self.num1 / self.num2
+
+
 # cl = Calulator(10, 5)
 
 # print(cl.add())
 # print(cl.subtract())
 # print(cl.multply())
 # print(cl.divide())
-        
+
 # right shift problem
 # def shift_to_right(x, y):
 # 	return  x / 2 ** y
-    
-        
+
+
 # print(shift_to_right(-512, 10))
-        
+
 # info = {
 #   "cost_price": 2.77,
 #   "sell_price": 7.95,
@@ -421,7 +420,7 @@ def football_points(wins, draws, losses):
 # }
 
 
-# # profit problem  
+# # profit problem
 # def profit(info):
 #     cost =  info.get('cost_price')
 #     sell = info.get('sell_price')
@@ -429,11 +428,11 @@ def football_points(wins, draws, losses):
 #     total_sales = round(sell) * inventory
 #     total_cost = round(cost) * inventory
 #     profit = total_sales - total_cost
-#     return profit 
-	
+#     return profit
+
 # print(profit(info))
 
-# cricket problem 
+# cricket problem
 # def total_overs(balls):
 # 	return balls / 6
 
@@ -445,30 +444,34 @@ def football_points(wins, draws, losses):
 # destinationTwo = ['w', 'n', 'w', 'n', 'w', 'w', 'n']
 
 # # robot problem
-# def robot_path(commands):
-	
-# list of multiples 
-def list_of_multiples (num, length):
-	
+# # def robot_path(commands):
+
+# # list of multiples
+# def list_of_multiples (num, length):
+# 	for i in range(num):
+#         return i
 
 
+# print(list_of_multiples(7,5))
 
 
+def list_of_multiples(num, length):
+    list = []
+    for i in range(1, num + 1):
+        list.append(num * i)
+        if len(list) == length:
+            return list
 
 
+print(list_of_multiples(7, 5))
 
 
+# class Animal:
+#     def __init__(self):
+#         print(self)
+#     def color(self):
+#         print(self)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+# an = Animal()
+# print(an.color())
