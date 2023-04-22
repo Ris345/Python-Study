@@ -407,8 +407,68 @@ def football_points(wins, draws, losses):
 # print(cl.multply())
 # print(cl.divide())
         
+# right shift problem
+# def shift_to_right(x, y):
+# 	return  x / 2 ** y
+    
         
+# print(shift_to_right(-512, 10))
         
-        
-        
-        
+# info = {
+#   "cost_price": 2.77,
+#   "sell_price": 7.95,
+#   "inventory": 8500
+# }
+
+
+# # profit problem  
+# def profit(info):
+#     cost =  info.get('cost_price')
+#     sell = info.get('sell_price')
+#     inventory = info.get('inventory')
+#     total_sales = round(sell) * inventory
+#     total_cost = round(cost) * inventory
+#     profit = total_sales - total_cost
+#     return profit 
+	
+# print(profit(info))
+
+# cricket problem 
+# def total_overs(balls):
+# 	return balls / 6
+
+
+# print(total_overs(164))
+
+
+# destinationOne = ['e', 'n', 'e', 'e', 'n']
+# destinationTwo = ['w', 'n', 'w', 'n', 'w', 'w', 'n']
+
+# # robot problem
+# def robot_path(commands):
+	
+# list of multiples 
+def list_of_multiples (num, length):
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
