@@ -455,15 +455,15 @@ def football_points(wins, draws, losses):
 # print(list_of_multiples(7,5))
 
 
-def list_of_multiples(num, length):
-    list = []
-    for i in range(1, num + 1):
-        list.append(num * i)
-        if len(list) == length:
-            return list
+# def list_of_multiples(num, length):
+#     list = []
+#     for i in range(1, num + 1):
+#         list.append(num * i)
+#         if len(list) == length:
+#             return list
 
 
-print(list_of_multiples(7, 5))
+# print(list_of_multiples(7, 5))
 
 
 # class Animal:
@@ -475,3 +475,28 @@ print(list_of_multiples(7, 5))
 
 # an = Animal()
 # print(an.color())
+
+
+
+# def sum(num):
+#     total = 0
+#     for i in range(1,num + 1):
+#         total += i ** 2
+#     return total
+
+# print(sum(4))
+
+n = 4 
+i = 1
+total = 0
+# while i <= n:
+#     total  = total + i * i
+#     i = i + 1
+
+#     print(total)
+    
+# print(n * (n + 1) * (2 * (n + 1)) // 6) 
+
+
+
+
