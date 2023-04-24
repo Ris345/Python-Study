@@ -498,5 +498,16 @@ total = 0
 # print(n * (n + 1) * (2 * (n + 1)) // 6) 
 
 
+L = [1,2,1,6,9,4,0,1,6,2,8,1000,1]
+count = {}
 
+def frequentNum(L):
+    for i in range(len(L)):
+        if L[i] not in count:
+            count[L[i]] = 1
+        else: 
+            count[L[i]] += 1
+    return max(count, key =count.get)
+
+print(frequentNum(L))
 
