@@ -567,36 +567,21 @@ output = 5
 # print(reverseString('hello'))
 
 
-def reverseString(str):
-    # str[left], str[right] = str[right], str[left]
-    left = 0
-    right = len(str) - 1
-    while left < right:
-        temp = str[left]
-        str[left] = str[right]
-        str[right] = temp
-        left +=   1
-        right -=  1        
-        # left, right = left + 1, right - 1
-    return str    
-
-str  = ["h","e","l","l","o"]
-print(reverseString(str))
-        
-    
-# str = ['Hello']
-
 # def reverseString(str):
+#     # str[left], str[right] = str[right], str[left]
 #     left = 0
 #     right = len(str) - 1
 #     while left < right:
 #         temp = str[left]
 #         str[left] = str[right]
 #         str[right] = temp
-#         left = left + 1
-#         right = right - 1
+#         left +=   1
+#         right -=  1        
+#         # left, right = left + 1, right - 1
 #     return str    
 
+# str  = ["h","e","l","l","o"]
 # print(reverseString(str))
-
+        
+    
 

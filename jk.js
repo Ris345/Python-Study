@@ -38,13 +38,18 @@
 // }
 
 
-num = [1, 1, 2]
-output = 2 
+// num = [1, 1, 2]
+// output = 2 
 
-function removeDuplicates(num) {
-    for (let i = 0; i < num.length; i++){
-        for (j = i + 1; j < num.length; j++){
-            
-        }
-    }
-}
+// function removeDuplicates(num) {
+//     i = 0
+//     for (let j = 0; j < num.length; j++){
+//         if (num[i] !== num[j]){
+//             num[i + 1] = num[j]
+//             i++
+//         }
+//     }
+//     return i + 1
+// }
+
+// console.log(removeDuplicates(num))
