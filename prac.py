@@ -467,10 +467,10 @@ def football_points(wins, draws, losses):
 
 
 # class Animal:
-#     def __init__(self):
+#     def __init__(self,color):
 #         print(self)
-#     def color(self):
-#         print(self)
+#     def color(self, color):
+#         print(self.color)
 
 
 # an = Animal()
@@ -486,9 +486,9 @@ def football_points(wins, draws, losses):
 
 # print(sum(4))
 
-n = 4 
-i = 1
-total = 0
+# n = 4 
+# i = 1
+# total = 0
 # while i <= n:
 #     total  = total + i * i
 #     i = i + 1
@@ -498,16 +498,105 @@ total = 0
 # print(n * (n + 1) * (2 * (n + 1)) // 6) 
 
 
-L = [1,2,1,6,9,4,0,1,6,2,8,1000,1]
-count = {}
+# L = [1,2,1,6,9,4,0,1,6,2,8,1000,1]
+# count = {}
 
-def frequentNum(L):
-    for i in range(len(L)):
-        if L[i] not in count:
-            count[L[i]] = 1
-        else: 
-            count[L[i]] += 1
-    return max(count, key =count.get)
+# def frequentNum(L):
+#     for i in range(len(L)):
+#         if L[i] not in count:
+#             count[L[i]] = 1
+#         else: 
+#             count[L[i]] += 1
+#     return max(count, key =count.get)
 
-print(frequentNum(L))
+# print(frequentNum(L))
+
+
+# def check(num):
+#     return num 
+
+
+# print(check([1,2,3,4]))
+# print(check([3,4,5,6,4]))
+
+nums = [0,0,1,1,1,2,2,3,3,4]
+output = 5
+
+# def removeDuplicates(nums):
+#     for i in range(len(nums)):
+#         firstVal = nums[i]
+#         for j in range(i + 1, len(nums)):
+#             secondVal = nums[j]
+#             if firstVal != secondVal:
+#                 return i
+            
+# print(removeDuplicates(nums))
+    
+# nums = [1,1,2]
+
+# def removeDuplicates(nums):
+#     i = 0 
+#     for j in range(len(nums)):
+#         if nums[i] != nums[j]:
+#             nums[i + 1] = nums[j]
+#             i += 1
+#     print(nums)
+#     return i + 1 
+                
+# print(removeDuplicates(nums))
+
+
+# def reverseString(str):
+#     # reverse for loop
+#     for i in range(len(str), 0,  - 1): 
+#         print(str[i])
+
+     
+# print(reverseString('Hello'))
+
+
+
+
+
+# def reverseString(str):
+#     i = 0
+#     for j in range(len(str)):
+#         i -= 1
+#     print(i)
+    
+# print(reverseString('hello'))
+
+
+def reverseString(str):
+    # str[left], str[right] = str[right], str[left]
+    left = 0
+    right = len(str) - 1
+    while left < right:
+        temp = str[left]
+        str[left] = str[right]
+        str[right] = temp
+        left +=   1
+        right -=  1        
+        # left, right = left + 1, right - 1
+    return str    
+
+str  = ["h","e","l","l","o"]
+print(reverseString(str))
+        
+    
+# str = ['Hello']
+
+# def reverseString(str):
+#     left = 0
+#     right = len(str) - 1
+#     while left < right:
+#         temp = str[left]
+#         str[left] = str[right]
+#         str[right] = temp
+#         left = left + 1
+#         right = right - 1
+#     return str    
+
+# print(reverseString(str))
+
 
