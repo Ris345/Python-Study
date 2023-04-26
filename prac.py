@@ -477,7 +477,6 @@ def football_points(wins, draws, losses):
 # print(an.color())
 
 
-
 # def sum(num):
 #     total = 0
 #     for i in range(1,num + 1):
@@ -486,7 +485,7 @@ def football_points(wins, draws, losses):
 
 # print(sum(4))
 
-# n = 4 
+# n = 4
 # i = 1
 # total = 0
 # while i <= n:
@@ -494,8 +493,8 @@ def football_points(wins, draws, losses):
 #     i = i + 1
 
 #     print(total)
-    
-# print(n * (n + 1) * (2 * (n + 1)) // 6) 
+
+# print(n * (n + 1) * (2 * (n + 1)) // 6)
 
 
 # L = [1,2,1,6,9,4,0,1,6,2,8,1000,1]
@@ -505,7 +504,7 @@ def football_points(wins, draws, losses):
 #     for i in range(len(L)):
 #         if L[i] not in count:
 #             count[L[i]] = 1
-#         else: 
+#         else:
 #             count[L[i]] += 1
 #     return max(count, key =count.get)
 
@@ -513,13 +512,13 @@ def football_points(wins, draws, losses):
 
 
 # def check(num):
-#     return num 
+#     return num
 
 
 # print(check([1,2,3,4]))
 # print(check([3,4,5,6,4]))
 
-nums = [0,0,1,1,1,2,2,3,3,4]
+nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 output = 5
 
 # def removeDuplicates(nums):
@@ -529,33 +528,30 @@ output = 5
 #             secondVal = nums[j]
 #             if firstVal != secondVal:
 #                 return i
-            
+
 # print(removeDuplicates(nums))
-    
+
 # nums = [1,1,2]
 
 # def removeDuplicates(nums):
-#     i = 0 
+#     i = 0
 #     for j in range(len(nums)):
 #         if nums[i] != nums[j]:
 #             nums[i + 1] = nums[j]
 #             i += 1
 #     print(nums)
-#     return i + 1 
-                
+#     return i + 1
+
 # print(removeDuplicates(nums))
 
 
 # def reverseString(str):
 #     # reverse for loop
-#     for i in range(len(str), 0,  - 1): 
+#     for i in range(len(str), 0,  - 1):
 #         print(str[i])
 
-     
+
 # print(reverseString('Hello'))
-
-
-
 
 
 # def reverseString(str):
@@ -563,7 +559,7 @@ output = 5
 #     for j in range(len(str)):
 #         i -= 1
 #     print(i)
-    
+
 # print(reverseString('hello'))
 
 
@@ -576,12 +572,46 @@ output = 5
 #         str[left] = str[right]
 #         str[right] = temp
 #         left +=   1
-#         right -=  1        
+#         right -=  1
 #         # left, right = left + 1, right - 1
-#     return str    
+#     return str
 
 # str  = ["h","e","l","l","o"]
 # print(reverseString(str))
-        
+
+
+
+# arr = [0,1,0,3,12]
+
+# def moveZeros(arr):
+#     for a in range(len(arr)):
+#         if arr[a] == 0:
+#             arr.append(0)
+#             arr.remove(0)
+#     return arr
+                
+
+# print(moveZeros(arr))    
     
+
+nums = [0,1,0,3,12]
+
+class Solution:
+
+    def moveZeroes(self, nums: List[int]) -> None:
+        slow = 0
+        for fast in range(len(nums)):
+
+            if nums[fast] != 0 and nums[slow] == 0:
+
+                nums[slow], nums[fast] = nums[fast], nums[slow]
+            if nums[slow] != 0:
+
+                slow += 1
+                
+                
+sl = Solution()
+print(sl.moveZeros())
+
+
 
