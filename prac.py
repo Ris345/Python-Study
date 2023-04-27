@@ -626,6 +626,13 @@ class Solution:
             
         return min(dict, key =dict.get)
                  
-sl = Solution()
-print(sl.singleNumber(nums))
+# sl = Solution()
+# print(sl.singleNumber(nums))
 
+def oddNums():
+    num =[] 
+    for i in range(1,100):
+        if i % 2 != 0:
+            num.append(i)
+    return num
+print(oddNums())
