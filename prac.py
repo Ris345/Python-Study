@@ -580,7 +580,6 @@
 # print(reverseString(str))
 
 
-
 # arr = [0,1,0,3,12]
 
 # def moveZeros(arr):
@@ -589,10 +588,10 @@
 #             arr.append(0)
 #             arr.remove(0)
 #     return arr
-                
 
-# print(moveZeros(arr))    
-    
+
+# print(moveZeros(arr))
+
 
 # nums = [0,1,0,3,12]
 
@@ -607,32 +606,81 @@
 #             if nums[slow] != 0:
 
 #                 slow += 1
-#         return nums        
-                
+#         return nums
+
 # sl = Solution()
 # print(sl.moveZeros(nums))
 
 # single num
-nums = [1]
-dict = {}
+# nums = [1]
+# dict = {}
 
-class Solution:
-    def singleNumber(self, nums):
-        for i in range(len(nums)):
-            if nums[i] in dict:
-                dict[nums[i]] += 1
-            else:
-                dict[nums[i]] = 1
-            
-        return min(dict, key =dict.get)
-                 
+# class Solution:
+#     def singleNumber(self, nums):
+#         for i in range(len(nums)):
+#             if nums[i] in dict:
+#                 dict[nums[i]] += 1
+#             else:
+#                 dict[nums[i]] = 1
+
+#         return min(dict, key =dict.get)
+
 # sl = Solution()
 # print(sl.singleNumber(nums))
 
-def oddNums():
-    num =[] 
-    for i in range(1,100):
-        if i % 2 != 0:
-            num.append(i)
-    return num
-print(oddNums())
+# def oddNums():
+#     num =[]
+#     for i in range(1,100):
+#         if i % 2 != 0:
+#             num.append(i)
+#     return num
+# print(oddNums())
+
+# nums = [1,1,2]
+# # output = 2
+
+# def removeDuplicates(nums):
+#   i = 0
+#   for j in range(len(nums)):
+#         if nums[i] != nums[j]:
+#             nums[i + 1] = nums[j]
+#             i += 1
+#   print(nums)
+#   return i + 1
+
+# print(removeDuplicates(nums))
+
+
+# nums = [1,1,2]
+
+# def removeDuplicates(nums):
+#     i = 0
+#     for j in range(len(nums)):
+#         if nums[i] != nums[j]:
+#             nums[i + 1] = nums[j]
+#             i += 1
+#     print(nums)
+#     return i + 1
+
+# print(removeDuplicates(nums))
+
+
+#  Contains Duplicate
+nums = [1, 2, 3, 4]
+
+
+def containsDuplicate(nums):
+    # iterate through each item
+    # keep a track of each item
+    dict = {}
+    for j in range(len(nums) - 1):
+        if nums[j] == nums[j + 1]:
+            dict[nums[j]] += 1
+        else:
+            dict[nums[j]] = 1
+    if dict.values() > 2:
+        return True
+    else:
+        return False
+
+# print(containsDuplicate(nums))
