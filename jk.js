@@ -103,3 +103,20 @@ var containsDuplicate = function (nums) {
     return false  
 };
 console.log(containsDuplicate(nums))
+
+
+
+let s = "race a car"
+
+var isPalindrome = function (s) {
+    let regularStr = s.replace(/[^a-z0-9]/gi, '').toLowerCase()
+    let sortedStr =  s.replace(/[^a-z0-9]/gi, '').toLowerCase().split('').reverse().join('')
+    if (regularStr === sortedStr) {
+        return true
+    }
+   return false 
+};
+
+console.log(isPalindrome(s))
+
+

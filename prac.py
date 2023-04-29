@@ -684,3 +684,25 @@ def containsDuplicate(nums):
         return False
 
 # print(containsDuplicate(nums))
+
+
+s = " "
+
+class Solution:
+    def isPalindrome(self, s):
+        #  clean the space between strings
+        # lowercase all letters
+        #  reverse the str 
+        # if the intial string is equal to the sorted string return palindrome 
+        cleanedUpstr = ''.join(filter(str.isalnum, s)).lower()
+        sortStr = cleanedUpstr[::-1]
+        newStr=  "".join(sortStr)
+        if cleanedUpstr == newStr:
+            return True
+        else:
+            return False
+    
+sl = Solution()
+print(sl.isPalindrome(s))
+
+  
