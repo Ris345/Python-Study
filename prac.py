@@ -702,7 +702,26 @@ class Solution:
         else:
             return False
     
-sl = Solution()
-print(sl.isPalindrome(s))
+# sl = Solution()
+# print(sl.isPalindrome(s))
 
-  
+s = "rat"
+t = "car"
+
+class Solution:
+    def isAnagram(self, s, t):
+        # length of each string is same if not stop the function overall 
+        if len(s) != len(t):
+            return 
+        # sort both strings if they are the same then it is anagram 
+        sortS = sorted(s)
+        newStrS = "".join(sortS)
+        sortT = sorted(t)
+        newStrT = "".join(sortT)
+        if newStrS == newStrT:
+            return True
+        else: 
+            return False 
+                
+sk = Solution()
+print(sk.isAnagram(s,t))
