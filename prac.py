@@ -686,14 +686,13 @@ def containsDuplicate(nums):
 # print(containsDuplicate(nums))
 
 
-s = " "
-
+s = " race a car"
 class Solution:
     def isPalindrome(self, s):
         #  clean the space between strings
         # lowercase all letters
         #  reverse the str 
-        # if the intial string is equal to the sorted string return palindrome 
+        # if the intial string is equal to the reversed string return True 
         cleanedUpstr = ''.join(filter(str.isalnum, s)).lower()
         sortStr = cleanedUpstr[::-1]
         newStr=  "".join(sortStr)
@@ -704,6 +703,27 @@ class Solution:
     
 # sl = Solution()
 # print(sl.isPalindrome(s))
+
+# two pointer method
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        i = 0
+        j = len(s) - 1
+        while i < j:
+            while i < j and not s[i].isalnum(i):
+                i += 1
+            while i < j and not s[j].isalnum(j):
+                j -= 1
+            if s[i].lower()  != s[j].lower():
+                return False 
+            i += 1 
+            j -= 1
+        return True 
+
+
+
+
 
 s = "rat"
 t = "car"
