@@ -122,3 +122,27 @@ var isAnagram = function (s, t) {
 };
 
 console.log(isAnagram(s));
+
+
+// let x = 123
+
+// var reverse = function(x) {
+//   //  convert x into an array 
+//   // run a reverse for loop
+//   // convert the array to string and then  integer
+//   // return the result 
+  
+//   console.log(Array.from(x))
+
+
+// };
+
+// console.log(reverse(x))
+
+
+let x = 1
+let num = 0
+while (x != 0) {
+  num += x
+  console.log(x)
+}

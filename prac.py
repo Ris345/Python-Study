@@ -687,24 +687,27 @@ def containsDuplicate(nums):
 
 
 s = " race a car"
+
+
 class Solution:
     def isPalindrome(self, s):
         #  clean the space between strings
         # lowercase all letters
-        #  reverse the str 
-        # if the intial string is equal to the reversed string return True 
+        #  reverse the str
+        # if the intial string is equal to the reversed string return True
         cleanedUpstr = ''.join(filter(str.isalnum, s)).lower()
         sortStr = cleanedUpstr[::-1]
-        newStr=  "".join(sortStr)
+        newStr = "".join(sortStr)
         if cleanedUpstr == newStr:
             return True
         else:
             return False
-    
+
 # sl = Solution()
 # print(sl.isPalindrome(s))
 
 # two pointer method
+
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
@@ -715,33 +718,178 @@ class Solution:
                 i += 1
             while i < j and not s[j].isalnum(j):
                 j -= 1
-            if s[i].lower()  != s[j].lower():
-                return False 
-            i += 1 
+            if s[i].lower() != s[j].lower():
+                return False
+            i += 1
             j -= 1
-        return True 
-
-
-
+        return True
 
 
 s = "rat"
 t = "car"
 
+
 class Solution:
     def isAnagram(self, s, t):
-        # length of each string is same if not stop the function overall 
+        # length of each string is same if not stop the function overall
         if len(s) != len(t):
-            return 
-        # sort both strings if they are the same then it is anagram 
+            return
+        # sort both strings if they are the same then it is anagram
         sortS = sorted(s)
         newStrS = "".join(sortS)
         sortT = sorted(t)
         newStrT = "".join(sortT)
         if newStrS == newStrT:
             return True
-        else: 
-            return False 
-                
-sk = Solution()
-print(sk.isAnagram(s,t))
+        else:
+            return False
+
+
+# sk = Solution()
+# print(sk.isAnagram(s, t))
+
+nums1 = [1, 2, 2, 1]
+nums2 = [2, 2]
+
+
+class Solution:
+    def intersect(self, nums1, nums2):
+        list = []
+    #  loop through each array if items in num1 == num2 append it in a new list
+        for n in range(len(nums1)):
+            for x in range(len(nums2)):
+                if nums1[n] == nums2[x]:
+                    list.append(nums2[x])
+        return list
+
+
+# sl = Solution()
+# print(sl.intersect(nums1, nums2))
+
+
+# range(10)
+
+# for i in range(10):
+#     print(i, end=',')
+# print()
+
+# for x in range(1,20):
+#     print(x, end=',')
+# print()
+
+# for j in range(1,20,3):
+#     print(j, end=' ')
+# print()
+
+# def custom_range(a):
+#     i = 1
+#     while i <= a:
+#          print(i, end=':')
+#          i -= 1
+# print()
+
+# custom_range(10)
+
+# # for c in custom_range(10):
+# #     print(c, end=' ')
+
+# def custom_range(x,y=0,z=1):
+#     if y == 0:
+#         x = y
+#         y = x
+
+#     while x < y:
+#         yield x
+#         print(x)
+#         x += z
+
+#     while x > y:
+#         yield x
+#         x += z
+
+
+# # custom_range(1,20,2)
+
+
+def custom_range(x, y=0, z=1):
+
+    if y == 0:
+        x = y
+        y = x
+
+    if x < y:
+        while x < y:
+            yield x
+            x = x+z
+    else:
+        while x > y:
+            yield x
+            x = x + z
+
+
+# for i in range(10):
+# print(i, end=',')
+# print()
+
+# for i in custom_range(10):
+# print(i, end=',')
+# print()
+
+# for x in range(1, 20):
+# print(x, end=',')
+# print()
+
+# for x in custom_range(1, 20):
+# print(x, end=',')
+# print()
+
+# for j in range(1, 20, 3):
+# print(j, end=' ')
+# print()
+
+# for j in custom_range(1, 20, 3):
+# print(j, end=' ')
+# print()
+
+# for j in range(20, 1, -3):
+# print(j, end=' ')
+# print()
+
+# for j in custom_range(20, 1, -3):
+# print(j, end=' ')
+# print()
+# print('end')
+#  
+
+
+# intuitive solution but wrong solu
+# x = -123
+
+# class Solution:
+#     def reverse(self, x):
+#             # convert the x into string
+#             # revesre the string
+#             # return the string
+#             toStr = str(x)
+#             reverse = toStr[::-1]
+#             print(reverse)
+
+
+# sl = Solution()
+# print(sl.reverse(x))
+
+x = 120
+
+
+class Solution:
+    def reverse(self, x):
+        # convert it into a list
+        # iterate through item backwards
+        # return the result
+        while x != 0:
+            num = x % 10
+            print(num)
+
+
+s = Solution()
+print(s.reverse(x))
