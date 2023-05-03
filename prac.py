@@ -678,10 +678,11 @@ def containsDuplicate(nums):
             dict[nums[j]] += 1
         else:
             dict[nums[j]] = 1
-    if dict.values() > 2:
-        return True
-    else:
-        return False
+    return dict
+    # if dict.values() > 2:
+    #     return True
+    # else:
+    #     return False
 
 # print(containsDuplicate(nums))
 
@@ -878,18 +879,136 @@ def custom_range(x, y=0, z=1):
 # sl = Solution()
 # print(sl.reverse(x))
 
-x = 120
+# x = 123
+
+# class Solution:
+#     def reverse(self, x):
+#         # convert it into a list
+#         # iterate through item backwards
+#         # return the result
+#         while x < 0:
+#             num = x % 10
+#         print(num)
 
 
-class Solution:
-    def reverse(self, x):
-        # convert it into a list
-        # iterate through item backwards
-        # return the result
-        while x != 0:
-            num = x % 10
-            print(num)
+# s = Solution()
+# print(s.reverse(x))
 
 
-s = Solution()
-print(s.reverse(x))
+# def digit_reverse(x):
+#     if x>=(2**31-1) or x<=-2**31:
+#         return 0
+
+#     else:
+#         s=str(x)
+
+#     if x>=0:
+#         rev = s[::-1]
+#     else:
+#         temp=s[1:]
+#         temp2=temp[::-1]
+#         rev="-"+temp2
+
+#     if int(rev)>=2**32-1 or int(rev)<=-2**32:
+#         return 0
+#     else:
+#         return int(rev)
+
+# print(digit_reverse(1230))
+# print(digit_reverse(12345))
+# print(digit_reverse(-12345))
+# print(digit_reverse(1234556465125564215641))
+# print(digit_reverse(-123452514654))
+# print(digit_reverse(5000))
+
+
+# s = "loveleetcode"
+# keepTrack = 0
+# i = 0
+# dict = {}
+# class Solution:
+#     def firstUniqChar(self, s):
+#         for i in range(len(s) - 1):
+#             for j in range(1,len(s)):
+#                 if s[i] == s[j]:
+#                     dict[s[i]] += 1
+#                 else:
+#                     dict[s[i]] = 1
+#         return dict
+
+            
+# sl = Solution()
+# print(sl.firstUniqChar(s))        
+
+# s = "loveleetcode"
+# list = []
+# class Solution:
+#     def firstUniqChar(self, s):
+#         for i in range(len(s) - 1):
+#             if s[i] != s[i + 1]:
+#                 list.append(i)
+#             else: 
+#                  - 1
+#         return list[0]
+                
+                
+# sl = Solution()
+# print(sl.firstUniqChar(s))
+
+# s = "leetcode"
+# test= s.split(' , ')
+# print(test)
+# # def containsDuplicate(s):
+# #     # iterate through each item
+# #     # keep a track of each item
+# #     dict = {}
+# #     for j in range(len(s) - 1):
+# #         if nums[j] == nums[j + 1]:
+# #             dict[nums[j]] += 1
+# #         else:
+# #             dict[nums[j]] = 1
+# #     return dict
+
+
+# # print(containsDuplicate(s))
+
+s = "leetcode"
+class Solution(object):
+    def firstUniqChar(self, s):
+        dict = {}
+        i = 0
+        for i in s:
+            if i in dict:
+                dict[i] += 1
+            else:
+                dict[i] = 1
+        print(dict)
+        for x in range(len(s)):
+            if dict[s[x]] < 2:
+                return x
+        return - 1
+                        
+sl = Solution()
+print(sl.firstUniqChar(s))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

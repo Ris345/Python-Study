@@ -110,7 +110,7 @@ var containsDuplicate = function (nums) {
 
 // console.log(isPalindrome(s))
 
-let s = "anagram";
+// let s = "anagram";
 let t = "nagaram";
 
 var isAnagram = function (s, t) {
@@ -140,9 +140,64 @@ console.log(isAnagram(s));
 // console.log(reverse(x))
 
 
-let x = 1
-let num = 0
-while (x != 0) {
-  num += x
-  console.log(x)
-}
+// let x = 1
+// let num = 0
+// while (x != 0) {
+//   num += x
+//   console.log(x)
+// }
+
+
+// let s = "loveleetcode"
+
+// let keepTrack = 0
+// var firstUniqChar = function (s) {
+//   debugger; 
+//   for (let i = 0; i < s.length; i++){
+//     for (let j = i + 1; j < s.length; j++){
+//       if (s[i] != s[j]) {
+//         keepTrack += i
+//       }
+//     }
+//   }
+// return keepTrack.toString()
+// };
+
+
+// console.log(firstUniqChar(s))
+
+let s = "loveleetcode"
+var firstUniqChar = function(s) {
+  debugger; 
+  let obj = {}
+  let i = 0
+  for ( i ; i < s.length; i++){
+    if(obj[s[i]]){
+      obj[s[i]] += 1
+    } else {
+      obj[s[i]] = 1
+    }
+  }
+    for(let k = 0; k < s.length; k++){
+       if ( obj[s[k]] < 2){
+         return k 
+      } 
+    }
+  return - 1
+};
+
+console.log(firstUniqChar(s))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
