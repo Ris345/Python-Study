@@ -936,9 +936,9 @@ def custom_range(x, y=0, z=1):
 #                     dict[s[i]] = 1
 #         return dict
 
-            
+
 # sl = Solution()
-# print(sl.firstUniqChar(s))        
+# print(sl.firstUniqChar(s))
 
 # s = "loveleetcode"
 # list = []
@@ -947,11 +947,11 @@ def custom_range(x, y=0, z=1):
 #         for i in range(len(s) - 1):
 #             if s[i] != s[i + 1]:
 #                 list.append(i)
-#             else: 
+#             else:
 #                  - 1
 #         return list[0]
-                
-                
+
+
 # sl = Solution()
 # print(sl.firstUniqChar(s))
 
@@ -972,11 +972,31 @@ def custom_range(x, y=0, z=1):
 
 # # print(containsDuplicate(s))
 
-s = "leetcode"
+
+# s = "aabb"
+# class Solution(object):
+#     def firstUniqChar(self, s):
+#         dict = {}
+#         i = 0
+#         for i in s:
+#             if i in dict:
+#                 dict[i] += 1
+#             else:
+#                 dict[i] = 1
+#         test = list(dict.values())
+#         print(test)
+#         for x in range(len(test)):
+#             if test[x] < 2:
+#                 return x
+#         return - 1
+
+# sl = Solution()
+# print(sl.firstUniqChar(s))
+
+s = "loveleetcode"
 class Solution(object):
     def firstUniqChar(self, s):
         dict = {}
-        i = 0
         for i in s:
             if i in dict:
                 dict[i] += 1
@@ -987,27 +1007,54 @@ class Solution(object):
             if dict[s[x]] < 2:
                 return x
         return - 1
-                        
-sl = Solution()
-print(sl.firstUniqChar(s))
+
+# sl = Solution()
+# print(sl.firstUniqChar(s))
 
 
+# import collections
+# from collections import Counter
+# def firstUniqChar(s):
+#     count=collections.Counter(s)
+
+#         #3 ways of iteration:
+#         # for i in s > value of s :> leetcode
+#         # for i in range(len(s)) > index> s[i] > 01234567
+
+#     for index,value in enumerate(s): #enum creates key-value pair
+#         if count[value]==1:
+#             return index
+#     return -1
 
 
+# print(firstUniqChar("leetcode")) #0
+# print(firstUniqChar("loveleetcode")) #2
+# print(firstUniqChar("aabbccc")) #-1
+# print(firstUniqChar("abcabc"))
 
 
+# x = "leetcode"
+# test = dict(x)
 
+# print(test)
 
+digits = [9,9] 
 
-
-
-
-
-
-
-
-
-
+class Solution(object):
+    def plusOne(self, digits):
+       for i in range(len(digits)):
+          if len(digits) == 1:
+              test = digits[i] + 1
+              breakDown = [int(i) for i in str(test)]
+              return breakDown
+          else: 
+               lastDigit= digits.pop()
+               changedNum = lastDigit + 1
+               digits.append(changedNum)
+               return digits 
+                      
+sl = Solution ()
+print(sl.plusOne(digits));        
 
 
 

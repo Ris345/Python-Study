@@ -1853,16 +1853,16 @@ n = 5
 
 # “wke” is the longest substring without repeating characters among all the substrings.
 
-S = 'abcabcbb'
-def subString(S):
-    newStr = ' '
-    # iterate through each item 
-    for i in (range(len(S))):
-        for x in (range(len(S))):
-            # if firstValue != seconfValue
-            if S[i] != S[x]:
-                 newStr = S[i]        
-            print(newStr)
+# S = 'abcabcbb'
+# def subString(S):
+#     newStr = ' '
+#     # iterate through each item 
+#     for i in (range(len(S))):
+#         for x in (range(len(S))):
+#             # if firstValue != seconfValue
+#             if S[i] != S[x]:
+#                  newStr = S[i]        
+#             print(newStr)
                                  
-print(subString(S))
+# print(subString(S))
 
