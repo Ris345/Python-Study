@@ -206,21 +206,21 @@ console.log(firstUniqChar(s))
 
 // console.log(plusOne(digits)); 
 
-let digits = [9]
-var plusOne = function(digits) {
-  for (let i = 0; i < digits.length; i++){
-    if (digits[i] < 9) {
-      digits[digits.length - 1]++
-      return digits
-    } else {
-      digits[i] = 0
-     }
-  }
-  digits.unshift(1)
-  return digits; 
-};
+// let digits = [9]
+// var plusOne = function(digits) {
+//   for (let i = 0; i < digits.length; i++){
+//     if (digits[i] < 9) {
+//       digits[digits.length - 1]++
+//       return digits
+//     } else {
+//       digits[i] = 0
+//      }
+//   }
+//   digits.unshift(1)
+//   return digits; 
+// };
 
-console.log(plusOne(digits)); 
+// console.log(plusOne(digits)); 
 
 
 

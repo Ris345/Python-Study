@@ -573,7 +573,7 @@
 #         str[right] = temp
 #         left +=   1
 #         right -=  1
-#         # left, right = left + 1, right - 1
+#         left, right = left + 1, right - 1
 #     return str
 
 # str  = ["h","e","l","l","o"]
@@ -666,25 +666,25 @@
 
 
 #  Contains Duplicate
-nums = [1, 2, 3, 4]
+# nums = [1, 2, 3, 4]
 
 
-def containsDuplicate(nums):
-    # iterate through each item
-    # keep a track of each item
-    dict = {}
-    for j in range(len(nums) - 1):
-        if nums[j] == nums[j + 1]:
-            dict[nums[j]] += 1
-        else:
-            dict[nums[j]] = 1
-    return dict
-    # if dict.values() > 2:
-    #     return True
-    # else:
-    #     return False
+# def containsDuplicate(nums):
+#     # iterate through each item
+#     # keep a track of each item
+#     dict = {}
+#     for j in range(len(nums) - 1):
+#         if nums[j] == nums[j + 1]:
+#             dict[nums[j]] += 1
+#         else:
+#             dict[nums[j]] = 1
+#     return dict
+#     # if dict.values() > 2:
+#     #     return True
+#     # else:
+#     #     return False
 
-# print(containsDuplicate(nums))
+# # print(containsDuplicate(nums))
 
 
 s = " race a car"
@@ -993,20 +993,22 @@ def custom_range(x, y=0, z=1):
 # sl = Solution()
 # print(sl.firstUniqChar(s))
 
-s = "loveleetcode"
-class Solution(object):
-    def firstUniqChar(self, s):
-        dict = {}
-        for i in s:
-            if i in dict:
-                dict[i] += 1
-            else:
-                dict[i] = 1
-        print(dict)
-        for x in range(len(s)):
-            if dict[s[x]] < 2:
-                return x
-        return - 1
+# s = "loveleetcode"
+
+
+# class Solution(object):
+#     def firstUniqChar(self, s):
+#         dict = {}
+#         for i in s:
+#             if i in dict:
+#                 dict[i] += 1
+#             else:
+#                 dict[i] = 1
+#         print(dict)
+#         for x in range(len(s)):
+#             if dict[s[x]] < 2:
+#                 return x
+#         return - 1
 
 # sl = Solution()
 # print(sl.firstUniqChar(s))
@@ -1038,24 +1040,103 @@ class Solution(object):
 
 # print(test)
 
-digits = [9,9] 
+# wrong solution
+# digits = [9,9]
+# class Solution(object):
+#     def plusOne(self, digits):
+#        for i in range(len(digits)):
+#           if len(digits) == 1:
+#               test = digits[i] + 1
+#               breakDown = [int(i) for i in str(test)]
+#               return breakDown
+#           else:
+#                lastDigit= digits.pop()
+#                changedNum = lastDigit + 1
+#                digits.append(changedNum)
+#                return digits
+
+# sl = Solution ()
+# print(sl.plusOne(digits));
+
+# def reverseString(str):
+#     # str[left], str[right] = str[right], str[left]
+#     left = 0
+#     right = len(str) - 1
+#     while left < right:
+#         temp = str[left]
+#         str[left] = str[right]
+#         str[right] = temp
+#         left +=   1
+#         right -=  1
+#         left = left + 1
+#         right = right - 1
+#     return str
+
+# str  = ["h","e","l","l","o"]
+# print(reverseString(str))
+
+
+s = ["h", "e", "l", "l", "o"]
+# i = 0 , j = 4 while i is 0
+# 0,1,2,3,4
+#
+
 
 class Solution(object):
-    def plusOne(self, digits):
-       for i in range(len(digits)):
-          if len(digits) == 1:
-              test = digits[i] + 1
-              breakDown = [int(i) for i in str(test)]
-              return breakDown
-          else: 
-               lastDigit= digits.pop()
-               changedNum = lastDigit + 1
-               digits.append(changedNum)
-               return digits 
-                      
-sl = Solution ()
-print(sl.plusOne(digits));        
+    def reverseString(self, s):
+        i = 0
+        j = len(s) - 1
+        while i < j:
+            test = s[i]
+            s[i] = s[j]
+            s[j] = test
+            i += 1
+            j -= 1
+            i = i + 1
+            j = j - 1
+        return s
 
 
+# sl = Solution()
+# print(sl.reverseString(s))
 
+nums = [1,2,3,4]
+class Solution(object):
+    def containsDuplicate(self, nums):
+        dict = {}
+        # iterate through  nums
+        for i in nums:
+            #  if value in obj + 1 
+            if i in dict:
+                dict[i] += 1
+            #  else 1 
+            else:
+                dict[i] = 1
+        #  if length of the obj is more than 1 
+        if max(dict.values()) > 1:
+            return True
+        else:
+            return False  
+              
+# sl = Solution()            
+# print(sl.containsDuplicate(nums))
 
+s = "anagram"
+t = "nagaram"
+class Solution(object):
+    def isAnagram(self, s, t):
+        if len(s) != len(t):
+            return 
+        strs = sorted(t)
+        testStr = "".join(strs)
+        strs2 = sorted(s)
+        testStr2 = "".join(strs2)
+        if testStr == testStr2:
+            return True
+        else:
+            return False
+     
+     
+sl = Solution()
+print(sl.isAnagram(s,t))
+       
