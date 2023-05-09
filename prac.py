@@ -1100,43 +1100,146 @@ class Solution(object):
 # sl = Solution()
 # print(sl.reverseString(s))
 
-nums = [1,2,3,4]
+nums = [1, 2, 3, 4]
+
+
 class Solution(object):
     def containsDuplicate(self, nums):
         dict = {}
         # iterate through  nums
         for i in nums:
-            #  if value in obj + 1 
+            #  if value in obj + 1
             if i in dict:
                 dict[i] += 1
-            #  else 1 
+            #  else 1
             else:
                 dict[i] = 1
-        #  if length of the obj is more than 1 
+        #  if length of the obj is more than 1
         if max(dict.values()) > 1:
             return True
         else:
-            return False  
-              
-# sl = Solution()            
+            return False
+
+# sl = Solution()
 # print(sl.containsDuplicate(nums))
 
-s = "anagram"
-t = "nagaram"
+# s = "anagram"
+# t = "nagaram"
+# class Solution(object):
+#     def isAnagram(self, s, t):
+#         if len(s) != len(t):
+#             return
+#         strs = sorted(t)
+#         testStr = "".join(strs)
+#         strs2 = sorted(s)
+#         testStr2 = "".join(strs2)
+#         if testStr == testStr2:
+#             return True
+#         else:
+#             return False
+
+
+# # sl = Solution()
+# # print(sl.isAnagram(s,t))
+
+# import collections
+
+# s = "rat"
+# t = "car"
+# class Solution(object):
+#     def isAnagram(self, s, t):
+#         dict = {}
+#         for i in s:
+#             if i in dict:
+#                 dict[i] += 1
+#             else:
+#                 dict[i] = 1
+#         for x in t:
+#             if x in dict:
+#                 dict[x] += 1
+#             else:
+#                 dict[x] = 1
+#         if dict[s[i]] > 0:
+#             return True
+#         else:
+#             return False
+
+# sk =Solution()
+# print(sk.isAnagram(s,t))
+
+
+# class Solution:
+
+#  def isAnagram(self, s: str, t: str) -> bool:
+#  dic = {}
+# for i in s:
+#  if i not in dic:
+
+#  dic[i] = 1
+#   else:
+
+#  dic[i] += 1
+
+
+# for j in t:
+
+# if j not in dic:
+# return False
+# else:
+#  dic[j] -= 1
+# if dic[j] == 0:
+
+# dic.pop(j)
+
+# if len(dic) == 0:
+
+# return True
+
+# else:
+
+# return False
+
+
+# digits = [9,9]
+# # [123] ---> [1,2,4]
+# class Solution(object):
+#     def plusOne(self, digits):
+#         list = []
+#         #  right a reverse for loop
+#         #  add the i[0] value + 1
+#         # then push it to the new array
+#         # for d in range(len(digits)):
+#         if  len(digits) > 1:
+#             lastNum = digits.pop()
+#             addOne = lastNum + 1
+#             digits.append(addOne)
+#         else:
+#             addsingleNum = digits[0] + 1
+#             nums = [int(i) for i in str(addsingleNum)]
+#             return digits
+#         return [1] + digits
+
+
+# sk = Solution()
+# print(sk.plusOne(digits))
+
+        # inplace operations
+digits = [9]
+
+
 class Solution(object):
-    def isAnagram(self, s, t):
-        if len(s) != len(t):
-            return 
-        strs = sorted(t)
-        testStr = "".join(strs)
-        strs2 = sorted(s)
-        testStr2 = "".join(strs2)
-        if testStr == testStr2:
-            return True
-        else:
-            return False
-     
-     
-sl = Solution()
-print(sl.isAnagram(s,t))
-       
+    def plusOne(self, digits):
+        n = len(digits)
+        for i in range(n):
+            index = n - 1 - i
+            if digits[index] == 0:
+                digits[index] = 0
+            else:
+                digits[index] = digits[index] + 1
+                return digits
+
+        return [1] + digits
+
+
+sk = Solution()
+print(sk.plusOne(digits))
