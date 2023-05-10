@@ -1224,22 +1224,95 @@ class Solution(object):
 # print(sk.plusOne(digits))
 
         # inplace operations
-digits = [9]
+# digits = [9]
+
+# class Solution(object):
+#     def plusOne(self, digits):
+#         n = len(digits)
+#         for i in range(n):
+#             index = n - 1 - i
+#             if digits[index] == 0:
+#                 digits[index] = 0
+#             else:
+#                 digits[index] = digits[index] + 1
+#                 return digits
+                   
+#         return [1] + digits
+
+# sk = Solution()
+# print(sk.plusOne(digits))
 
 
-class Solution(object):
-    def plusOne(self, digits):
-        n = len(digits)
-        for i in range(n):
-            index = n - 1 - i
-            if digits[index] == 0:
-                digits[index] = 0
-            else:
-                digits[index] = digits[index] + 1
-                return digits
-
-        return [1] + digits
 
 
-sk = Solution()
-print(sk.plusOne(digits))
+
+# matrix = [[1,1,1],[1,0,1],[1,1,1]]
+# # output =  [[1,0,1],[0,0,0],[1,0,1]]
+# class Solution(object):
+#     def setZeroes(self, matrix):
+#         #  changeMatrix[0] idx 1 
+#         #  changematrix[1] idx 0,1,2
+#         # changematrix[2] idx 0,1,2
+#         if len(matrix) > 3 or len(matrix) < 3:
+#             return
+#         else: 
+#                    firstMatrix = matrix[0]
+#                    secondMatrix = matrix[1]
+#                    thirdMatrix = matrix[2]
+#                    for m in range(len(matrix)):
+#                     check1 = firstMatrix[m]
+#                     check2 = secondMatrix[m]
+#                     check3 = thirdMatrix[m]
+#                 #     if that list has a value of 0 then make everything in the list 0
+#                 # and also make the index of that particualr lists 0 for example if m[2] = 0 then make that index position 0
+#                     if check1 == 0 or check2 == 0 or check3 == 0:
+#                         thatMatrix = matrix[m]
+#                         thatidx = m
+#                         print(thatidx)
+#                         for m in range(len(thatMatrix)):
+#                             thatMatrix[m] -= thatMatrix[m]
+#                             # list[0] [0,0,0]
+#                             # list[1] [1,0,1]
+                            
+                             
+# sl = Solution()
+# print(sl.setZeroes(matrix))
+        
+
+
+
+# matrix = [[1,1,1],[1,0,1],[1,1,1]]
+# class Solution(object):
+#     def setZeroes(self, matrix):
+#     rows = set()
+#     column = set()
+#     n = len(matrix)
+#     c = len(matrix[0])
+#     for i in range(n):
+#         for j in range(n):
+#             if matrix[i][j] == 0:
+#                 rows.add(i)
+#                 column.add(j)
+               
+            
+#         print(rows)
+#         print(column)
+
+  
+#         for i in range(n):
+#             for j in range(c):
+#                  if i in row or j in column:
+#                     matrix[i][j] = 0
+        
+# print(matrix)
+
+
+      
+# sk = Solution()
+# print(sk.setZeroes(matrix))       
+
+
+
+
+
+
