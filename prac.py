@@ -1313,6 +1313,45 @@ class Solution(object):
 
 
 
+# str = "%%%%%Saurabh%%%%Singh%%%%"
+# def trimPercentSign(str):
+#     newStr = ''
+#     # loop through the string 
+#     # remove push the string only to a new string 
+#     #  then add the % sign in respective places 
+#     #  if letter is capital then before that add a percent sign in between the strings
+#     n = len(str)
+#     for s in range(n): 
+#         if str[s] != '%':
+#             newStr += str[s]
+           
+#     l = len(newStr)               
+#     for a in range(l):
+#         if newStr.isalpha():                    
+#             newStr += '%'
+            
+#     return newStr
+# print(trimPercentSign(str))
+
+input_str = "%%%%%Saurabh%%%%Singh%%%%"
+def remove_percentage_sign(input_str):
+    output = ""
+    prev_char_is_letter = False
+    for char in input_str:
+        if char != '%':
+            output += char
+            prev_char_is_letter = True
+        else:
+            if prev_char_is_letter:
+                output += '%'
+                prev_char_is_letter = False
+    if output[-1] == '%':
+        output = output[:-1]
+
+    return output
+
+print(remove_percentage_sign(input_str))
+
 
 
 
