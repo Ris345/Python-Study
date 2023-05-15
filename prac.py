@@ -1236,26 +1236,23 @@ class Solution(object):
 #             else:
 #                 digits[index] = digits[index] + 1
 #                 return digits
-                   
+
 #         return [1] + digits
 
 # sk = Solution()
 # print(sk.plusOne(digits))
 
 
-
-
-
 # matrix = [[1,1,1],[1,0,1],[1,1,1]]
 # # output =  [[1,0,1],[0,0,0],[1,0,1]]
 # class Solution(object):
 #     def setZeroes(self, matrix):
-#         #  changeMatrix[0] idx 1 
+#         #  changeMatrix[0] idx 1
 #         #  changematrix[1] idx 0,1,2
 #         # changematrix[2] idx 0,1,2
 #         if len(matrix) > 3 or len(matrix) < 3:
 #             return
-#         else: 
+#         else:
 #                    firstMatrix = matrix[0]
 #                    secondMatrix = matrix[1]
 #                    thirdMatrix = matrix[2]
@@ -1273,12 +1270,10 @@ class Solution(object):
 #                             thatMatrix[m] -= thatMatrix[m]
 #                             # list[0] [0,0,0]
 #                             # list[1] [1,0,1]
-                            
-                             
+
+
 # sl = Solution()
 # print(sl.setZeroes(matrix))
-        
-
 
 
 # matrix = [[1,1,1],[1,0,1],[1,1,1]]
@@ -1293,64 +1288,98 @@ class Solution(object):
 #             if matrix[i][j] == 0:
 #                 rows.add(i)
 #                 column.add(j)
-               
-            
+
+
 #         print(rows)
 #         print(column)
 
-  
+
 #         for i in range(n):
 #             for j in range(c):
 #                  if i in row or j in column:
 #                     matrix[i][j] = 0
-        
+
 # print(matrix)
 
 
-      
 # sk = Solution()
-# print(sk.setZeroes(matrix))       
-
+# print(sk.setZeroes(matrix))
 
 
 # str = "%%%%%Saurabh%%%%Singh%%%%"
 # def trimPercentSign(str):
 #     newStr = ''
-#     # loop through the string 
-#     # remove push the string only to a new string 
-#     #  then add the % sign in respective places 
+#     # loop through the string
+#     # remove push the string only to a new string
+#     #  then add the % sign in respective places
 #     #  if letter is capital then before that add a percent sign in between the strings
 #     n = len(str)
-#     for s in range(n): 
+#     for s in range(n):
 #         if str[s] != '%':
 #             newStr += str[s]
-           
-#     l = len(newStr)               
+#     l = len(newStr)
 #     for a in range(l):
-#         if newStr.isalpha():                    
+#         if newStr.isalpha():
 #             newStr += '%'
-            
 #     return newStr
-# print(trimPercentSign(str))
+# # print(trimPercentSign(str))
+# input_str = "%%%%%Saurabh%%%%Singh%%%%"
 
-input_str = "%%%%%Saurabh%%%%Singh%%%%"
-def remove_percentage_sign(input_str):
-    output = ""
-    prev_char_is_letter = False
-    for char in input_str:
-        if char != '%':
-            output += char
-            prev_char_is_letter = True
+
+# def remove_percentage_sign(input_str):
+#     output = ""
+#     prev_char_is_letter = False
+#     for char in input_str:
+#         if char != '%':
+#             output += char
+#             prev_char_is_letter = True
+#         else:
+#             if prev_char_is_letter:
+#                 output += '%'
+#                 prev_char_is_letter = False
+#     if output[-1] == '%':
+#         output = output[:-1]
+
+#     return output
+
+
+# print(remove_percentage_sign(input_str))
+
+prices = [7, 1, 5, 3, 6, 4]
+
+
+# class Solution(object):
+#     def maxProfit(self, prices):
+#         buy = 0
+#         sell = 0
+#     #    profit = sell - buy
+#         cost = range(len(prices))
+#         for p in cost:
+#             buy = (prices[p])
+#             sell = prices[p - 1]
+#             print(buy, end=" | ")
+#             print()
+#         #    print(sell, end=" | ")
+
+
+# sk = Solution()
+# print(sk.maxProfit(prices))
+
+
+
+L = [1,2,1,6,9,4,0,1,6,2,0,1000,1,2,2,2,2,2]
+# L1 = [1,1,1,1]
+def repeatedNum(L):
+    dict = {}
+    for n in L:
+        if n in dict:
+            dict[n] += 1
         else:
-            if prev_char_is_letter:
-                output += '%'
-                prev_char_is_letter = False
-    if output[-1] == '%':
-        output = output[:-1]
-
-    return output
-
-print(remove_percentage_sign(input_str))
+            dict[n] = 1
+    print(dict)
+    return max(dict, key=dict.get)
+    
+print(repeatedNum(L))
 
 
 
