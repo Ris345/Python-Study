@@ -1377,10 +1377,27 @@ def repeatedNum(L):
         else:
             dict[n] = 1
     print(dict)
-    return max(dict, key=dict.get)
     
-print(repeatedNum(L))
+    m = 0
+    for index, value in dict.items():
+        print(dict.items())
+        if value > m: 
+            m = value
+            output = index
+    return output
+            
+# print(repeatedNum(L))
 
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
 
-
-
+class Solution(object):
+    def trap(self, height):
+        for h in range(len(height)):
+            right = height[h]
+            left = len(height) - 1 
+            right = left 
+            left = right 
+            
+            
+sk = Solution()
+print(sk.trap(height))
