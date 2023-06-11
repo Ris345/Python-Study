@@ -1,127 +1,127 @@
-// let S = 'abcabcbb'
+// // let S = 'abcabcbb'
 
-// function subString(S) {
-//     debugger;
-//     newStr = ' '
-//     for (let i = 0; i < S.length; i++){
-//         for (let j = 0; j < S.length; j++){
-//             if (S[i] !== S[j + 1]) {
-//                 newStr =  S[j + 1]
-//             }
-//         }
-//     }
-//     return newStr
-// }
+// // function subString(S) {
+// //     debugger;
+// //     newStr = ' '
+// //     for (let i = 0; i < S.length; i++){
+// //         for (let j = 0; j < S.length; j++){
+// //             if (S[i] !== S[j + 1]) {
+// //                 newStr =  S[j + 1]
+// //             }
+// //         }
+// //     }
+// //     return newStr
+// // }
 
-// console.log(subString(S))
+// // console.log(subString(S))
 
-// L = [1, 2, 1, 6, 9, 4, 0, 1, 6, 2, 8, 1000, 1]
+// // L = [1, 2, 1, 6, 9, 4, 0, 1, 6, 2, 8, 1000, 1]
 
-// function frequentNum(L) {
-//     let obj = {}
-//     // iterate over each item
-//     //   run a nested loop
-//     for (let i = 0; i < L.length; i++){
-//         if (obj.hasOwnProperty(L[i])) {
-//             obj[L[i]] = 1
-//         } else {
-//             obj[L[i]] += 1
-//         }
-//     }
-//     return obj.keys()
-// }
+// // function frequentNum(L) {
+// //     let obj = {}
+// //     // iterate over each item
+// //     //   run a nested loop
+// //     for (let i = 0; i < L.length; i++){
+// //         if (obj.hasOwnProperty(L[i])) {
+// //             obj[L[i]] = 1
+// //         } else {
+// //             obj[L[i]] += 1
+// //         }
+// //     }
+// //     return obj.keys()
+// // }
 
-// num = [1, 1, 2]
-// output = 2
+// // num = [1, 1, 2]
+// // output = 2
 
-// function removeDuplicates(num) {
-//     i = 0
-//     for (let j = 0; j < num.length; j++){
-//         if (num[i] !== num[j]){
-//             num[i + 1] = num[j]
-//             i++
-//         }
-//     }
-//     return i + 1
-// }
+// // function removeDuplicates(num) {
+// //     i = 0
+// //     for (let j = 0; j < num.length; j++){
+// //         if (num[i] !== num[j]){
+// //             num[i + 1] = num[j]
+// //             i++
+// //         }
+// //     }
+// //     return i + 1
+// // }
 
-// console.log(removeDuplicates(num))
+// // console.log(removeDuplicates(num))
 
-// let nums = [1,1,2]
-// const removeDuplicates = function (nums) {
-//     debugger;
-//     let i = 0
-//     for (let j = 0; j < nums.length; j++){
-//         if (nums[i] !== nums[j]) {
-//             nums[i + 1] = nums[j]
-//             i++
-//         }
-//     }
-// return i + 1
-// }
+// // let nums = [1,1,2]
+// // const removeDuplicates = function (nums) {
+// //     debugger;
+// //     let i = 0
+// //     for (let j = 0; j < nums.length; j++){
+// //         if (nums[i] !== nums[j]) {
+// //             nums[i + 1] = nums[j]
+// //             i++
+// //         }
+// //     }
+// // return i + 1
+// // }
 
-// console.log(removeDuplicates(nums))
+// // console.log(removeDuplicates(nums))
 
-// solved with O(n2) time complexity
+// // solved with O(n2) time complexity
+// // var containsDuplicate = function (nums) {
+// //     debugger;
+// //     for (let i = 0; i < nums.length; i++){
+// //         for (let j = 1; j < nums.length; j++){
+// //             if (nums[i] === nums[j]) {
+// //                 return true
+// //             }
+// //         }
+// //         return false
+// //     }
+// // };
+
+// // console.log(containsDuplicate(nums))
+
+// // O(n)
 // var containsDuplicate = function (nums) {
-//     debugger;
-//     for (let i = 0; i < nums.length; i++){
-//         for (let j = 1; j < nums.length; j++){
-//             if (nums[i] === nums[j]) {
-//                 return true
-//             }
-//         }
-//         return false
+//   debugger;
+//   let obj = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     if (obj[nums[i]]) {
+//       obj[nums[i]] += 1;
+//     } else {
+//       obj[nums[i]] = 1;
 //     }
+//   }
+//   let values = Object.values(obj);
+
+//   if (Math.max(...values) > 1) {
+//     return true;
+//   }
+//   return false;
+// };
+// // console.log(containsDuplicate(nums))
+
+// // let s = "race a car"
+
+// // var isPalindrome = function (s) {
+// //     let regularStr = s.replace(/[^a-z0-9]/gi, '').toLowerCase()
+// //     let sortedStr =  s.replace(/[^a-z0-9]/gi, '').toLowerCase().split('').reverse().join('')
+// //     if (regularStr === sortedStr) {
+// //         return true
+// //     }
+// //    return false
+// // };
+
+// // console.log(isPalindrome(s))
+
+// // let s = "anagram";
+// let t = "nagaram";
+
+// var isAnagram = function (s, t) {
+//   sortS = s.split("").sort();
+//   console.log(sortS);
+//   sortT = t.split("").sort();
+//   console.log(sortT);
+//   return sortS === sortT ? true : false;
 // };
 
-// console.log(containsDuplicate(nums))
-
-// O(n)
-var containsDuplicate = function (nums) {
-  debugger;
-  let obj = {};
-  for (let i = 0; i < nums.length; i++) {
-    if (obj[nums[i]]) {
-      obj[nums[i]] += 1;
-    } else {
-      obj[nums[i]] = 1;
-    }
-  }
-  let values = Object.values(obj);
-
-  if (Math.max(...values) > 1) {
-    return true;
-  }
-  return false;
-};
-// console.log(containsDuplicate(nums))
-
-// let s = "race a car"
-
-// var isPalindrome = function (s) {
-//     let regularStr = s.replace(/[^a-z0-9]/gi, '').toLowerCase()
-//     let sortedStr =  s.replace(/[^a-z0-9]/gi, '').toLowerCase().split('').reverse().join('')
-//     if (regularStr === sortedStr) {
-//         return true
-//     }
-//    return false
-// };
-
-// console.log(isPalindrome(s))
-
-// let s = "anagram";
-let t = "nagaram";
-
-var isAnagram = function (s, t) {
-  sortS = s.split("").sort();
-  console.log(sortS);
-  sortT = t.split("").sort();
-  console.log(sortT);
-  return sortS === sortT ? true : false;
-};
-
-console.log(isAnagram(s));
+// console.log(isAnagram(s));
 
 // let x = 123
 
@@ -161,26 +161,26 @@ console.log(isAnagram(s));
 
 // console.log(firstUniqChar(s))
 
-let s = "loveleetcode";
-var firstUniqChar = function (s) {
-  let obj = {};
-  let i = 0;
-  for (i; i < s.length; i++) {
-    if (obj[s[i]]) {
-      obj[s[i]] += 1;
-    } else {
-      obj[s[i]] = 1;
-    }
-  }
-  for (let k = 0; k < s.length; k++) {
-    if (obj[s[k]] < 2) {
-      return k;
-    }
-  }
-  return -1;
-};
+// let s = "loveleetcode";
+// var firstUniqChar = function (s) {
+//   let obj = {};
+//   let i = 0;
+//   for (i; i < s.length; i++) {
+//     if (obj[s[i]]) {
+//       obj[s[i]] += 1;
+//     } else {
+//       obj[s[i]] = 1;
+//     }
+//   }
+//   for (let k = 0; k < s.length; k++) {
+//     if (obj[s[k]] < 2) {
+//       return k;
+//     }
+//   }
+//   return -1;
+// };
 
-console.log(firstUniqChar(s));
+// console.log(firstUniqChar(s));
 
 // let digits = [9,9]
 
@@ -224,5 +224,30 @@ console.log(firstUniqChar(s));
 // };
 // console.log(missingNumber(nums))
 
+// trying to solve without using  any inbuilt methods 
 
+let arr = [-1, 3, 5, 6, 99, 12, 2];
+function largestNum(arr) {
+  debugger; 
+  let min = arr[0]
+  let i = 0
+  while (arr.length > i) {
+    i += 1
+    if (arr[i] > min) {
+      min = arr[i]
+    }
+  }
+  return min
+}
+
+console.log(largestNum(arr));
+
+// function largestNum(arr) {
+//   debugger;
+//   let min = arr[0];
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > min)  min = arr[i];
+//   }
+//  return min
+// }
 

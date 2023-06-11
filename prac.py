@@ -1505,11 +1505,10 @@ def find_highest(list):
     max = 0
     min = list[0]
     for i in range(len(list)):
-        if list[i] > list[0]:
-            max = list[i]
-            return max
-        else:
-            find_highest(list)
+        if list[i] > min:
+            min = list[i]
+    return min
+       
     
             
 print(find_highest(list))
