@@ -1390,14 +1390,128 @@ def repeatedNum(L):
 
 height = [0,1,0,2,1,0,1,3,2,1,2,1]
 
-class Solution(object):
-    def trap(self, height):
-        for h in range(len(height)):
-            right = height[h]
-            left = len(height) - 1 
-            right = left 
-            left = right 
+# class Solution(object):
+#     def trap(self, height):
+#         for h in range(len(height)):
+#             right = height[h]
+#             left = len(height) - 1 
+#             right = left 
+#             left = right 
             
             
-sk = Solution()
-print(sk.trap(height))
+# sk = Solution()
+# print(sk.trap(height))
+
+
+# class Solution:
+
+#     def trap(self, height: List[int]) -> int:
+
+#         left = 0
+
+#         right = len(height) - 1
+
+#         max_left = max_right = water = 0
+
+
+
+
+#         while left < right:
+
+#             if height[left] <= height[right]:
+
+#                 if height[left] >= max_left:
+
+#                     max_left = height[left]
+
+#                 else:
+
+#                     water += max_left - height[left]
+
+#                 left += 1
+
+#             else:
+
+#                 if height[right] >= max_right:
+
+#                     max_right = height[right]
+
+#                 else:
+
+#                     water += max_right - height[right]
+
+#                 right -= 1
+
+
+
+
+#         return water
+    
+    
+ 
+# arr = ["t", "h", "e" , "s", "k", "y", "i", "s", "b", "l", "u","e"]
+   
+# def reverseStr(arr): 
+#         reverse = arr[::-1]
+#         return reverse
+    
+# print(reverseStr(arr))
+
+
+# def fixStr():
+#      left = 0
+#      right = len(arr) - 1
+#      while >= 0:
+         
+
+# nums = [1,2,3,4,5,6,7]
+# k = 3
+
+# # Output: [5,6,7,1,2,3,4] 
+
+# newList = []
+# class Solution(object):
+#     def rotate(self, nums, k):
+#             r = range(len(nums))
+#             for n in r:
+#                 if n == k:
+#                     newList.append( nums[k + 1])
+#                     print(newList)
+                    
+                    
+                    
+                    
+                    
+                    
+# sk = Solution()
+# print(sk.rotate(nums,k))
+ 
+ 
+# nums = [3,0,1] 
+ 
+# class Solution:
+#     def missingNumber(self, nums: List[int]) -> int:
+        
+   
+# def shift_to_right(x, y): 
+#         return round(x / 2 ** y) 
+  
+# print(shift_to_right(4666,6))   
+
+
+list = [-1, 3, 5, 6, 99, 12, 2]
+
+def find_highest(list):
+    max = 0
+    min = list[0]
+    for i in range(len(list)):
+        if list[i] > list[0]:
+            max = list[i]
+            return max
+        else:
+            find_highest(list)
+    
+            
+print(find_highest(list))
+	
+

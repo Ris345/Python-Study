@@ -123,22 +123,19 @@ var isAnagram = function (s, t) {
 
 console.log(isAnagram(s));
 
-
 // let x = 123
 
 // var reverse = function(x) {
-//   //  convert x into an array 
+//   //  convert x into an array
 //   // run a reverse for loop
 //   // convert the array to string and then  integer
-//   // return the result 
-  
-//   console.log(Array.from(x))
+//   // return the result
 
+//   console.log(Array.from(x))
 
 // };
 
 // console.log(reverse(x))
-
 
 // let x = 1
 // let num = 0
@@ -147,12 +144,11 @@ console.log(isAnagram(s));
 //   console.log(x)
 // }
 
-
 // let s = "loveleetcode"
 
 // let keepTrack = 0
 // var firstUniqChar = function (s) {
-//   debugger; 
+//   debugger;
 //   for (let i = 0; i < s.length; i++){
 //     for (let j = i + 1; j < s.length; j++){
 //       if (s[i] != s[j]) {
@@ -163,30 +159,28 @@ console.log(isAnagram(s));
 // return keepTrack.toString()
 // };
 
-
 // console.log(firstUniqChar(s))
 
-let s = "loveleetcode"
-var firstUniqChar = function(s) {
-  let obj = {}
-  let i = 0
-  for ( i ; i < s.length; i++){
-    if(obj[s[i]]){
-      obj[s[i]] += 1
+let s = "loveleetcode";
+var firstUniqChar = function (s) {
+  let obj = {};
+  let i = 0;
+  for (i; i < s.length; i++) {
+    if (obj[s[i]]) {
+      obj[s[i]] += 1;
     } else {
-      obj[s[i]] = 1
+      obj[s[i]] = 1;
     }
   }
-    for(let k = 0; k < s.length; k++){
-       if ( obj[s[k]] < 2){
-         return k 
-      } 
+  for (let k = 0; k < s.length; k++) {
+    if (obj[s[k]] < 2) {
+      return k;
     }
-  return - 1
+  }
+  return -1;
 };
 
-console.log(firstUniqChar(s))
-
+console.log(firstUniqChar(s));
 
 // let digits = [9,9]
 
@@ -203,8 +197,7 @@ console.log(firstUniqChar(s))
 //   return digits
 // };
 
-
-// console.log(plusOne(digits)); 
+// console.log(plusOne(digits));
 
 // let digits = [9]
 // var plusOne = function(digits) {
@@ -217,10 +210,19 @@ console.log(firstUniqChar(s))
 //      }
 //   }
 //   digits.unshift(1)
-//   return digits; 
+//   return digits;
 // };
 
-// console.log(plusOne(digits)); 
+// console.log(plusOne(digits));
+
+// let nums = [3,0,1]
+// var missingNumber = function (nums) {
+//   for (let i = 0; i < nums.length; i++) {
+//     console.log(i)
+//   }
+
+// };
+// console.log(missingNumber(nums))
 
 
 
