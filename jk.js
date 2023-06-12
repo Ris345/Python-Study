@@ -224,23 +224,50 @@
 // };
 // console.log(missingNumber(nums))
 
-// trying to solve without using  any inbuilt methods 
+// trying to solve without using  any inbuilt methods
+
+// function largestNum(arr) {
+//   debugger;
+//   let min = arr[0]
+//   let i = 0
+//   while (arr.length > i) {
+//     i += 1
+//     if (arr[i] > min) {
+//       min = arr[i]
+//     }
+//   }
+//   return min
+// }
+
+// console.log(largestNum(arr));
 
 let arr = [-1, 3, 5, 6, 99, 12, 2];
-function largestNum(arr) {
-  debugger; 
-  let min = arr[0]
-  let i = 0
-  while (arr.length > i) {
-    i += 1
-    if (arr[i] > min) {
-      min = arr[i]
-    }
-  }
-  return min
-}
+// const largestNum = (arr, i = 0) => {
+//   debugger;
+//   let min = arr[i]
+//   let j = i + 1
+//   if (i < arr.length - 1) {
+//     if (arr[j] > min) {
+//       i += 1
+//        min = arr[j]
+//     } else {
+//       largestNum(arr, i)
+//     }
+//   }
+//   return min
+// }
 
-console.log(largestNum(arr));
+const largestNumTwo = (arr, i = 0, max = -Infinity) => {
+  if (i < arr.length) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+    return largestNumTwo(arr, i + 1, max);
+  }
+  return max;
+};
+
+console.log(largestNumTwo(arr));
 
 // function largestNum(arr) {
 //   debugger;
@@ -250,4 +277,3 @@ console.log(largestNum(arr));
 //   }
 //  return min
 // }
-

@@ -1500,17 +1500,27 @@ height = [0,1,0,2,1,0,1,3,2,1,2,1]
 
 
 list = [-1, 3, 5, 6, 99, 12, 2]
-
-def find_highest(list):
-    max = 0
-    min = list[0]
-    for i in range(len(list)):
-        if list[i] > min:
-            min = list[i]
-    return min
+# def find_highest(list):
+#     min = list[0]
+#     for i in range(len(list)):
+#         if list[i] > min:
+#             min = list[i]
+#     return min
        
     
             
-print(find_highest(list))
+# print(find_highest(list))
 	
-
+#trying to use recursion to solve this problem
+def find_highest(list):
+   min = list[0]
+   i = 0
+   if list[i] > min:
+       min = list[i]
+   else:
+       find_highest(list)
+       pass
+   return min
+    
+    
+print(find_highest(list))
