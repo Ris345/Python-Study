@@ -267,7 +267,7 @@ const largestNumTwo = (arr, i = 0, max = -Infinity) => {
   return max;
 };
 
-console.log(largestNumTwo(arr));
+// console.log(largestNumTwo(arr));
 
 // function largestNum(arr) {
 //   debugger;
@@ -277,3 +277,48 @@ console.log(largestNumTwo(arr));
 //   }
 //  return min
 // }
+
+// solving the factorial problem
+//  4! = 4 X 3 X 2 X 1 = 24
+// let fac = 1
+// const factorial = (n) => {
+//   debugger;
+//   for (let i = 0; i < n; i++) {
+//      fac *= i
+//   }
+//   return fac
+// };
+
+// console.log(factorial(3));
+
+//  4! = 4 X 3 X 2 X 1 = 24
+
+// let i = 0;
+// let total = 0;
+// const factorial = (n) => {
+//   let test = (n - 1)
+//   debugger;
+//   if (total > test) {
+//     total = n * test;
+//   } else {
+//     return factorial(n,i);
+//   }
+//   console.log(total)
+// };
+
+// console.log(factorial(4));
+
+// practicing factorial problem 
+// const factorize = (n) => {
+//   if (n < 0) {
+//    return - 1
+//   } else if (n === 0) {
+//     return 1
+//   } else {
+//     return (n * factorize(n - 1))
+//  }
+// }
+
+// console.log(factorize(4))
+
+
