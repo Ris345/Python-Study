@@ -278,35 +278,6 @@ const largestNumTwo = (arr, i = 0, max = -Infinity) => {
 //  return min
 // }
 
-// solving the factorial problem
-//  4! = 4 X 3 X 2 X 1 = 24
-// let fac = 1
-// const factorial = (n) => {
-//   debugger;
-//   for (let i = 0; i < n; i++) {
-//      fac *= i
-//   }
-//   return fac
-// };
-
-// console.log(factorial(3));
-
-//  4! = 4 X 3 X 2 X 1 = 24
-
-// let i = 0;
-// let total = 0;
-// const factorial = (n) => {
-//   let test = (n - 1)
-//   debugger;
-//   if (total > test) {
-//     total = n * test;
-//   } else {
-//     return factorial(n,i);
-//   }
-//   console.log(total)
-// };
-
-// console.log(factorial(4));
 
 // practicing factorial problem 
 // const factorize = (n) => {
@@ -322,3 +293,47 @@ const largestNumTwo = (arr, i = 0, max = -Infinity) => {
 // console.log(factorize(4))
 
 
+// const factorial = (n) => {
+//   let result = n
+//   if (n === 0 || n === 1) return 1;
+//     while (n > 1) {
+//       n--
+//       result *= n
+//     }
+//     return result
+
+// }
+
+// console.log(factorial(3))
+
+
+//  chunk array 
+let array = [1,9,6,3,2], size = 1
+const chunkArray = (array, size) => {
+  debugger; 
+  if (size <= 0 || array.length === 0) {
+    return []
+  }
+
+  let newArr = []
+  let i = 0
+  while (i < array.length) {
+    newArr.push(array.slice(i, i + size))
+    i += size
+  }
+  return newArr; 
+}
+
+console.log(chunkArray(array, size))
+
+
+const chunking = (arr, size) => {
+  if (arr <= size || arr.length === 0) return []
+  let i = 0
+  let chunkArray = []
+  while (i < arr.length) {
+    chunkArray.push(arr.slice(i, i + size))
+    i += size
+  }
+  return chunkArray
+}
