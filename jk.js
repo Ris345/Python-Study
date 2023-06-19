@@ -278,8 +278,7 @@ const largestNumTwo = (arr, i = 0, max = -Infinity) => {
 //  return min
 // }
 
-
-// practicing factorial problem 
+// practicing factorial problem
 // const factorize = (n) => {
 //   if (n < 0) {
 //    return - 1
@@ -291,7 +290,6 @@ const largestNumTwo = (arr, i = 0, max = -Infinity) => {
 // }
 
 // console.log(factorize(4))
-
 
 // const factorial = (n) => {
 //   let result = n
@@ -306,34 +304,144 @@ const largestNumTwo = (arr, i = 0, max = -Infinity) => {
 
 // console.log(factorial(3))
 
-
-//  chunk array 
-let array = [1,9,6,3,2], size = 1
+//  chunk array
+let array = [1, 9, 6, 3, 2],
+  size = 1;
 const chunkArray = (array, size) => {
-  debugger; 
+  debugger;
   if (size <= 0 || array.length === 0) {
-    return []
+    return [];
   }
 
-  let newArr = []
-  let i = 0
+  let newArr = [];
+  let i = 0;
   while (i < array.length) {
-    newArr.push(array.slice(i, i + size))
-    i += size
+    newArr.push(array.slice(i, i + size));
+    i += size;
   }
-  return newArr; 
-}
+  return newArr;
+};
 
-console.log(chunkArray(array, size))
+// console.log(chunkArray(array, size))
 
+// const chunking = (arr, size) => {
+//   if (arr <= size || arr.length === 0) return []
+//   let i = 0
+//   let chunkArray = []
+//   while (i < arr.length) {
+//     chunkArray.push(arr.slice(i, i + size))
+//     i += size
+//   }
+//   return chunkArray
+// }
 
-const chunking = (arr, size) => {
-  if (arr <= size || arr.length === 0) return []
-  let i = 0
-  let chunkArray = []
-  while (i < arr.length) {
-    chunkArray.push(arr.slice(i, i + size))
-    i += size
+// let  numbers = [2,3,4], target = 6
+// var twoSum = function (numbers, target) {
+//   debugger;
+//   let sum = 0
+//   let arr = []
+//   let i = 0
+//   let idxOne = 0
+//   let idxTwo = 0
+//   for (i; i < numbers.length; i++){
+//     console.log(i)
+//     sum = numbers[i] + numbers[i + 1]
+//     if (sum === target) {
+//       arr.push(i + 1, i + 1)
+//     }
+//   }
+//   return arr
+// };
+// console.log(twoSum(numbers, target))
+
+// let numbers = [2, 3, 4], target = 6
+
+// var twoSum = function (numbers, target) {
+//   debugger;
+//   let right = numbers.length - 1
+//   let left = 0
+//   let sum = 0
+//   let arr = []
+//   while (left < right) {
+//     sum = numbers[left] + numbers[right]
+//     if (sum === target) {
+//       return  [left + 1, right + 1]
+//     } else if (sum < target) {
+//       left++
+//     } else {
+//       right--
+//     }
+//   }
+// };
+
+// console.log(twoSum(numbers,target))
+
+// two pointer problem
+// let numbers = [-1, 0],
+//   target = -1;
+// var twoSum = function (numbers, target) {
+//   let sum = 0;
+//   let arr = [];
+//   for (let i = 0; i < numbers.length; i++) {
+//     for (let j = numbers.length - 1; j >= i; j--) {
+//       sum = numbers[i] + numbers[j];
+//       if (sum === target) {
+//         return [i + 1, j + 1];
+//       }
+//     }
+//   }
+// };
+
+// console.log(twoSum(numbers, target));
+
+// Arrays -- have cache locality
+// linked lists -- extra memory assocaited with and have more dynamic memory
+
+// Queuses -- linked lists only
+
+// let nums = [2, 7, 11, 15]
+// let target = 9
+// var twoSum =  function (nums, target)  {
+//   debugger;
+//   let left = 0
+//   let right = nums.length - 1
+//   let sum = 0
+//   while (left < right) {
+//     sum = nums[left] + nums[right]
+//     if (sum === target) {
+//        return [left + 1, right + 1]
+//     } else if (sum > target) {
+//       right--
+//     } else {
+//       left++
+//      }
+//   }
+// }
+
+// console.log(twoSum(nums,target))
+
+// k is the length of the repeated item is repeated
+// most frequent k items 
+let nums = [4,1,-1,2,-1,2,3]
+let k = 2;
+var topKFrequent = function (nums, k) {
+  debugger;
+  let obj = {};
+  for (let i = 0; i < nums.length; i++) {
+    //  keep track of how many times a number repeats
+    if (obj[nums[i]]) {
+      obj[nums[i]] += 1;
+    } else {
+      obj[nums[i]] = 1;
+    }
   }
-  return chunkArray
-}
+  let arr = [];
+  // sort the keys from the obj 
+  let sortKeys = Object.keys(obj).sort((a,b)=>obj[b]-obj[a]);
+  for (let i = 0; i < k; i++){
+    arr.push(sortKeys[i])
+  }
+  return arr; 
+};
+
+console.log(topKFrequent(nums, k));

@@ -1366,9 +1366,10 @@ prices = [7, 1, 5, 3, 6, 4]
 # print(sk.maxProfit(prices))
 
 
-
-L = [1,2,1,6,9,4,0,1,6,2,0,1000,1,2,2,2,2,2]
+L = [1, 2, 1, 6, 9, 4, 0, 1, 6, 2, 0, 1000, 1, 2, 2, 2, 2, 2]
 # L1 = [1,1,1,1]
+
+
 def repeatedNum(L):
     dict = {}
     for n in L:
@@ -1377,28 +1378,29 @@ def repeatedNum(L):
         else:
             dict[n] = 1
     print(dict)
-    
+
     m = 0
     for index, value in dict.items():
         print(dict.items())
-        if value > m: 
+        if value > m:
             m = value
             output = index
     return output
-            
+
 # print(repeatedNum(L))
 
-height = [0,1,0,2,1,0,1,3,2,1,2,1]
+
+height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
 
 # class Solution(object):
 #     def trap(self, height):
 #         for h in range(len(height)):
 #             right = height[h]
-#             left = len(height) - 1 
-#             right = left 
-#             left = right 
-            
-            
+#             left = len(height) - 1
+#             right = left
+#             left = right
+
+
 # sk = Solution()
 # print(sk.trap(height))
 
@@ -1412,8 +1414,6 @@ height = [0,1,0,2,1,0,1,3,2,1,2,1]
 #         right = len(height) - 1
 
 #         max_left = max_right = water = 0
-
-
 
 
 #         while left < right:
@@ -1443,18 +1443,15 @@ height = [0,1,0,2,1,0,1,3,2,1,2,1]
 #                 right -= 1
 
 
-
-
 #         return water
-    
-    
- 
+
+
 # arr = ["t", "h", "e" , "s", "k", "y", "i", "s", "b", "l", "u","e"]
-   
-# def reverseStr(arr): 
+
+# def reverseStr(arr):
 #         reverse = arr[::-1]
 #         return reverse
-    
+
 # print(reverseStr(arr))
 
 
@@ -1462,12 +1459,12 @@ height = [0,1,0,2,1,0,1,3,2,1,2,1]
 #      left = 0
 #      right = len(arr) - 1
 #      while >= 0:
-         
+
 
 # nums = [1,2,3,4,5,6,7]
 # k = 3
 
-# # Output: [5,6,7,1,2,3,4] 
+# # Output: [5,6,7,1,2,3,4]
 
 # newList = []
 # class Solution(object):
@@ -1477,26 +1474,22 @@ height = [0,1,0,2,1,0,1,3,2,1,2,1]
 #                 if n == k:
 #                     newList.append( nums[k + 1])
 #                     print(newList)
-                    
-                    
-                    
-                    
-                    
-                    
+
+
 # sk = Solution()
 # print(sk.rotate(nums,k))
- 
- 
-# nums = [3,0,1] 
- 
+
+
+# nums = [3,0,1]
+
 # class Solution:
 #     def missingNumber(self, nums: List[int]) -> int:
-        
-   
-# def shift_to_right(x, y): 
-#         return round(x / 2 ** y) 
-  
-# print(shift_to_right(4666,6))   
+
+
+# def shift_to_right(x, y):
+#         return round(x / 2 ** y)
+
+# print(shift_to_right(4666,6))
 
 
 list = [-1, 3, 5, 6, 99, 12, 2]
@@ -1506,21 +1499,59 @@ list = [-1, 3, 5, 6, 99, 12, 2]
 #         if list[i] > min:
 #             min = list[i]
 #     return min
-       
-    
-            
+
+
 # print(find_highest(list))
-	
-#trying to use recursion to solve this problem
-def find_highest(list):
-   min = list[0]
-   i = 0
-   if list[i] > min:
-       min = list[i]
-   else:
-       find_highest(list)
-       pass
-   return min
-    
-    
-print(find_highest(list))
+
+# trying to use recursion to solve this problem
+# def find_highest(list):
+#    min = list[0]
+#    i = 0
+#    if list[i] > min:
+#        min = list[i]
+#    else:
+#        find_highest(i, list)
+#        pass
+#    return min
+
+
+# print(find_highest(list))
+
+# arr = [-1, 3, 5, 6, 99, 12, 2]
+# def highestNum(arr):
+#     i = 0
+#     right = len(arr) - 1
+#     tracker = range(len(arr))
+#     for i in tracker:
+#         if arr[i] > arr[right]:
+#             print('tracker left', arr[i])
+#             print('tracker right', arr[right])
+
+
+# print(highestNum(arr))
+
+
+# def tri_area(base, height):
+#     return round((base * height) / 2)
+
+
+# print(tri_area(7, 4))
+
+
+lst = [1, 2, 3, 4, 5, 6]
+
+
+def sum_odd_and_even(lst):
+    even = 0
+    sum = 0
+    odd = 0
+    for i in range(len(lst) - 1):
+        if lst[i] % 2 == 0:
+            even += lst[i]
+        else:
+            odd += lst[i]
+    print('odd', odd)
+    print('even', even)
+
+
+print(sum_odd_and_even(lst))
