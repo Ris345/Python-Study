@@ -509,27 +509,51 @@ var maxArea = function (height) {
 
 // console.log(maxAreas(heig))
 
+// let nums = [100, 4, 200, 1, 3, 2];
+// var longestConsecutive = function (nums) {
+//   debugger;
+//   //  handle the edge case
+//   if (nums.length === 0) return 0;
+//   // sort the array and remove any non squentialnumber
+//   //  and return the length of that array with sequential numbers
+//   let difference = 0;
+//   let count = 1;
+//   let max_count = 1;
+//   let sortedArr = nums.sort((a, b) => a - b);
+//   for (let i = 0; i < sortedArr.length - 1; i++) {
+//     difference = sortedArr[i + 1] - sortedArr[i];
+//     if (difference === 1) {
+//       count++;
+//     } else {
+//       count = 1;
+//     }
+//     max_count = Math.max(max_count, count);
+//   }
+//   return max_count;
+// };
+
+// console.log(longestConsecutive(nums));
+
+
+
 let nums = [100, 4, 200, 1, 3, 2];
-var longestConsecutive = function (nums) {
-  debugger;
-  //  handle the edge case
-  if (nums.length === 0) return 0;
-  // sort the array and remove any non squentialnumber
-  //  and return the length of that array with sequential numbers
-  let difference = 0;
-  let count = 1;
-  let max_count = 1;
-  let sortedArr = nums.sort((a, b) => a - b);
-  for (let i = 0; i < sortedArr.length - 1; i++) {
-    difference = sortedArr[i + 1] - sortedArr[i];
+var longestConsecutive = function(nums) {
+  let difference = 0
+  let count = 1
+  let max_count = 1 
+  // sort 
+  nums.sort((a, b) => a - b)
+  for (let i = 0; i < nums.length - 1; i++){
+    difference = nums[i + 1] - nums[i]
     if (difference === 1) {
-      count++;
+      count++
     } else {
-      count = 1;
+      count = 1
     }
-    max_count = Math.max(max_count, count);
+    max_count = Math.max(count, max_count)
   }
-  return max_count;
+  return max_count; 
 };
 
-console.log(longestConsecutive(nums));
+
+console.log(longestConsecutive(nums))
