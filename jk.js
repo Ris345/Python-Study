@@ -421,7 +421,7 @@ const chunkArray = (array, size) => {
 // console.log(twoSum(nums,target))
 
 // k is the length of the repeated item is repeated
-// most frequent k items 
+// most frequent k items
 // let nums = [4,1,-1,2,-1,2,3]
 // let k = 2;
 // var topKFrequent = function (nums, k) {
@@ -436,18 +436,17 @@ const chunkArray = (array, size) => {
 //     }
 //   }
 //   let arr = [];
-//   // sort the keys from the obj 
+//   // sort the keys from the obj
 //   let sortKeys = Object.keys(obj).sort((a,b)=>obj[b]-obj[a]);
 //   for (let i = 0; i < k; i++){
 //     arr.push(sortKeys[i])
 //   }
-//   return arr; 
+//   return arr;
 // };
 
 // console.log(topKFrequent(nums, k));
 
-//  repracticing the ame problem 
-
+//  repracticing the ame problem
 
 // var topKFrequent = function(nums, k) {
 //   let obj = {}
@@ -456,7 +455,7 @@ const chunkArray = (array, size) => {
 //     if (obj[nums[i]]) {
 //       obj[nums[i]] = 1
 //     } else {
-//       obj[nums[i]] += 1 
+//       obj[nums[i]] += 1
 //     }
 //   }
 //   let arr = []
@@ -466,35 +465,32 @@ const chunkArray = (array, size) => {
 //   for (let i = 0; i < k; i++){
 //     arr.push(sortKeys[i])
 //   }
-//   return arr; 
+//   return arr;
 // };
 
-let height = [1,8,6,2,5,4,8,3,7]
+let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
 var maxArea = function (height) {
-  debugger; 
-  let amountOfwater = 0
-  let x = 0 
-  //  height has length of n 
+  debugger;
+  let amountOfwater = 0;
+  let x = 0;
+  //  height has length of n
   // n vertical lines drawn such taht the ith line are (i, 0)
   // and (i, height[i])
-  // find two lines on x-axis that make a container that hold a lot of water 
-  for (let i = 0; i < height.length; i++){
-  //   find difference between two numbers 
-    for (let j = i + 1; j < height.length; j++){
-   
-        amountOfwater = Math.abs(j-i) * Math.min(height[i], height[j])
-      console.log('waterContainer', amountOfwater)
-      if (amountOfwater > x) { x = amountOfwater}
-      
+  // find two lines on x-axis that make a container that hold a lot of water
+  for (let i = 0; i < height.length; i++) {
+    //   find difference between two numbers
+    for (let j = i + 1; j < height.length; j++) {
+      amountOfwater = Math.abs(j - i) * Math.min(height[i], height[j]);
+      console.log("waterContainer", amountOfwater);
+      if (amountOfwater > x) {
+        x = amountOfwater;
+      }
     }
   }
-  return x
+  return x;
 };
 
-// console.log(maxArea(height)); 
-
-
-
+// console.log(maxArea(height));
 
 // let heig = [1,8,6,2,5,4,8,3,7]
 // var maxAreas = function(heig) {
@@ -505,7 +501,7 @@ var maxArea = function (height) {
 //     if (heig[left] === heig[right]) {
 //       difference = height[left]
 //     } else {
-//       difference = heig[left] - heig[right]    
+//       difference = heig[left] - heig[right]
 //       console.log(difference)
 //     }
 //   }
@@ -513,30 +509,30 @@ var maxArea = function (height) {
 
 // console.log(maxAreas(heig))
 
-
-
-
-let nums = [100,4,200,1,3,2]
-var longestConsecutive = function(nums) {
-  // sort the array and remove any non squentialnumber 
-  //  and return the length of that array with sequential numbers 
-  let lastNumber = nums.length - 1
-  let sortedArr = nums.sort((a, b) => a - b)
-  console.log('sortedArr', sortedArr)
-  for (let i = 0; i < sortedArr.length; i++){
-    console.log(sortedArr[i]) 
-    if (sortedArr[i] < 10) {
-      sortedArr.pop()
+let nums = [100, 4, 200, 1, 3, 2];
+var longestConsecutive = function (nums) {
+  debugger;
+  // sort the array and remove any non squentialnumber
+  //  and return the length of that array with sequential numbers
+  let arr = [];
+  let lastNumber = nums.length - 1;
+  let test = 0;
+  let sortedArr = nums.sort((a, b) => a - b);
+  console.log("sortedArr", sortedArr);
+  for (let i = 0; i < sortedArr.length; i++) {
+    for (let j = i + 1; j < sortedArr.length; j++){
+      test = Math.abs(sortedArr[i] - sortedArr[j]);
+      console.log("difference", test);
+      if (test !== 1 && test !== 0) {
+        sortedArr.pop();
+      } else {
+        arr.push(test);
+      }
     }
-    return sortedArr; 
   }
   
-
-
+  console.log(arr);
+  return arr.length;
 };
 
-
-console.log(longestConsecutive(nums))
-
-
-
+console.log(longestConsecutive(nums));

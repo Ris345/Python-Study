@@ -1538,20 +1538,43 @@ list = [-1, 3, 5, 6, 99, 12, 2]
 # print(tri_area(7, 4))
 
 
-lst = [1, 2, 3, 4, 5, 6]
+# lst = [1, 2, 3, 4, 5, 6]
 
 
-def sum_odd_and_even(lst):
-    even = 0
-    sum = 0
-    odd = 0
-    for i in range(len(lst) - 1):
-        if lst[i] % 2 == 0:
-            even += lst[i]
-        else:
-            odd += lst[i]
-    print('odd', odd)
-    print('even', even)
+# def sum_odd_and_even(lst):
+#     even = 0
+#     sum = 0
+#     odd = 0
+#     for i in range(len(lst) - 1):
+#         if lst[i] % 2 == 0:
+#             even += lst[i]
+#         else:
+#             odd += lst[i]
+#     print('odd', odd)
+#     print('even', even)
 
 
-print(sum_odd_and_even(lst))
+# print(sum_odd_and_even(lst))
+
+# solving simple problems to be familiar with syntax
+# def football_points(wins, draws, losses):
+#     return wins * 3 + draws * 1 + losses * 0
+
+
+# print(football_points(5, 0, 2))
+
+
+def format_date(date):
+    # remove the extra slashes and everything from the date so we can restructure it
+    # use filter function to remove the unwanted slashes
+    date_list = date.split("/")
+    reverse_list = date_list[::-1]
+    print(reverse_list)
+    newStr = ''
+    for d in reverse_list:
+        newStr += d
+
+    return newStr; 
+
+
+print(format_date("11/12/2019"))
