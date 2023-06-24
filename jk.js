@@ -512,27 +512,24 @@ var maxArea = function (height) {
 let nums = [100, 4, 200, 1, 3, 2];
 var longestConsecutive = function (nums) {
   debugger;
+  //  handle the edge case
+  if (nums.length === 0) return 0;
   // sort the array and remove any non squentialnumber
   //  and return the length of that array with sequential numbers
-  let arr = [];
-  let lastNumber = nums.length - 1;
-  let test = 0;
+  let difference = 0;
+  let count = 1;
+  let max_count = 1;
   let sortedArr = nums.sort((a, b) => a - b);
-  console.log("sortedArr", sortedArr);
-  for (let i = 0; i < sortedArr.length; i++) {
-    for (let j = i + 1; j < sortedArr.length; j++){
-      test = Math.abs(sortedArr[i] - sortedArr[j]);
-      console.log("difference", test);
-      if (test !== 1 && test !== 0) {
-        sortedArr.pop();
-      } else {
-        arr.push(test);
-      }
+  for (let i = 0; i < sortedArr.length - 1; i++) {
+    difference = sortedArr[i + 1] - sortedArr[i];
+    if (difference === 1) {
+      count++;
+    } else {
+      count = 1;
     }
+    max_count = Math.max(max_count, count);
   }
-  
-  console.log(arr);
-  return arr.length;
+  return max_count;
 };
 
 console.log(longestConsecutive(nums));
