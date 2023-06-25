@@ -1564,17 +1564,59 @@ list = [-1, 3, 5, 6, 99, 12, 2]
 # print(football_points(5, 0, 2))
 
 
-def format_date(date):
-    # remove the extra slashes and everything from the date so we can restructure it
-    # use filter function to remove the unwanted slashes
-    date_list = date.split("/")
-    reverse_list = date_list[::-1]
-    print(reverse_list)
-    newStr = ''
-    for d in reverse_list:
-        newStr += d
+# def format_date(date):
+#     # remove the extra slashes and everything from the date so we can restructure it
+#     # use filter function to remove the unwanted slashes
+#     date_list = date.split("/")
+#     reverse_list = date_list[::-1]
+#     print(reverse_list)
+#     newStr = ''
+#     for d in reverse_list:
+#         newStr += d
 
-    return newStr; 
+#     return newStr; 
 
 
-print(format_date("11/12/2019"))
+# print(format_date("11/12/2019"))
+
+# calculate profit 
+# info =  {
+#   "cost_price": 2.77,
+#   "sell_price": 7.95,
+#   "inventory": 8500
+# }
+# def profit(info):
+#     total_sales = info["cost_price"] * info["inventory"] - info["sell_price"] * info["inventory"]
+#     return round(abs(total_sales))
+
+# print(profit(info))
+
+
+# invert key value 
+
+dct = { "z": "q", "w": "f" }
+def invert(dct):
+    return dict(map(reversed, dct.items()))
+            
+print(invert(dct))
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+

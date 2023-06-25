@@ -470,7 +470,6 @@ const chunkArray = (array, size) => {
 
 let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
 var maxArea = function (height) {
-  debugger;
   let amountOfwater = 0;
   let x = 0;
   //  height has length of n
@@ -490,7 +489,7 @@ var maxArea = function (height) {
   return x;
 };
 
-// console.log(maxArea(height));
+console.log(maxArea(height));
 
 // let heig = [1,8,6,2,5,4,8,3,7]
 // var maxAreas = function(heig) {
