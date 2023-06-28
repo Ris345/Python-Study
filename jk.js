@@ -476,14 +476,13 @@ var maxArea = function (height) {
   // n vertical lines drawn such taht the ith line are (i, 0)
   // and (i, height[i])
   // find two lines on x-axis that make a container that hold a lot of water
-  for (let i = 0; i < height.length; i++) {
+  for (let i = 0; i < height.length - 1; i++) {
     //   find difference between two numbers
-    for (let j = i + 1; j < height.length; j++) {
-      amountOfwater = Math.abs(j - i) * Math.min(height[i], height[j]);
-      console.log("waterContainer", amountOfwater);
-      if (amountOfwater > x) {
-        x = amountOfwater;
-      }
+    let j = i + 1;
+    amountOfwater = Math.abs(j - i) * Math.min(height[i], height[j]);
+    console.log("waterContainer", amountOfwater);
+    if (amountOfwater > x) {
+      x = amountOfwater;
     }
   }
   return x;
@@ -533,26 +532,48 @@ console.log(maxArea(height));
 
 // console.log(longestConsecutive(nums));
 
-
-
 let nums = [100, 4, 200, 1, 3, 2];
-var longestConsecutive = function(nums) {
-  let difference = 0
-  let count = 1
-  let max_count = 1 
-  // sort 
-  nums.sort((a, b) => a - b)
-  for (let i = 0; i < nums.length - 1; i++){
-    difference = nums[i + 1] - nums[i]
+var longestConsecutive = function (nums) {
+  let difference = 0;
+  let count = 1;
+  let max_count = 1;
+  // sort
+  nums.sort((a, b) => a - b);
+  for (let i = 0; i < nums.length - 1; i++) {
+    difference = nums[i + 1] - nums[i];
     if (difference === 1) {
-      count++
+      count++;
     } else {
-      count = 1
+      count = 1;
     }
-    max_count = Math.max(count, max_count)
+    max_count = Math.max(count, max_count);
   }
-  return max_count; 
+  return max_count;
 };
 
+// console.log(longestConsecutive(nums))
 
-console.log(longestConsecutive(nums))
+var isValid = function (s) {
+  debugger;
+  //  key value pair
+  let char = {
+    "(": ")",
+    "{": "}",
+    "[": "]",
+  };
+  let stack = [];
+  //  if '()" return true"
+  //  else {] return false
+  for (let c in s) {
+    if (char[c]) {
+      stack.push(char[c]);
+    } else if (stack.length > 0 && stack[stack.length - 1] === k) {
+      stack.pop();
+    } else {
+      return false 
+    }
+  }
+  return stack.length === 0;
+};
+
+console.log(isValid("(}"));
