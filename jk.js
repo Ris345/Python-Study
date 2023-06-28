@@ -553,27 +553,79 @@ var longestConsecutive = function (nums) {
 
 // console.log(longestConsecutive(nums))
 
+// var isValid = function (s) {
+//   debugger;
+//   //  key value pair
+//   let char = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
+//   let stack = [];
+//   //  if '()" return true"
+//   //  else {] return false
+//   for (let c in s) {
+//     if (char[c]) {
+//       stack.push(char[c]);
+//     } else if (stack.length > 0 && stack[stack.length - 1] === k) {
+//       stack.pop();
+//     } else {
+//       return false
+//     }
+//   }
+//   return stack.length === 0;
+// };
+
+// console.log(isValid("(}"));
+
+// var isValid = function (s) {
+//   //  key value pair
+//   let char = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
+//   //  if '()" return true"
+//   //  else {] return false
+//   let stack = [];
+//   for (let c of s) {
+//     if (char[c]) {
+//       stack.push(char[c]);
+//       console.log(stack)
+//     } else if (stack.length > 0 && stack[stack.length - 1] === c) {
+//       stack.pop();
+//     } else {
+//       return false;
+//     }
+//   }
+//   return stack.length === 0;
+// };
+
+// console.log(isValid("(}"));
+
 var isValid = function (s) {
   debugger;
   //  key value pair
+  //
   let char = {
     "(": ")",
     "{": "}",
     "[": "]",
   };
-  let stack = [];
   //  if '()" return true"
   //  else {] return false
-  for (let c in s) {
+  let stack = [];
+  for (let c of s) {
     if (char[c]) {
       stack.push(char[c]);
-    } else if (stack.length > 0 && stack[stack.length - 1] === k) {
+    } else if (stack.length > 0 && stack[stack.length - 1] === c) {
       stack.pop();
     } else {
-      return false 
+      return false;
     }
   }
+
   return stack.length === 0;
 };
 
-console.log(isValid("(}"));
+console.log(isValid("[]"));
