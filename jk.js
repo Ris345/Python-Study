@@ -470,25 +470,80 @@ const chunkArray = (array, size) => {
 
 let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
 var maxArea = function (height) {
-  let amountOfwater = 0;
+  debugger; 
   let x = 0;
+  let j = height.length - 1
   //  height has length of n
   // n vertical lines drawn such taht the ith line are (i, 0)
   // and (i, height[i])
   // find two lines on x-axis that make a container that hold a lot of water
-  for (let i = 0; i < height.length - 1; i++) {
+  for (let i = 0; i < height.length; i++) {
     //   find difference between two numbers
-    let j = i + 1;
-    amountOfwater = Math.abs(j - i) * Math.min(height[i], height[j]);
+    let amountOfwater = Math.abs(j - i) * Math.min(height[i], height[height.length - 1]);
     console.log("waterContainer", amountOfwater);
     if (amountOfwater > x) {
       x = amountOfwater;
     }
+    if (height[i] < height[height.length - 1]) {
+      i++
+    } else {
+      j-- 
+    }
   }
   return x;
 };
-
 console.log(maxArea(height));
+
+
+
+
+
+
+
+// let height = [1,8,6,2,5,4,8,3,7]
+// var maxArea = function (height) {
+//   debugger; 
+//   let total = 0
+//   let left = 0 
+//   let right = height.length - 1
+
+//   while (left < right){
+//       let smallestSide = Math.min(height[left], height[right])
+//       let area = (right - left) * smallestSide;
+
+//       if (area > total) total = area 
+
+//       if (height[left] < height[right]) left++
+//       else right-- 
+//   }
+//   return total
+// };
+
+// console.log(maxArea(height))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let heig = [1,8,6,2,5,4,8,3,7]
 // var maxAreas = function(heig) {
@@ -532,24 +587,24 @@ console.log(maxArea(height));
 
 // console.log(longestConsecutive(nums));
 
-let nums = [100, 4, 200, 1, 3, 2];
-var longestConsecutive = function (nums) {
-  let difference = 0;
-  let count = 1;
-  let max_count = 1;
-  // sort
-  nums.sort((a, b) => a - b);
-  for (let i = 0; i < nums.length - 1; i++) {
-    difference = nums[i + 1] - nums[i];
-    if (difference === 1) {
-      count++;
-    } else {
-      count = 1;
-    }
-    max_count = Math.max(count, max_count);
-  }
-  return max_count;
-};
+// let nums = [100, 4, 200, 1, 3, 2];
+// var longestConsecutive = function (nums) {
+//   let difference = 0;
+//   let count = 1;
+//   let max_count = 1;
+//   // sort
+//   nums.sort((a, b) => a - b);
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     difference = nums[i + 1] - nums[i];
+//     if (difference === 1) {
+//       count++;
+//     } else {
+//       count = 1;
+//     }
+//     max_count = Math.max(count, max_count);
+//   }
+//   return max_count;
+// };
 
 // console.log(longestConsecutive(nums))
 
@@ -603,29 +658,45 @@ var longestConsecutive = function (nums) {
 
 // console.log(isValid("(}"));
 
-var isValid = function (s) {
-  debugger;
-  //  key value pair
-  //
-  let char = {
-    "(": ")",
-    "{": "}",
-    "[": "]",
-  };
-  //  if '()" return true"
-  //  else {] return false
-  let stack = [];
-  for (let c of s) {
-    if (char[c]) {
-      stack.push(char[c]);
-    } else if (stack.length > 0 && stack[stack.length - 1] === c) {
-      stack.pop();
-    } else {
-      return false;
-    }
-  }
+// var isValid = function (s) {
+//   debugger;
+//   //  key value pair
+//   //
+//   let char = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
+//   //  if '()" return true"
+//   //  else {] return false
+//   let stack = [];
+//   for (let c of s) {
+//     if (char[c]) {
+//       stack.push(char[c]);
+//     } else if (stack.length > 0 && stack[stack.length - 1] === c) {
+//       stack.pop();
+//     } else {
+//       return false;
+//     }
+//   }
 
-  return stack.length === 0;
-};
+//   return stack.length === 0;
+// };
 
-console.log(isValid("[]"));
+// console.log(isValid("[]"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

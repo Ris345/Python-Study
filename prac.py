@@ -1574,12 +1574,12 @@ list = [-1, 3, 5, 6, 99, 12, 2]
 #     for d in reverse_list:
 #         newStr += d
 
-#     return newStr; 
+#     return newStr;
 
 
 # print(format_date("11/12/2019"))
 
-# calculate profit 
+# calculate profit
 # info =  {
 #   "cost_price": 2.77,
 #   "sell_price": 7.95,
@@ -1592,49 +1592,39 @@ list = [-1, 3, 5, 6, 99, 12, 2]
 # print(profit(info))
 
 
-# invert key value 
+# invert key value
 
 # dct = { "z": "q", "w": "f" }
 # def invert(dct):
 #     return dict(map(reversed, dct.items()))
-            
+
 # print(invert(dct))
 
 orginalLst = [5, 5, 10, 10, 15, 15, 20, 20]
 orginalTime = 120
 
+
 def interview(lst, tot):
-	# time limit is 120 mins 
-    # easy questions 5 mins 
-    # easy question 10 mins 
-    # med questions 15 mins 
-    # hard questions 20 mins 
-    global orginalLst 
+    # time limit is 120 mins
+    # easy questions 5 mins
+    # easy question 10 mins
+    # med questions 15 mins
+    # hard questions 20 mins
+    global orginalLst
     global orginalTime
     timeOrg = 0
     time = 0
-    orginalTime =sum(orginalLst)
-    
+
     for timeOrg in orginalLst:
         for time in lst:
-            if time <= timeOrg and orginalTime <= tot:
+            if time == timeOrg and tot == orginalTime:
                 return "Qualified"
             else:
                 return "Disqualfied"
+
 
 print(interview([5, 5, 10, 10, 15, 15, 20, 20], 120))
 print(interview([2, 3, 8, 6, 5, 12, 10, 18], 64))
 print(interview([5, 5, 10, 10, 25, 15, 20, 20], 120))
 print(interview([5, 5, 10, 10, 15, 15, 20], 120))
 print(interview([5, 5, 10, 10, 15, 15, 20, 20], 130))
-
-
-
-
-
-
-
-
-
-
-
