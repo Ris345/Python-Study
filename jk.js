@@ -241,7 +241,7 @@
 
 // console.log(largestNum(arr));
 
-let arr = [-1, 3, 5, 6, 99, 12, 2];
+// let arr = [-1, 3, 5, 6, 99, 12, 2];
 // const largestNum = (arr, i = 0) => {
 //   debugger;
 //   let min = arr[i]
@@ -257,15 +257,15 @@ let arr = [-1, 3, 5, 6, 99, 12, 2];
 //   return min
 // }
 
-const largestNumTwo = (arr, i = 0, max = -Infinity) => {
-  if (i < arr.length) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-    return largestNumTwo(arr, i + 1, max);
-  }
-  return max;
-};
+// const largestNumTwo = (arr, i = 0, max = -Infinity) => {
+//   if (i < arr.length) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//     return largestNumTwo(arr, i + 1, max);
+//   }
+//   return max;
+// };
 
 // console.log(largestNumTwo(arr));
 
@@ -305,22 +305,22 @@ const largestNumTwo = (arr, i = 0, max = -Infinity) => {
 // console.log(factorial(3))
 
 //  chunk array
-let array = [1, 9, 6, 3, 2],
-  size = 1;
-const chunkArray = (array, size) => {
-  debugger;
-  if (size <= 0 || array.length === 0) {
-    return [];
-  }
+// let array = [1, 9, 6, 3, 2],
+//   size = 1;
+// const chunkArray = (array, size) => {
+//   debugger;
+//   if (size <= 0 || array.length === 0) {
+//     return [];
+//   }
 
-  let newArr = [];
-  let i = 0;
-  while (i < array.length) {
-    newArr.push(array.slice(i, i + size));
-    i += size;
-  }
-  return newArr;
-};
+//   let newArr = [];
+//   let i = 0;
+//   while (i < array.length) {
+//     newArr.push(array.slice(i, i + size));
+//     i += size;
+//   }
+//   return newArr;
+// };
 
 // console.log(chunkArray(array, size))
 
@@ -468,82 +468,52 @@ const chunkArray = (array, size) => {
 //   return arr;
 // };
 
-let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
-var maxArea = function (height) {
-  debugger; 
-  let x = 0;
-  let j = height.length - 1
-  //  height has length of n
-  // n vertical lines drawn such taht the ith line are (i, 0)
-  // and (i, height[i])
-  // find two lines on x-axis that make a container that hold a lot of water
-  for (let i = 0; i < height.length; i++) {
-    //   find difference between two numbers
-    let amountOfwater = Math.abs(j - i) * Math.min(height[i], height[height.length - 1]);
-    console.log("waterContainer", amountOfwater);
-    if (amountOfwater > x) {
-      x = amountOfwater;
-    }
-    if (height[i] < height[height.length - 1]) {
-      i++
-    } else {
-      j-- 
-    }
-  }
-  return x;
-};
-console.log(maxArea(height));
-
-
-
-
-
-
+// let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+// var maxArea = function (height) {
+//   debugger;
+//   let x = 0;
+//   let j = height.length - 1
+//   //  height has length of n
+//   // n vertical lines drawn such taht the ith line are (i, 0)
+//   // and (i, height[i])
+//   // find two lines on x-axis that make a container that hold a lot of water
+//   for (let i = 0; i < height.length; i++) {
+//     //   find difference between two numbers
+//     let amountOfwater = Math.abs(j - i) * Math.min(height[i], height[height.length - 1]);
+//     console.log("waterContainer", amountOfwater);
+//     if (amountOfwater > x) {
+//       x = amountOfwater;
+//     }
+//     if (height[i] < height[height.length - 1]) {
+//       i++
+//     } else {
+//       j--
+//     }
+//   }
+//   return x;
+// };
+// console.log(maxArea(height));
 
 // let height = [1,8,6,2,5,4,8,3,7]
 // var maxArea = function (height) {
-//   debugger; 
+//   debugger;
 //   let total = 0
-//   let left = 0 
+//   let left = 0
 //   let right = height.length - 1
 
 //   while (left < right){
 //       let smallestSide = Math.min(height[left], height[right])
 //       let area = (right - left) * smallestSide;
 
-//       if (area > total) total = area 
+//       if (area > total) total = area
 
 //       if (height[left] < height[right]) left++
-//       else right-- 
+//       else right--
 //   }
 //   return total
 // };
 
 // console.log(maxArea(height))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // let heig = [1,8,6,2,5,4,8,3,7]
 // var maxAreas = function(heig) {
@@ -685,18 +655,143 @@ console.log(maxArea(height));
 
 // console.log(isValid("[]"));
 
+// let nums = [1, 2, 3, 4];
+// // output [24, 12, 8, 6]
+// var productExceptSelf = function (nums) {
+//   debugger;
+//   let right = 1;
+//   let left = 1;
+//   let arr = [];
+//   for (let i = 0; i < nums.length; i++) {
+//     arr.push(right);
+//     right *= nums[i];
+//   }
+//   for (let j = nums.length - 1; j >= 0; j--) {
+//     arr[j] *= left
+//     left *= nums[j];
+//   }
+//   return arr;
+// };
 
+// console.log(productExceptSelf(nums));
 
+// let board = [
+//   ["5", "3", ".", ".", "7", ".", ".", ".", "."],
+//   ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+//   [".", "9", "8", ".", ".", ".", ".", "6", "."],
+//   ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+//   ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+//   ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+//   [".", "6", ".", ".", ".", ".", "2", "8", "."],
+//   [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+//   [".", ".", ".", ".", "8", ".", ".", "7", "9"],
+// ];
 
+// var isValidSudoku = function (board) {
+//   debugger;
+//   let hash = new Object();
+//   console.log(hash);
+//   for (let i = 0; i < board.length; i++) {
+//     for (let j = 1; j < board.length - 1; j++) {
+//       if (hash[board[i][j]]) {
+//         hash[board[i][j]] += 1;
+//       } else {
+//         hash[board[i][j]] = 1;
+//       }
+//       console.log(i, hash);
+//     }
 
+//     // let columnZero = ('columns', board[i][0])
+//     // let columnOne = ('columns', board[i][1])
+//     // let columnTwo = ('columns', board[i][2])
+//     // let columnThree = ('columns', board[i][3])
+//     // let columnFour = ('columns', board[i][4])
+//     // let columnFive = ('columns', board[i][5])
+//     // let columnSix = ('columns', board[i][6])
+//     // let columnSeven = ('columns', board[i][7])
+//     // let columnEight = ('columns', board[i][8])
+//     // let columnNine = ('columns', board[i][9])
+//   }
+// };
 
+// console.log(isValidSudoku(board));
 
+// const array = [];
 
+// var isValidSudoku = function (board) {
+//   // check vertically
+//   for (let i = 0; i < board[0].length; i++) {
+//     for (let j = 0; j < board.length; j++) {
+//       console.log("vertical check", board[j][i]);
+//     }
+//   }
+//   //  check horizantally
+//   for (let j = 0; j < board.length; j++) {
+//     console.log("horizantal check", board[j]);
+//   }
+// };
 
+// console.log(isValidSudoku(board));
 
+// var isValidSudoku = function (board) {
+//   debugger;
+//   //  iterate over the row , one by one meaning first row, second row etc
+//   //  iterate over the coloum by iterating on eacgh row index board[0], board[1]
+//   //  it needs to know what row I am at inorder to iterate over the column
+//   // row
+//   let result = false;
+//   let hash = {};
+//   for (let i = 0; i < board.length; i++) {
+//     for (let j = 1; j < board.length; j++) {
+//       console.log("board row", board[i][i]);
+//       console.log("board column", board[j][j]);
+//       if (board[i][j]) {
+//         hash[board[i][j]] = 1;
+//       } else {
+//         hash[board[i][j]] += 1;
+//       }
+//       console.log(hash);
+//       if (board[i][j] <= 9 || board[i][j] >= 1) {
+//         result = true;
+//       }
+//       return result;
+//     }
+//   }
+//   return result;
+// };
 
+// console.log(isValidSudoku(board));
 
+let s = "ab";
+let goal = "ab";
+var buddyStrings = function (s, goal) {
+  debugger;
+  //  we have two variables s and goal
+  //  s = 'ab', goal = 'ba'
+  // return true if I can make s = 'ba'  else return false
 
+  //  step1 iterate through each variable
+  //  reverse the indexes
+  //  return if that index is reversible
+  let newStr = "";
+  if (s !== goal) {
+    for (let i = s.length - 1; i >= 0; i--) {
+      newStr += s[i];
+      console.log(newStr);
+    }
+    if (newStr === goal) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return true;
+  }
+};
 
+console.log(buddyStrings(s, goal));
 
-
+// for await (let question of questions) {
+//   console.log(answer(question));
+// }
+// console.log("Thanks");
