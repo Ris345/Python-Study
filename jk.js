@@ -762,36 +762,86 @@
 
 // console.log(isValidSudoku(board));
 
-let s = "ab";
-let goal = "ab";
-var buddyStrings = function (s, goal) {
-  debugger;
-  //  we have two variables s and goal
-  //  s = 'ab', goal = 'ba'
-  // return true if I can make s = 'ba'  else return false
+// let s = "aaaaaaabc";
+// let goal = "aaaaaaacb";
 
-  //  step1 iterate through each variable
-  //  reverse the indexes
-  //  return if that index is reversible
-  let newStr = "";
-  if (s !== goal) {
-    for (let i = s.length - 1; i >= 0; i--) {
-      newStr += s[i];
-      console.log(newStr);
-    }
-    if (newStr === goal) {
-      return true;
-    } else {
-      return false;
-    }
-  } else {
-    return true;
-  }
-};
+// var buddyStrings = function (s, goal) {
+//   debugger; 
+//   // check for edge cases
+//   if (s.length !== goal.length) return false;
 
-console.log(buddyStrings(s, goal));
+//   if (s === goal) {
+//     set = new Set(s.split(""));
+//     return set.size < s.length;
+//   }
+
+//   let arr = [];
+//   for (let i = 0; i < s.length; i++) {
+//     arr.push(i);
+//   }
+//   if (arr.length > 2) return false;
+//   return (
+//     arr.length === 2 && s[arr[0]] == goal[arr[1]] && s[arr[1]] == goal[arr[0]]
+//   );
+// };
+
+// console.log(buddyStrings(s, goal));
+
+// var buddyStrings = function (s, goal) {
+//   debugger;
+//   //  we have two variables s and goal
+//   //  s = 'ab', goal = 'ba'
+//   // return true if I can make s = 'ba'  else return false
+
+//   //  step1 iterate through each variable
+//   //  reverse the indexes
+//   //  return if that index is reversible
+//   let newStr = "";
+//   if (s !== goal) {
+//     for (let i = s.length - 1; i >= 0; i--) {
+//       newStr += s[i];
+//       console.log(newStr);
+//     }
+//     if (newStr === goal) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   } else {
+//     return true;
+//   }
+// };
+
+// console.log(buddyStrings(s, goal));
 
 // for await (let question of questions) {
 //   console.log(answer(question));
 // }
 // console.log("Thanks");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

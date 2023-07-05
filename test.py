@@ -449,7 +449,6 @@
 # #         return False
 
 
-
 # # print(check('hghghgh'))
 # # print(check('01010101'))
 
@@ -1803,13 +1802,12 @@ shopping = Shopping(['Shoes', 'dress'], 'Jessa')
 
 # myFun(first='Jinko', mid='egua', last='cookie')
 
-# try this question 
+# try this question
 
 # int mat[][] = { { 0, 0, 0, 1 },
 # { 0, 1, 1, 1 },
 # { 1, 1, 1, 1 },
 # { 0, 0, 0, 0 } };
-
 
 
 # inList = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -1837,9 +1835,9 @@ n = 5
 #             print(check,end = ' ')
 #             check = check + n - j - 1
 #         print()
-            
+
 # print(column(n))
-    
+
 
 # nput: S = “abcabcbb”
 # Output: 3
@@ -1856,13 +1854,25 @@ n = 5
 # S = 'abcabcbb'
 # def subString(S):
 #     newStr = ' '
-#     # iterate through each item 
+#     # iterate through each item
 #     for i in (range(len(S))):
 #         for x in (range(len(S))):
 #             # if firstValue != seconfValue
 #             if S[i] != S[x]:
-#                  newStr = S[i]        
+#                  newStr = S[i]
 #             print(newStr)
-                                 
+
 # print(subString(S))
 
+
+#  mutiples of a given number
+def list_of_multiples(num, length):
+    list = []
+    for n in range(1, length + 1):
+        multiple = num * n
+        if multiple % num == 0:
+            list.append(multiple)
+    return list
+
+
+print(list_of_multiples(7, 5))
