@@ -1866,13 +1866,13 @@ n = 5
 
 
 #  mutiples of a given number
-def list_of_multiples(num, length):
-    list = []
-    for n in range(1, length + 1):
-        multiple = num * n
-        if multiple % num == 0:
-            list.append(multiple)
-    return list
+# def list_of_multiples(num, length):
+#     list = []
+#     for n in range(1, length + 1):
+#         multiple = num * n
+#         if multiple % num == 0:
+#             list.append(multiple)
+#     return list
 
 
-print(list_of_multiples(7, 5))
+# print(list_of_multiples(7, 5))
