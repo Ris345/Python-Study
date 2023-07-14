@@ -1879,23 +1879,23 @@ n = 5
 
 
 # print(list_of_multiples(7, 5))
-def sockMerchant(n, arr):
-    # Write your code here
-    # edge case
-    dict = {}
-    if len(arr) < 1:
-        return
-    socks = range(len(arr))
-    for color in arr:
-        if color in dict:
-            dict[color] += 1
-        else:
-            dict[color] = 1
-    #  if value from the dict === 2 then it is a pair / if it is more than 2 or less than 2 it is not a pair 
-    total_pair = 0
-    unpaired_socks = 0
-    for key in dict.values(): 
-    #    I am  stuck here.
+# def sockMerchant(n, arr):
+#     # Write your code here
+#     # edge case
+#     dict = {}
+#     if len(arr) < 1:
+#         return
+#     socks = range(len(arr))
+#     for color in arr:
+#         if color in dict:
+#             dict[color] += 1
+#         else:
+#             dict[color] = 1
+#     #  if value from the dict === 2 then it is a pair / if it is more than 2 or less than 2 it is not a pair 
+#     total_pair = 0
+#     unpaired_socks = 0
+#     for key in dict.values(): 
+#     #    I am  stuck here.
         
 # print(sockMerchant(7, [1, 2, 1, 2, 1, 3, 2]))
 

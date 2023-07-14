@@ -766,7 +766,7 @@
 // let goal = "aaaaaaacb";
 
 // var buddyStrings = function (s, goal) {
-//   debugger; 
+//   debugger;
 //   // check for edge cases
 //   if (s.length !== goal.length) return false;
 
@@ -785,63 +785,183 @@
 //   );
 // };
 
-// console.log(buddyStrings(s, goal));
+// // console.log(buddyStrings(s, goal));
 
-// var buddyStrings = function (s, goal) {
+// // var buddyStrings = function (s, goal) {
+// //   debugger;
+// //   //  we have two variables s and goal
+// //   //  s = 'ab', goal = 'ba'
+// //   // return true if I can make s = 'ba'  else return false
+
+// //   //  step1 iterate through each variable
+// //   //  reverse the indexes
+// //   //  return if that index is reversible
+// //   let newStr = "";
+// //   if (s !== goal) {
+// //     for (let i = s.length - 1; i >= 0; i--) {
+// //       newStr += s[i];
+// //       console.log(newStr);
+// //     }
+// //     if (newStr === goal) {
+// //       return true;
+// //     } else {
+// //       return false;
+// //     }
+// //   } else {
+// //     return true;
+// //   }
+// // };
+
+// // console.log(buddyStrings(s, goal));
+
+// // for await (let question of questions) {
+// //   console.log(answer(question));
+// // }
+// // console.log("Thanks");
+
+// let board = [
+//   ["5", "3", ".", ".", "7", ".", ".", ".", "."],
+//   ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+//   [".", "9", "8", ".", ".", ".", ".", "6", "."],
+//   ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+//   ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+//   ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+//   [".", "6", ".", ".", ".", ".", "2", "8", "."],
+//   [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+//   [".", ".", ".", ".", "8", ".", ".", "7", "9"],
+// ];
+
+// var isValidSudoku = function (board) {
 //   debugger;
-//   //  we have two variables s and goal
-//   //  s = 'ab', goal = 'ba'
-//   // return true if I can make s = 'ba'  else return false
-
-//   //  step1 iterate through each variable
-//   //  reverse the indexes
-//   //  return if that index is reversible
-//   let newStr = "";
-//   if (s !== goal) {
-//     for (let i = s.length - 1; i >= 0; i--) {
-//       newStr += s[i];
-//       console.log(newStr);
+//   // we have 9 X 9 column
+//   //  9 X 9 row
+//   // 3 subboxes
+//   //  in that 9 X 9 we have unique numbers from 1-9
+//   //  for it to be valid we need we cannot have a repeating number in the same row or column
+//   //  first step
+//   //  loop horizantally
+//   //  loop vertically
+//   //  in that we check if those conditions are truthy or falsy
+//   let hash = {};
+//   let arr = [];
+//   console.log(board.length);
+//   for (let i = 0; i < board.length; i++) {
+//     for (let j = 0; j < board.length; j++) {
+//       if (arr.length < 9) {
+//         arr.push(board[i][j]);
+//       }
+//       //  keep track of the numbers
+//       if (!board[hash[i]]) {
+//         board[hash[i]] = 1
+//       } else {
+//         board[hash[i]] += 1
+//       }
+//       console.log(hash)
 //     }
-//     if (newStr === goal) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   } else {
-//     return true;
+//     // console.log(board[i][i])
+//     // //     if (hash[board[i][i]]) {
+//     // //         hash[board[i][i]] += 1
+//     // //     } else {
+//     // //         hash[board[i][i]] = 1
+//     // //     }
+//     // // }
+//     // // return hash
 //   }
+//   console.log(arr)
 // };
 
-// console.log(buddyStrings(s, goal));
+// console.log(isValidSudoku(board));
 
-// for await (let question of questions) {
-//   console.log(answer(question));
-// }
-// console.log("Thanks");
+// let nums = [100, 4, 200, 1, 3, 2];
+// var longestConsecutive = function (nums) {
+//   debugger;
+//   let res = 0
+//   let obj = {}
 
+//   for (let i  = 0; i < nums.length; i++){
+//       obj[nums[i]] = true
+//   }
 
+//   for (let j = 0; j < nums.length; j++){
+//       if (obj[nums[j] - 1]) continue
+//       let nextVal = nums[j] + 1
+//       let count = 1
+//       while(obj[nextVal]){
+//           count++
+//           nextVal++
+//       }
+//       if(count > res){
+//           result = count
+//       }
+//   }
 
+// return result;
+// };
 
+// console.log(longestConsecutive(nums))
 
+// var longestConsecutive = function (nums) {
+//   debugger;
+//   let set = new Set(nums);
+//   let largSquence = 0
+//   for (let x of set) {
+//     if (set.has(x - 1))
+//       continue
+//       let currentNum = x
+//       let currSqu = 1
+//     while (set.has(currentNum + 1)) {
+//       currentNum++;
+//       currSqu++;
+//     }
+//     largSquence = Math.max(largSquence, currSqu)
+//   }
+//   return largSquence
+// };
+// console.log(longestConsecutive(nums));
 
+// let strs = ["dog", "racecar", "car"];
+// var longestCommonPrefix = function (strs) {
+//   debugger;
+//   let prefix = "";
+//     for (let i = 0; i < strs[0].length; i++) {
+//         for (let j = 0; j < strs.length; j++) {
+//       if (strs[j][i] === strs[0][i]) {
+//         continue;
+//       } else {
+//         return prefix;
+//       }
+//     }
+//     prefix += strs[0][i];
+//   }
+//   return prefix;
+// };
 
+// console.log(longestCommonPrefix(strs));
 
+let strs = ["dog","racecar","car"]
+var longestCommonPrefix = function(strs) {
+    // let sorted = strs.sort((a, b) => a < b ? -1:1)
+    // console.log(sorted)
+    if (strs.length === 0) {
+        return 
+    }
+    if (strs.length === 1) {
+        strs[0]
+    }
+    let output = ""
+    let firstword = strs[0]
+    let lastIdxWord = strs[strs.length - 1]
+    for (let i = 0; i < firstword.length; i++){
+        if (firstword[i] == lastIdxWord[i]){
+            output += firstword[i]
+        } else {
+            break; 
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+return output; 
+    
+};
+console.log(longestCommonPrefix(strs))
 
 
